@@ -30,8 +30,8 @@ const Header = ({ toggle, setToggle }) => {
 
   return (
     <header
-      className="text-white h-auto py-6"
-      style={{ backgroundImage: `url(${pattern})` }}
+      className=" h-auto py-6"
+      style={{ backgroundImage: `url(${pattern})`, color: "#ac8b4a" }}
     >
       <div className="container mx-auto flex justify-between items-center relative">
         <div className="flex items-center">
@@ -66,7 +66,7 @@ const Header = ({ toggle, setToggle }) => {
 
           <div>
             <FaSearch
-              className="text-white-500 cursor-pointer hover:cursor-pointer transform hover:scale-110 transition-all"
+              className=" cursor-pointer hover:cursor-pointer transform hover:scale-110 transition-all"
               onClick={handleSearchToggle}
             />
           </div>
@@ -76,11 +76,13 @@ const Header = ({ toggle, setToggle }) => {
               window.location.href = "/login";
             }}
           >
-            <FaUser className="text-white transform hover:scale-110 transition-all hover:cursor-pointer" />
+            <FaUser className=" transform hover:scale-110 transition-all hover:cursor-pointer" />
           </div>
 
-          <div>
-            <FaShoppingCart className="text-white transform hover:scale-110 transition-all hover:cursor-pointer" />
+          <div  onClick={() => {
+              window.location.href = "/cart";
+            }}>
+            <FaShoppingCart className=" transform hover:scale-110 transition-all hover:cursor-pointer" />
           </div>
 
           <div>

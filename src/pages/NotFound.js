@@ -3,7 +3,7 @@ import React from 'react'
 const NotFound = () => {
   return (
 
-    <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="min-h-screen flex items-center justify-center bg-white" style={{fontFamily:'Seasons'}}>
     <div className=" w-full space-y- px-5 pb-4 rounded m-4">
     <h1 class="mt-12 text-5xl font-bold text-center mb-4">404: Page Not Found</h1>
     <p class="mb-4 text-lg text-black text-semibold text-center">Oops! The resource you are looking for is not available.</p>
