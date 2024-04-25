@@ -12,6 +12,7 @@ const ProductDetails = () => {
   const [showSizeChart, setShowSizeChart] = useState(false);
   const [load, setLoad] = useState(false);
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     const fetchProducts = async () => {
       setLoad(true);
@@ -20,11 +21,11 @@ const ProductDetails = () => {
           id
       );
       const data = await response.json();
-      // console.log(data,"data in details")
       setProduct(data);
       setLoad(false);
     };
     fetchProducts();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggleSizeChart = () => {
@@ -83,14 +84,14 @@ const ProductDetails = () => {
                           {item.ProductDescription}
                         </p>
                         <p className="text-md text-center font-thin mb-8" style={{fontFamily:'Seasons Light'}}>
-                          Elegent ~ Classy ~ Versatile
+                          Elegant ~ Classy ~ Versatile
                         </p>
                       </div>
 
                       <div>
                         <p className="text-left text-sm mb-4 italic" style={{fontFamily:'Seasons Light'}}>
                           Copyright: We at Ayesha Ali Design value originality
-                          and creativity. The embroidery is Ayesha's origional
+                          and creativity. The embroidery is Ayesha's original
                           artwork and prohibited from being copied.
                         </p>
                       </div>
@@ -110,7 +111,7 @@ const ProductDetails = () => {
                         Show Size Chart
                       </button>
                       <button
-                        onClick={() => addToCart(item, item.producId)}
+                        onClick={() => addToCart(item, item.ProductId)}
                         className="bg-black text-white text-md font-semibold mt-2 py-2 px-4" style={{fontFamily:'Seasons Light'}}
                       >
                         Add to cart
