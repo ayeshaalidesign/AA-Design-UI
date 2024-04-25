@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+
+import React, { useState, lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NotFound from './pages/NotFound';
+import AppLoader from './loader/AppLoader';
+
+// Lazy loading components
+const LazyLayout = lazy(() => import('../src/layout/Layout'));
+const LazyHomePage = lazy(() => import('../src/pages/Homepage'));
+const LazyLogin = lazy(() => import('./pages/Login'));
+const LazyRegister = lazy(() => import('./pages/Register'));
+const LazyProductDetails = lazy(() => import('./pages/ProductDetails'));
+const LazyProductCardList = lazy(() => import('./pages/ProductList'));
+const LazyCart = lazy(() => import('./pages/Cart'));
+const LazyAboutUs = lazy(() => import('./pages/AboutUs'));
+const LazyContactUs = lazy(() => import('./pages/ContactUs'));
+const LazyPolicies = lazy(() => import('./pages/Policies'));
+
+
 
 function App() {
+  const [toggle, setToggle] = useState(false); 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Suspense fallback={<AppLoader />}>
+        <LazyLayout toggle={toggle} setToggle={setToggle}>
+          <Routes>
+            <Route path="/" element={<LazyHomePage />} />
+            <Route path="/login" element={<LazyLogin />} />
+            <Route path="/register" element={<LazyRegister />} />
+            <Route path="/products" element={<LazyProductCardList />} />
+            <Route path="/products/:id" element={<LazyProductDetails />} />
+            <Route path="/cart" element={<LazyCart />} />
+            <Route path="/contact-us" element={<LazyContactUs />} />
+            <Route path="/about-us" element={<LazyAboutUs />} />
+            <Route path="/policies" element={<LazyPolicies/>} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </LazyLayout>
+      </Suspense>
+    </Router>
   );
 }
 

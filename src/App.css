@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'Seasons';
+  src: url('/src/fonts/The-Seasons-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Seasons Light';
+  src: url('/src/fonts/The-Seasons-Light.ttf') format('truetype');
+}
+
+
