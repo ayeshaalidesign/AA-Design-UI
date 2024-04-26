@@ -85,8 +85,8 @@ const ProductDetails = () => {
               </p>
             </div>
 
-            <div>
-              <p className="text-center text-sm mb-4 italic" style={{ fontFamily: 'Seasons Light' }}>
+            <div className="text-center text-sm mb-4 italic">
+              <p style={{ fontFamily: 'Seasons Light' }}>
                 Copyright: We at Ayesha Ali Design value originality
                 and creativity. The embroidery is Ayesha's original
                 artwork and prohibited from being copied.
