@@ -24,7 +24,7 @@ const ContactUs = () => {
           className="h-16 w-16 mx-auto"
         />
         <h2 className="text-xl font-bold text-center mt-4">Email</h2>
-        <p className="text-black text-center mt-2">info@ayeshaalidesign.com</p>
+        <a href={'mailto:info@ayeshaalidesign.com' } className="text-black text-center mt-2">info@ayeshaalidesign.com</a>
       </div>
 
       <div className="p-4">

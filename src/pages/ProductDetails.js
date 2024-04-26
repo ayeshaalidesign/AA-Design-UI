@@ -46,84 +46,81 @@ const ProductDetails = () => {
         <AppLoader />
       ) : (
         <>
-          <section className="pt-[100px] md:pt-32 pb-[100px] md:pb-12 lg:py-32 h-auto flex items-center">
-            <div className="container mx-auto">
-              {/* image and text wrapper */}
-              <div className="flex flex-col lg:flex-row items-center">
-                {product.map((item) => (
-                  <>
-                    {/* image */}
-                    <div
-                      key={item.ProductId}
-                      className="flex flex-1 justify-center items-center mb-8 lg:mb-0"
-                    >
-                      <img
-                        className="w-100 h-100 lg:max-w-xs"
-                        src={item.ImageUrl}
-                        alt={item.ProductName}
-                      />
-                    </div>
-                    {/* text */}
-                    <div className="flex-1 pr-20">
-                      <div className="text-left mt-10">
-                        <div className="text-3xl text-black-500 mb-6" style={{fontFamily:'Seasons'}}>
-                          {item.ProductName}
-                        </div>
-                        <div className="text-xl text-black-500 mb-6" style={{fontFamily:'Seasons Light'}}>
-                        <span className="font-serif text-gray-600">$</span>{item.ProductPrice}
-                        </div>
-                      </div>
-                      <div className="text-center w-100">
-                        <h1 className="text-lg font-medium max-w-[450px]  lg:mx-0 text-center mb-6" style={{fontFamily:'Seasons Light'}}>
-                          {item.CategoryName}
-                        </h1>
-                        <p
-                          className="mb-6 text-center text-md font-thin "
-                          style={{ lineHeight: "2", fontFamily: "Seasons Light" }}
-                        >
-                          {item.ProductDescription}
-                        </p>
-                        <p className="text-md text-center font-thin mb-8" style={{fontFamily:'Seasons Light'}}>
-                          Elegant ~ Classy ~ Versatile
-                        </p>
-                      </div>
-
-                      <div>
-                        <p className="text-left text-sm mb-4 italic" style={{fontFamily:'Seasons Light'}}>
-                          Copyright: We at Ayesha Ali Design value originality
-                          and creativity. The embroidery is Ayesha's original
-                          artwork and prohibited from being copied.
-                        </p>
-                      </div>
-
-                      <select className="w-80 h-10 block mb-4 px-4 outline rounded-md font-semibold" style={{fontFamily:'Seasons Light'}}>
-                        <option value="">Select size</option>
-                        <option value="xs">Xs</option>
-                        <option value="s">S</option>
-                        <option value="m">M</option>
-                        <option value="l">L</option>
-                        <option value="xl">Xl</option>
-                      </select>
-                      <button
-                        onClick={toggleSizeChart}
-                        className="bg-black text-white text-md font-semibold mt-2 py-2 px-4 mr-2" style={{fontFamily:'Seasons Light'}}
-                      >
-                        Show Size Chart
-                      </button>
-                      <button
-                        onClick={() => addToCart(item, item.ProductId)}
-                        className="bg-black text-white text-md font-semibold mt-2 py-2 px-4" style={{fontFamily:'Seasons Light'}}
-                      >
-                        Add to cart
-                      </button>
-                      {showSizeChart && <div className="flex justify-center">
-                        <SizeChart /></div>}
-                    </div>
-                  </>
-                ))}
+         <section className="pt-[100px] md:pt-32 pb-[100px] md:pb-12 lg:py-32 h-auto flex items-center">
+  <div className="container mx-auto">
+    {/* image and text wrapper */}
+    <div className="flex flex-col lg:flex-row items-center">
+      {product.map((item) => (
+        <div key={item.ProductId} className="flex flex-col lg:flex-row justify-center items-center mb-8 lg:mb-0">
+          {/* image */}
+          <div className="flex justify-center items-center mb-8 lg:mb-0 lg:mr-8">
+            <img
+              className="w-100 h-100 lg:max-w-xs"
+              src={item.ImageUrl}
+              alt={item.ProductName}
+            />
+          </div>
+          {/* text */}
+          <div className="flex-1 pr-20">
+            <div className="text-center lg:text-left mt-10">
+              <div className="text-3xl text-black-500 mb-6" style={{ fontFamily: 'Seasons' }}>
+                {item.ProductName}
+              </div>
+              <div className="text-xl text-black-500 mb-6" style={{ fontFamily: 'Seasons Light' }}>
+                <span className="font-serif text-gray-600">$</span>{item.ProductPrice}
               </div>
             </div>
-          </section>
+            <div className="text-center w-100">
+              <h1 className="text-lg font-medium lg:mx-0 text-center mb-6" style={{ fontFamily: 'Seasons Light' }}>
+                {item.CategoryName}
+              </h1>
+              <p
+                className="mb-6 text-center text-md font-thin"
+                style={{ lineHeight: "2", fontFamily: "Seasons Light" }}
+              >
+                {item.ProductDescription}
+              </p>
+              <p className="text-md text-center font-thin mb-8" style={{ fontFamily: 'Seasons Light' }}>
+                Elegant ~ Classy ~ Versatile
+              </p>
+            </div>
+
+            <div>
+              <p className="text-center text-sm mb-4 italic" style={{ fontFamily: 'Seasons Light' }}>
+                Copyright: We at Ayesha Ali Design value originality
+                and creativity. The embroidery is Ayesha's original
+                artwork and prohibited from being copied.
+              </p>
+            </div>
+
+            <select className="w-80 h-10 block mb-4 px-4 outline rounded-md font-semibold" style={{ fontFamily: 'Seasons Light' }}>
+              <option value="">Select size</option>
+              <option value="xs">Xs</option>
+              <option value="s">S</option>
+              <option value="m">M</option>
+              <option value="l">L</option>
+              <option value="xl">Xl</option>
+            </select>
+            <button
+              onClick={toggleSizeChart}
+              className="bg-black text-white text-md font-semibold mt-2 py-2 px-4 mr-2" style={{ fontFamily: 'Seasons Light' }}
+            >
+              Show Size Chart
+            </button>
+            <button
+              onClick={() => addToCart(item, item.ProductId)}
+              className="bg-black text-white text-md font-semibold mt-2 py-2 px-4" style={{ fontFamily: 'Seasons Light' }}
+            >
+              Add to cart
+            </button>
+            {showSizeChart && <div className="flex justify-center">
+              <SizeChart /></div>}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
         </>
       )}
     </div>

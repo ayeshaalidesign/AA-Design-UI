@@ -40,8 +40,10 @@ export default function Footer() {
   <MDBContainer className='text-center text-md-start'>
     <MDBRow className='mt-3'>
       <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
-        
-       <img src={logo} alt='Ayesha Ali Design Logo' className='h-40 w-40' />
+        <div className='flex justify-center'>
+        <img src={logo} alt='Ayesha Ali Design Logo' className='h-40 w-40' />
+        </div>
+      
       </MDBCol>
 
       {/* <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
