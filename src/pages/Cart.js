@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 
 import { Link } from "react-router-dom";
-
-import { IoMdArrowForward } from "react-icons/io";
 import { FiTrash2 } from "react-icons/fi";
 import CartItem from "../components/CartItem";
 import { CartContext } from "../contexts/CartProvider";
@@ -12,21 +10,24 @@ const Cart = () => {
   const { cart, clearCart, itemAmount, total } = useContext(CartContext);
 
   return (
-    <div
-      className="w-full bg-white top-0 right-0 shadow-2xl md:w-[35vw] lg:w-[40vw] xl:max-w-[30vw] transition-all duration-300 z-20 px-4 lg:px-[35px]"
+    <div>
+       <div
+      className="w-full bg-white top-0 right-0 shadow-2xl  transition-all duration-300 z-20 px-4 py-4 "
     >
       <div className="flex items-center justify-between py-6 border-b">
         <div className="uppercase text-sm font-semibold">Shopping Bag ({itemAmount})</div>
-        <div
-        //   onClick={handleClose}
-          className="cursor-pointer w-8 h-8 flex justify-center items-center"
-        >
-          <IoMdArrowForward className="text-2xl" />
-        </div>
+       
       </div>
-      <div className="flex flex-col gap-y-2 h-[360px] md:h-[480px] lg:h-[420px] overflow-y-auto overflow-x-hidden border-b">
+      <div className="flex flex-col gap-y-2 h-auto border-b">
+        {cart.length === 0 && (
+          <>
+          <div className="h-60">
+            <h2 className="text-center mt-40">No Products Added...</h2>
+          </div>
+          </>
+        )}
         {cart.map((item) => {
-          return <CartItem item={item} key={item.id} />;
+          return <CartItem item={item} key={item.ProductId} />;
         })}
       </div>
       <div className="flex flex-col gap-y-3  mt-4">
@@ -48,7 +49,7 @@ const Cart = () => {
           to={"/cart"}
           className="bg-gray-200 flex p-3 justify-center items-center text-primary w-full font-medium"
         >
-          View Cart
+         Pay
         </Link>
         <Link
           to={"/"}
@@ -58,6 +59,8 @@ const Cart = () => {
         </Link>
       </div>
     </div>
+    </div>
+   
   );
 };
 

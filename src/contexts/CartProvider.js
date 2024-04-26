@@ -11,28 +11,41 @@ const CartProvider = ({ children }) => {
   const [total, setTotal] = useState(0);
 
 
+
+
   useEffect(() => {
+    // Retrieve cart data from local storage on component mount
+    const storedCart = JSON.parse(localStorage.getItem("cart"));
+    if (storedCart) {
+      setCart(storedCart);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Update local storage whenever cart state changes
+    localStorage.setItem("cart", JSON.stringify(cart));
+    // Calculate total price
     const total = cart.reduce((accumulator, currentItem) => {
-      return accumulator + currentItem.price * currentItem.amount;
+      return accumulator + currentItem.ProductPrice * currentItem.amount;
     }, 0);
     setTotal(total);
-    // eslint-disable-next-line
-  },[]);
+  }, [cart]);
 
-  // update item amount
   useEffect(() => {
-    if (cart) {
+
+    const storedCart = JSON.parse(localStorage.getItem("cart"));
+    if (storedCart) {
       const amount = cart.reduce((accumulator, currentItem) => {
         return accumulator + currentItem.amount;
       }, 0);
       setItemAmount(amount);
     }
+    
   }, [cart]);
 
   // add to cart
   const addToCart = (product, id) => {
-    console.log("here in cart context",id)
-    console.log("here in cart context",product)
+   
     const newItem = { ...product, amount: 1 };
     // check if the item is already in the cart
     const cartItem = cart.find((item) => {
