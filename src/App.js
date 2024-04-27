@@ -16,6 +16,8 @@ const LazyCart = lazy(() => import('./pages/Cart'));
 const LazyAboutUs = lazy(() => import('./pages/AboutUs'));
 const LazyContactUs = lazy(() => import('./pages/ContactUs'));
 const LazyPolicies = lazy(() => import('./pages/Policies'));
+const LazySuccess = lazy(() => import('./pages/PaymentSuccessful'));
+const LazyFail = lazy(() => import('./pages/PaymentFailed'));
 
 
 
@@ -35,6 +37,8 @@ function App() {
             <Route path="/contact-us" element={<LazyContactUs />} />
             <Route path="/about-us" element={<LazyAboutUs />} />
             <Route path="/policies" element={<LazyPolicies/>} />
+            <Route path="/payment-success" element={<LazySuccess/>} />
+            <Route path="/payment-fail" element={<LazyFail/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </LazyLayout>

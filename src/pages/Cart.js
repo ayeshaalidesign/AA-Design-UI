@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import { FiTrash2 } from "react-icons/fi";
 import CartItem from "../components/CartItem";
 import { CartContext } from "../contexts/CartProvider";
+import '../App.css';
 
 const Cart = () => {
 //   const { isOpen, handleClose } = useContext(SidebarContext);
   const { cart, clearCart, itemAmount, total } = useContext(CartContext);
 
   return (
-    <div>
+    <div style={{fontFamily:'Seasons'}}>
        <div
       className="w-full bg-white top-0 right-0 shadow-2xl  transition-all duration-300 z-20 px-4 py-4 "
     >
@@ -21,8 +22,8 @@ const Cart = () => {
       <div className="flex flex-col gap-y-2 h-auto border-b">
         {cart.length === 0 && (
           <>
-          <div className="h-60">
-            <h2 className="text-center mt-40">No Products Added...</h2>
+          <div className="h-80">
+            <h2 className="text-center mt-40">No Products.</h2>
           </div>
           </>
         )}
