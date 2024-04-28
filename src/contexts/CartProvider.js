@@ -22,7 +22,6 @@ const CartProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    // Update local storage whenever cart state changes
     localStorage.setItem("cart", JSON.stringify(cart));
     // Calculate total price
     const total = cart.reduce((accumulator, currentItem) => {
@@ -34,6 +33,7 @@ const CartProvider = ({ children }) => {
   useEffect(() => {
 
     const storedCart = JSON.parse(localStorage.getItem("cart"));
+    console.log(storedCart,"cart")
     if (storedCart) {
       const amount = cart.reduce((accumulator, currentItem) => {
         return accumulator + currentItem.amount;
@@ -45,23 +45,22 @@ const CartProvider = ({ children }) => {
 
   // add to cart
   const addToCart = (product, id) => {
-   
     const newItem = { ...product, amount: 1 };
+
     // check if the item is already in the cart
-    const cartItem = cart.find((item) => {
-      return item.ProductId === id;
-    });
-    if (cartItem) {
-      const newCart = [...cart].map((item) => {
-        if (item.ProductId === id) {
-          return { ...item, amount: cartItem.ProductPrice + 1 };
-        } else return item;
-      });
-      setCart(newCart);
+    const cartItemIndex = cart.findIndex((item) => item.ProductId === id);
+
+    if (cartItemIndex !== -1) {
+        // If the item already exists in the cart, update its quantity
+        const newCart = [...cart];
+        newCart[cartItemIndex].amount += 1;
+        setCart(newCart);
     } else {
-      setCart([...cart, newItem]);
+        // If the item is not in the cart, add it to the cart
+        setCart([...cart, newItem]);
     }
-  };
+};
+
 
   // remove from cart
   const removeFromCart = (id) => {
