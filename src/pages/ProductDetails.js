@@ -62,7 +62,7 @@ const ProductDetails = () => {
           </div>
           {/* text */}
           <div className="flex-1 pr-20">
-            <div className="text-center lg:text-left mt-10">
+            <div className="text-center mt-10">
               <div className="text-3xl text-black-500 mb-6" style={{ fontFamily: 'Seasons' }}>
                 {item.ProductName}
               </div>
@@ -75,7 +75,7 @@ const ProductDetails = () => {
                 {item.CategoryName}
               </h1>
               <p
-                className="mb-6 text-center text-md font-thin"
+                className="mb-6 text-center text-md font-thin ml-6"
                 style={{ lineHeight: "2", fontFamily: "Seasons Light" }}
               >
                 {item.ProductDescription}
@@ -85,7 +85,7 @@ const ProductDetails = () => {
               </p>
             </div>
 
-            <div className="text-center text-sm mb-4 italic">
+            <div className=" ml-6 text-center text-sm mb-4 italic ">
               <p style={{ fontFamily: 'Seasons Light' }}>
                 Copyright: We at Ayesha Ali Design value originality
                 and creativity. The embroidery is Ayesha's original
@@ -93,7 +93,7 @@ const ProductDetails = () => {
               </p>
             </div>
 
-            <select className="w-80 h-10 block mb-4 px-4 outline rounded-md font-semibold" style={{ fontFamily: 'Seasons Light' }}>
+            <select className="w-80 h-10 block mb-4 px-4 outline rounded-md font-semibold ml-6" style={{ fontFamily: 'Seasons Light' }}>
               <option value="">Select size</option>
               <option value="xs">Xs</option>
               <option value="s">S</option>
@@ -103,7 +103,7 @@ const ProductDetails = () => {
             </select>
             <button
               onClick={toggleSizeChart}
-              className="bg-black text-white text-md font-semibold mt-2 py-2 px-4 mr-2" style={{ fontFamily: 'Seasons Light' }}
+              className="ml-6 bg-black text-white text-md font-semibold mt-2 py-2 px-4 mr-2" style={{ fontFamily: 'Seasons Light' }}
             >
               Show Size Chart
             </button>
@@ -113,7 +113,7 @@ const ProductDetails = () => {
             >
               Add to cart
             </button>
-            {showSizeChart && <div className="flex justify-center">
+            {showSizeChart && <div className="flex justify-center items-center">
               <SizeChart /></div>}
           </div>
         </div>

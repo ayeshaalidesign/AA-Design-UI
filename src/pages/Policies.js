@@ -669,11 +669,11 @@ const Policies = () => {
           <h2
             className="text-lg font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
-            onClick={() => toggleSection("childrensPrivacy")}
+            onClick={() => toggleSection("childrenPrivacy")}
           >
             Children's Privacy:
           </h2>
-          {openSection === "childrensPrivacy" && (
+          {openSection === "childrenPrivacy" && (
             <ul className="list-disc">
               <li>
                 <p
@@ -1160,6 +1160,378 @@ const Policies = () => {
     </ul>
   )}
 </div>
+
+<div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
+  <h2
+    className="text-lg font-bold text-left cursor-pointer"
+    style={{ fontFamily: "Seasons" }}
+    onClick={() => toggleSection("traceabilityDocumentation")}
+  >
+    Traceability and Documentation:
+  </h2>
+  {openSection === "traceabilityDocumentation" && (
+    <ul className="list-disc">
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          We maintain detailed records and documentation for each product, including invoices, and receipts. 
+        </p>
+      </li>
+
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+         Customers can request product documentation and verification to confirm the authenticity and provenance of their purchases.
+        </p>
+      </li>
+    </ul>
+  )}
+</div>
+
+<div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
+  <h2
+    className="text-lg font-bold text-left cursor-pointer"
+    style={{ fontFamily: "Seasons" }}
+    onClick={() => toggleSection("legalCompliance")}
+  >
+    Legal Compliance:
+  </h2>
+  {openSection === "legalCompliance" && (
+    <ul className="list-disc">
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          Our operations comply with all relevant laws, regulations, and industry standards related to product authenticity, including intellectual property rights, trademark protection, and anti-counterfeiting laws. 
+        </p>
+      </li>
+
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+           We work closely with brand owners, law enforcement agencies, and industry organizations to combat counterfeiting and protect the integrity of our products and brands.
+        </p>
+      </li>
+    </ul>
+  )}
+</div>
+
+<div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
+  <h2
+    className="text-lg font-bold text-left cursor-pointer"
+    style={{ fontFamily: "Seasons" }}
+    onClick={() => toggleSection("satisfactionGuarantee")}
+  >
+    Satisfaction Guarantee:
+  </h2>
+  {openSection === "satisfactionGuarantee" && (
+    <ul className="list-disc">
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          We stand behind the authenticity of our products and offer a satisfaction guarantee to ensure customer confidence and satisfaction. 
+        </p>
+      </li>
+
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+           In the rare event that a customer receives a product that is found to be damaged or defective, we offer hassle-free returns, exchanges, or refunds as per our return policy. 
+        </p>
+      </li>
+
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+         Our Product Authenticity Guarantee reflects our unwavering commitment to delivering genuine luxury products and maintaining the trust and satisfaction of our valued customers.
+        </p>
+      </li>
+    </ul>
+  )}
+</div>
+
+
+
+      </div>
+
+      <div class="container mx-auto">
+        <h1
+          class="text-center text-3xl font-bold text-black"
+          style={{ fontFamily: "Seasons" }}
+        >
+                                                                                         Social Responsibility
+        </h1>
+
+        <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
+  <h2
+    className="text-lg font-bold text-left cursor-pointer"
+    style={{ fontFamily: "Seasons" }}
+    onClick={() => toggleSection("ethicalSourcingProduction")}
+  >
+    Ethical Sourcing and Production:
+  </h2>
+  {openSection === "ethicalSourcingProduction" && (
+    <ul className="list-disc">
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          We are committed to ethical sourcing and production practices that prioritize the well-being of workers, communities, and the environment. 
+        </p>
+      </li>
+
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          Our supply chain partners are required to adhere to strict ethical standards, including fair labor practices, safe working conditions, and environmental sustainability.
+        </p>
+      </li>
+    </ul>
+  )}
+</div>
+
+<div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
+  <h2
+    className="text-lg font-bold text-left cursor-pointer"
+    style={{ fontFamily: "Seasons" }}
+    onClick={() => toggleSection("environmentalStewardship")}
+  >
+    Environmental Stewardship:
+  </h2>
+  {openSection === "environmentalStewardship" && (
+    <ul className="list-disc">
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          We recognize our responsibility to minimize the environmental impact of our operations and products throughout their lifecycle. 
+        </p>
+      </li>
+
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+           We implement sustainable practices such as reducing waste, conserving resources, and minimizing carbon emissions in our manufacturing, packaging, and distribution processes.
+        </p>
+      </li>
+    </ul>
+  )}
+</div>
+
+<div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
+  <h2
+    className="text-lg font-bold text-left cursor-pointer"
+    style={{ fontFamily: "Seasons" }}
+    onClick={() => toggleSection("communityEngagementPhilanthropy")}
+  >
+    Community Engagement and Philanthropy:
+  </h2>
+  {openSection === "communityEngagementPhilanthropy" && (
+    <ul className="list-disc">
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          We value our active engagement with local communities and support charitable initiatives that address social, economic, and environmental challenges. 
+        </p>
+      </li>
+
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+         Through partnerships with nonprofit organizations and community outreach programs, we contribute to initiatives focused on education, poverty alleviation, and environmental conservation.
+        </p>
+      </li>
+    </ul>
+  )}
+</div>
+
+<div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
+  <h2
+    className="text-lg font-bold text-left cursor-pointer"
+    style={{ fontFamily: "Seasons" }}
+    onClick={() => toggleSection("diversityInclusion")}
+  >
+    Diversity and Inclusion:
+  </h2>
+  {openSection === "diversityInclusion" && (
+    <ul className="list-disc">
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          We embrace diversity and inclusion as one of our fundamental values that enrich our workplace culture, foster innovation, and strengthen our brand. 
+        </p>
+      </li>
+
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+         We promote diversity in our workforce, supply chain, and marketing efforts, striving to create an inclusive environment where all individuals are valued, respected, and empowered.
+        </p>
+      </li>
+    </ul>
+  )}
+</div>
+
+<div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
+  <h2
+    className="text-lg font-bold text-left cursor-pointer"
+    style={{ fontFamily: "Seasons" }}
+    onClick={() => toggleSection("humanRightsLaborStandards")}
+  >
+    Human Rights and Labor Standards:
+  </h2>
+  {openSection === "humanRightsLaborStandards" && (
+    <ul className="list-disc">
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          We uphold human rights and labor standards in all aspects of our business operations and supply chain.
+        </p>
+      </li>
+
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          We prohibit forced labor, child labor, discrimination, harassment, and other forms of exploitation, and we require our suppliers to adhere to the same principles.
+        </p>
+      </li>
+    </ul>
+  )}
+</div>
+
+<div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
+  <h2
+    className="text-lg font-bold text-left cursor-pointer"
+    style={{ fontFamily: "Seasons" }}
+    onClick={() => toggleSection("transparencyAccountability")}
+  >
+    Transparency and Accountability:
+  </h2>
+  {openSection === "transparencyAccountability" && (
+    <ul className="list-disc">
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          We are transparent about our social responsibility initiatives, practices, and performance, regularly communicating with stakeholders about our progress and challenges. 
+        </p>
+      </li>
+
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          We hold ourselves accountable for upholding the highest standards of social responsibility and welcome feedback from stakeholders to continuously improve our practices.
+        </p>
+      </li>
+    </ul>
+  )}
+</div>
+
+<div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
+  <h2
+    className="text-lg font-bold text-left cursor-pointer"
+    style={{ fontFamily: "Seasons" }}
+    onClick={() => toggleSection("continuousImprovement")}
+  >
+    Continuous Improvement:
+  </h2>
+  {openSection === "continuousImprovement" && (
+    <ul className="list-disc">
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          We are committed to continuous improvement in our social responsibility efforts, striving to set and achieve ambitious goals that drive positive impact. 
+        </p>
+      </li>
+
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          We regularly assess our policies, practices, and performance, identifying areas for improvement and implementing corrective actions to address any shortcomings.
+        </p>
+      </li>
+    </ul>
+  )}
+</div>
+
+<div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-8">
+  <h2
+    className="text-lg font-bold text-left cursor-pointer"
+    style={{ fontFamily: "Seasons" }}
+    onClick={() => toggleSection("complianceGovernance")}
+  >
+    Compliance and Governance:
+  </h2>
+  {openSection === "complianceGovernance" && (
+    <ul className="list-disc">
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          We comply with all applicable laws, regulations, and international standards related to social responsibility, including labor rights, environmental protection, and human rights. 
+        </p>
+      </li>
+
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+          Our social responsibility policies are governed by a dedicated team responsible for oversight, monitoring, and ensuring compliance across our organization and supply chain. 
+        </p>
+      </li>
+
+      <li>
+        <p
+          className="text-md text-left mt-2 font-normal"
+          style={{ fontFamily: "Seasons Light" }}
+        >
+         Our Social Responsibility Policy reflects our dedication to making a positive difference in the world, upholding ethical values, and contributing.
+        </p>
+      </li>
+    </ul>
+  )}
+</div>
+
 
 
       </div>

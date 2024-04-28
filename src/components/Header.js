@@ -57,16 +57,17 @@ const Header = ({ toggle, setToggle }) => {
   
       <div className="flex items-center space-x-5 mt-4 sm:mt-0">
         <div className={searchToggle ? "" : "hidden"}>
-          <input
-            type="text"
-            onChange={handleSearchInputChange}
-            placeholder="Search"
-            className={
-              searchToggle
-                ? "text-sm bg-white sm:w-full md:w-full lg:w-full rounded-full px-4 pl-6 py-1 mr-[-2] focus:outline-none transparent text-black"
-                : "hidden"
-            }
-          />
+        <input
+    type="text"
+    onChange={handleSearchInputChange}
+    placeholder="Search..."
+    className={
+        searchToggle
+            ? "text-sm bg-white w-full sm:w-1/2 md:w-1/2 lg:w-full rounded-full px-4 pl-6 py-1 focus:outline-none transparent text-black"
+            : "hidden"
+    }
+/>
+
         </div>
   
         <div>
@@ -93,28 +94,29 @@ const Header = ({ toggle, setToggle }) => {
       </div>
   
       {searchQuery && searchToggle && (
-        <div className="absolute top-full lg:right-0 z-10 bg-white lg:w-1/3  shadow-md rounded-md mt-2">
-          <ul className="divide-y divide-gray-200">
-            {filteredProducts.map((product) => (
-              <a href={`/products/${product.productId}`}>
-                <li key={product.productId} className="p-2">
-                  {/* <img
-                    src={product.imageUrl}
-                    alt={product.productName}
-                    className="w-8 h-8 inline-block mr-2"
-                  /> */}
-                  <span className="text-black text-sm font-semibold">
-                    {product.productName}
-                  </span>
-                  <span className="text-black text-sm font-semibold ml-2">
-                    {"$" + product.productPrice}
-                  </span>
-                </li>
-              </a>
-            ))}
-          </ul>
-        </div>
-      )}
+  <div className="absolute top-full lg:right-8 sm:right-6 z-10 bg-white lg:w-1/4 shadow-md rounded-md mt-2">
+    <ul className="divide-y divide-gray-200 ">
+      {filteredProducts.map((product) => (
+        <a href={`/products/${product.productId}`} key={product.productId}>
+          <li className="p-2">
+            {/* <img
+                src={product.imageUrl}
+                alt={product.productName}
+                className="w-8 h-8 inline-block mr-2"
+              /> */}
+            <span className="text-black text-sm font-semibold">
+              {product.productName}
+            </span>
+            <span className="text-black text-sm font-semibold ml-2">
+              {"$" + product.productPrice}
+            </span>
+          </li>
+        </a>
+      ))}
+    </ul>
+  </div>
+)}
+
     </div>
   </header>
   
