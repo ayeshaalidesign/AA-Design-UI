@@ -75,7 +75,7 @@ const ProductDetails = () => {
                 {item.CategoryName}
               </h1>
               <p
-                className="mb-6 text-center text-md font-thin ml-6"
+                className="mb-6 text-center text-md font-thin ml-12"
                 style={{ lineHeight: "2", fontFamily: "Seasons Light" }}
               >
                 {item.ProductDescription}
