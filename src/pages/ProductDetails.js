@@ -85,7 +85,7 @@ const ProductDetails = () => {
               </p>
             </div>
 
-            <div className=" ml-6 text-center text-sm mb-4 italic ">
+            <div className=" ml-12 text-center text-sm mb-4 italic ">
               <p style={{ fontFamily: 'Seasons Light' }}>
                 Copyright: We at Ayesha Ali Design value originality
                 and creativity. The embroidery is Ayesha's original
@@ -93,7 +93,7 @@ const ProductDetails = () => {
               </p>
             </div>
 
-            <select className="w-80 h-10 block mb-4 px-4 outline rounded-md font-semibold ml-6" style={{ fontFamily: 'Seasons Light' }}>
+            <select className="w-80 h-10 block mb-4 px-4 outline rounded-md font-semibold ml-12" style={{ fontFamily: 'Seasons Light' }}>
               <option value="">Select size</option>
               <option value="xs">Xs</option>
               <option value="s">S</option>
