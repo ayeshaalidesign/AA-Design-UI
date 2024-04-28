@@ -1326,7 +1326,7 @@ const Policies = () => {
 
       <div class="container mx-auto">
         <h1
-          class="text-center text-3xl font-bold text-black mt-4"
+          class="text-center text-3xl font-bold text-black mt-8"
           style={{ fontFamily: "Seasons" }}
         >
           Social Responsibility
