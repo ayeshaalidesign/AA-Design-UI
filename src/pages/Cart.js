@@ -1,17 +1,33 @@
-import React, { useContext } from "react";
-
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiTrash2 } from "react-icons/fi";
 import CartItem from "../components/CartItem";
 import { CartContext } from "../contexts/CartProvider";
 import '../App.css';
+import CheckoutModal from "../components/CheckoutModal";
 
 const Cart = () => {
 //   const { isOpen, handleClose } = useContext(SidebarContext);
   const { cart, clearCart, itemAmount, total } = useContext(CartContext);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handlePayClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleFormSubmit = (formData) => {
+    // Handle form submission, e.g., send data to backend or perform validation
+    console.log(formData);
+    // Close modal after submission
+    setIsModalOpen(false);
+  };
 
   return (
-    <div style={{fontFamily:'Seasons'}}>
+    <div style={{fontFamily:'Seasons'}} className="px-12">
        <div
       className="w-full bg-white top-0 right-0 shadow-2xl  transition-all duration-300 z-20 px-4 py-4 "
     >
@@ -19,10 +35,10 @@ const Cart = () => {
         <div className="uppercase text-sm font-semibold">Shopping Bag ({itemAmount})</div>
        
       </div>
-      <div className="flex flex-col gap-y-2 h-auto border-b">
+      <div className="flex flex-col gap-y-2 min-h-screen border-b">
         {cart.length === 0 && (
           <>
-          <div className="h-80">
+          <div className="flex justify-center items-center">
             <h2 className="text-center mt-40">No Products.</h2>
           </div>
           </>
@@ -46,18 +62,19 @@ const Cart = () => {
             <FiTrash2 />
           </div>
         </div>
-        <Link
-          to={"/cart"}
+        <Link 
           className="bg-gray-200 flex p-3 justify-center items-center text-primary w-full font-medium"
+          onClick={handlePayClick}
         >
-         Pay
+         Checkout
         </Link>
         <Link
-          to={"/"}
+         
           className="bg-primary flex p-3 justify-center items-center text-white w-full font-medium"
         >
-          Checkout
+          Pay
         </Link>
+        <CheckoutModal isOpen={isModalOpen} onClose={handleCloseModal} onSubmit={handleFormSubmit} />
       </div>
     </div>
     </div>
