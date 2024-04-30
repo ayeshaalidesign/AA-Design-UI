@@ -1,7 +1,7 @@
-// App.js
-
 import React, { useState, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import NotFound from './pages/NotFound';
 import AppLoader from './loader/AppLoader';
 
@@ -19,8 +19,6 @@ const LazyPolicies = lazy(() => import('./pages/Policies'));
 const LazySuccess = lazy(() => import('./pages/PaymentSuccessful'));
 const LazyFail = lazy(() => import('./pages/PaymentFailed'));
 
-
-
 function App() {
   const [toggle, setToggle] = useState(false); 
   return (
@@ -36,13 +34,14 @@ function App() {
             <Route path="/cart" element={<LazyCart />} />
             <Route path="/contact-us" element={<LazyContactUs />} />
             <Route path="/about-us" element={<LazyAboutUs />} />
-            <Route path="/policies" element={<LazyPolicies/>} />
-            <Route path="/payment-success" element={<LazySuccess/>} />
-            <Route path="/payment-fail" element={<LazyFail/>} />
+            <Route path="/policies" element={<LazyPolicies />} />
+            <Route path="/payment-success" element={<LazySuccess />} />
+            <Route path="/payment-fail" element={<LazyFail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </LazyLayout>
       </Suspense>
+      <ToastContainer /> 
     </Router>
   );
 }

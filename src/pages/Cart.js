@@ -27,7 +27,7 @@ const Cart = () => {
   };
 
   return (
-    <div style={{fontFamily:'Seasons'}} className="px-12">
+    <div style={{fontFamily:'Seasons'}} >
        <div
       className="w-full bg-white top-0 right-0 shadow-2xl  transition-all duration-300 z-20 px-4 py-4 "
     >
@@ -35,10 +35,10 @@ const Cart = () => {
         <div className="uppercase text-sm font-semibold">Shopping Bag ({itemAmount})</div>
        
       </div>
-      <div className="flex flex-col gap-y-2 min-h-screen border-b">
+      <div className="flex flex-col gap-y-2 border-b">
         {cart.length === 0 && (
           <>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center h-80">
             <h2 className="text-center mt-40">No Products.</h2>
           </div>
           </>

@@ -4,6 +4,7 @@ import { CartContext } from "../contexts/CartProvider";
 import AppLoader from "../loader/AppLoader";
 import SizeChart from "../components/SizeChart";
 import '../App.css';
+import ShoppingCartModal from "../components/ShoppingCartModal";
 
 const ProductDetails = () => {
   const { addToCart } = useContext(CartContext);
@@ -11,6 +12,13 @@ const ProductDetails = () => {
   const { id } = useParams();
   const [showSizeChart, setShowSizeChart] = useState(false);
   const [load, setLoad] = useState(false);
+  const [selectedSize, setSelectedSize] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
@@ -32,9 +40,10 @@ const ProductDetails = () => {
     setShowSizeChart(!showSizeChart);
   };
 
-  // const product = products.find((item) => {
-  //   return item.productId === parseInt(id);
-  // });
+  const handleSizeChange = (event) => {
+    setSelectedSize(event.target.value);
+  };
+
 
   if (!product) {
     return <AppLoader />;
@@ -93,14 +102,20 @@ const ProductDetails = () => {
               </p>
             </div>
 
-            <select className="w-80 h-10 block mb-4 px-4 outline rounded-md font-semibold ml-12" style={{ fontFamily: 'Seasons Light' }}>
-              <option value="">Select size</option>
-              <option value="xs">Xs</option>
-              <option value="s">S</option>
-              <option value="m">M</option>
-              <option value="l">L</option>
-              <option value="xl">Xl</option>
-            </select>
+            <select
+      className="w-80 h-10 block mb-4 px-4 outline rounded-md font-semibold ml-12"
+      style={{ fontFamily: 'Seasons Light' }}
+      value={selectedSize}
+      onChange={handleSizeChange}
+    >
+      <option value="">Select size</option>
+      <option value="xs">Xs</option>
+      <option value="s">S</option>
+      <option value="m">M</option>
+      <option value="l">L</option>
+      <option value="xl">Xl</option>
+    </select>
+
             <button
               onClick={toggleSizeChart}
               className="ml-6 bg-black text-white text-md font-semibold mt-2 py-2 px-4 mr-2" style={{ fontFamily: 'Seasons Light' }}
@@ -108,7 +123,7 @@ const ProductDetails = () => {
               Show Size Chart
             </button>
             <button
-              onClick={() => addToCart(item, item.ProductId)}
+              onClick={() => addToCart(item, item.ProductId, selectedSize)}
               className="bg-black text-white text-md font-semibold mt-2 py-2 px-4" style={{ fontFamily: 'Seasons Light' }}
             >
               Add to cart
@@ -123,6 +138,7 @@ const ProductDetails = () => {
 </section>
         </>
       )}
+       <ShoppingCartModal isOpen={isModalOpen} onClose={handleCloseModal}/>
     </div>
   );
 };
