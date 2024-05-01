@@ -1,15 +1,15 @@
 import React from "react";
 import "../App.css";
-import founder from "../images/founder.png";
-import team from "../images/team.png";
-import partner from '../images/partner.png';
+import founder from "../images/founder.svg";
+import team from "../images/Team.svg";
+import partner from '../images/whyme.svg';
 
 const AboutUs = () => {
   return (
     <div class="bg-white">
       <div class="container mx-auto pt-12">
         <h1
-          class="text-center my-4 text-3xl font-bold text-black"
+          class="text-center my-2 text-3xl font-bold text-black"
           style={{ fontFamily: "Seasons" }}
         >
           About Us
@@ -19,7 +19,7 @@ const AboutUs = () => {
             class="p-6 md:w-1/2 text-left"
             style={{ fontFamily: "Seasons Light" }}
           >
-            <p class="text-black leading-relaxed mb-4 text-md">
+            <p class="text-black leading-relaxed text-md">
               AYESHA ALI DESIGN is a women &apos; s fusion wear apparel luxury
               brand, combining intricate Eastern embroideries and embellishments
               on Western silhouettes, using fine luxury fabrics. Embracing her
@@ -31,7 +31,7 @@ const AboutUs = () => {
               their confidence. Her clothing designs reflect her commitment to
               originality, modesty, and elegance.
             </p>
-            <p class="text-black leading-relaxed mb-4 text-md">
+            <p class="text-black leading-relaxed text-md mt-2">
               Ayesha earned her master&grave;s degree in Apparel Design and
               Production Management from Auburn University, USA. It was there
               that she discovered her true passion to create fusion wear apparel
@@ -41,7 +41,7 @@ const AboutUs = () => {
           </div>
 
           <div
-            class="w-full md:w-1/2 p-6 md:mt-0 h-full"
+            class="w-full md:w-1/2 p-6 md:mt-0 h-auto"
             style={{ fontFamily: "Seasons" }}
           >
             <div>
@@ -52,11 +52,11 @@ const AboutUs = () => {
               />
             </div>
             <p
-              class="text-black leading-relaxed mb-2 font-semibold text-md italic"
+              class="text-black leading-relaxed mb-2 font-semibold text-md italic lg:mt-[-30px]"
               style={{ fontFamily: "Seasons Light" }}
             >
-              “My goal is to create thoughtfully designed, high quality fusion
               wear that is not limited to geographical boundaries, that the
+              “My goal is to create thoughtfully designed, high quality fusion
               customer can instantly relate to and feel confident wearing on any
               occasion, and is versatile to be worn by women in any part of the
               world.” &ndash; Ayesha Ali
@@ -72,12 +72,12 @@ const AboutUs = () => {
       </div>
 
       <div class="container mx-auto">
-        <h1
+        {/* <h1
           class="text-center my-4 text-3xl font-bold text-black"
           style={{ fontFamily: "Seasons" }}
         >
           Our Team
-        </h1>
+        </h1> */}
         <div class="max-w-4xl mx-auto bg-white md:flex md:items-center">
           <div
             class="p-6 md:w-1/2 text-left"
@@ -105,12 +105,12 @@ const AboutUs = () => {
       </div>
 
       <div class="container mx-auto">
-        <h1
+        {/* <h1
           class="text-center my-4 text-3xl font-bold text-black"
           style={{ fontFamily: "Seasons" }}
         >
           Our Partner
-        </h1>
+        </h1> */}
         <div class="max-w-4xl mx-auto bg-white md:flex md:items-center">
           <div
             class="p-6 md:w-1/2 text-left"
@@ -128,11 +128,32 @@ const AboutUs = () => {
           >
             <div>
               <img
-                class="object-cover w-full h-1/2 mb-2 rounded-lg"
+                class="object-cover w-full h-full mb-2 rounded-lg"
                 src={partner}
                 alt="Our Partner"
               />
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto">
+        {/* <h1
+          class="text-center my-4 text-3xl font-bold text-black"
+          style={{ fontFamily: "Seasons" }}
+        >
+          Our Partner
+        </h1> */}
+        <div class="max-w-4xl mx-auto bg-white md:flex md:items-center">
+          <div
+            class="p-6 md:w-full text-left"
+            style={{ fontFamily: "Seasons Light" }}
+          >
+            <p class="text-black leading-relaxed mb-4 text-md">
+            AYESHA ALI DESIGN celebrates and promotes the rich tapestry of cultures, traditions, and identities that make up the vibrant fabric of America and we aspire to build a diverse team of talented professionals within our company as well. We believe in giving back to the community which aligns with our main purpose of promoting culture and diversity. 
+We value originality and creativity. Our embroideries are original and authentic art work of the designer. Our business operates with integrity and fairness, fostering trust and respect in all our interactions and transactions.
+            </p>
+           
           </div>
         </div>
       </div>

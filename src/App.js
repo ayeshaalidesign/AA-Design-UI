@@ -8,8 +8,8 @@ import AppLoader from './loader/AppLoader';
 // Lazy loading components
 const LazyLayout = lazy(() => import('../src/layout/Layout'));
 const LazyHomePage = lazy(() => import('../src/pages/Homepage'));
-const LazyLogin = lazy(() => import('./pages/Login'));
-const LazyRegister = lazy(() => import('./pages/Register'));
+// const LazyLogin = lazy(() => import('./pages/Login'));
+// const LazyRegister = lazy(() => import('./pages/Register'));
 const LazyProductDetails = lazy(() => import('./pages/ProductDetails'));
 const LazyProductCardList = lazy(() => import('./pages/ProductList'));
 const LazyCart = lazy(() => import('./pages/Cart'));
@@ -27,8 +27,8 @@ function App() {
         <LazyLayout toggle={toggle} setToggle={setToggle}>
           <Routes>
             <Route path="/" element={<LazyHomePage />} />
-            <Route path="/login" element={<LazyLogin />} />
-            <Route path="/register" element={<LazyRegister />} />
+            {/* <Route path="/login" element={<LazyLogin />} />
+            <Route path="/register" element={<LazyRegister />} /> */}
             <Route path="/products" element={<LazyProductCardList />} />
             <Route path="/products/:id" element={<LazyProductDetails />} />
             <Route path="/cart" element={<LazyCart />} />

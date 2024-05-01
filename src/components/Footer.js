@@ -74,7 +74,7 @@ export default function Footer() {
         <h6 className='text-lg  font-bold mb-4'>Useful links</h6>
         <p className='text-md '>
           <a href='/products' >
-            Products
+            Shop
           </a>
         </p>
         <p className='text-md '>

@@ -10,20 +10,20 @@ const Policies = () => {
     <div class="bg-white text-black">
       <div class="container mx-auto py-12">
         <h1
-          class="text-center my-4 text-3xl font-bold text-black"
+          class="text-center my-4 text-xl font-bold text-black"
           style={{ fontFamily: "Seasons" }}
         >
           Our Policies
         </h1>
 
         <div className="max-w-5xl mx-auto font-semibold px-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("returns")}
           >
-            Returns:
-          </h2>
+            Returns
+          </h3>
           {openSection === "returns" && (
             <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
               <li>
@@ -34,7 +34,7 @@ const Policies = () => {
                 </p>
               </li>
               <li>
-                <p className="text-md text-left font-semibold mt-2">
+                <p className="text-md text-left font-normal mt-2">
                   We accept returns exclusively for items that exhibit damage
                   within a defined time frame of 10-14 days from the shipping
                   date, contingent upon the presentation of the original invoice
@@ -63,13 +63,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("exchanges")}
           >
-            Exchanges:
-          </h2>
+            Exchanges
+          </h3>
           {/* Render the content conditionally based on openSection state */}
           {openSection === "exchanges" && (
             <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
@@ -107,13 +107,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("refunds")}
           >
-            Refunds:
-          </h2>
+            Refunds
+          </h3>
           {/* Render the content conditionally based on openSection state */}
           {openSection === "refunds" && (
             <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
@@ -143,13 +143,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("returnExchange")}
           >
-            Initiating a Return or Exchange:
-          </h2>
+            Initiating a Return or Exchange
+          </h3>
           {/* Render the content conditionally based on openSection state */}
           {openSection === "returnExchange" && (
             <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
@@ -170,13 +170,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("exceptions")}
           >
-            Exceptions:
-          </h2>
+            Exceptions
+          </h3>
           {/* Render the content conditionally based on openSection state */}
           {openSection === "exceptions" && (
             <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
@@ -198,13 +198,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("shippingMethod")}
           >
-            Shipping Methods:
-          </h2>
+            Shipping Methods
+          </h3>
           {openSection === "shippingMethod" && (
             <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
               <li>
@@ -225,13 +225,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("shippingRates")}
           >
-            Shipping Rates:
-          </h2>
+            Shipping Rates
+          </h3>
           {openSection === "shippingRates" && (
             <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
               <li>
@@ -257,13 +257,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("orderProcessing")}
           >
-            Order Processing Time:
-          </h2>
+            Order Processing Time
+          </h3>
           {openSection === "orderProcessing" && (
             <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
               <li>
@@ -283,13 +283,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("orderTracking")}
           >
-            Order Tracking:
-          </h2>
+            Order Tracking
+          </h3>
           {openSection === "orderTracking" && (
             <ul className="list-disc">
               <li>
@@ -307,13 +307,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("shippingRestrictions")}
           >
-            Shipping Restrictions:
-          </h2>
+            Shipping Restrictions
+          </h3>
           {openSection === "shippingRestrictions" && (
             <ul className="list-disc">
               <li>
@@ -339,13 +339,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("deliveryIssues")}
           >
-            Delivery Issues:
-          </h2>
+            Delivery Issues
+          </h3>
           {openSection === "deliveryIssues" && (
             <ul className="list-disc">
               <li>
@@ -371,13 +371,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("internationalShipping")}
           >
-            International Shipping:
-          </h2>
+            International Shipping
+          </h3>
           {openSection === "internationalShipping" && (
             <ul className="list-disc">
               <li>
@@ -403,13 +403,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("shippingAddress")}
           >
-            Shipping Address:
-          </h2>
+            Shipping Address
+          </h3>
           {openSection === "shippingAddress" && (
             <ul className="list-disc">
               <li>
@@ -447,20 +447,20 @@ const Policies = () => {
 
       <div class="container mx-auto">
         <h1
-          class="text-center text-3xl font-bold text-black"
+          class="text-center text-xl font-bold text-black"
           style={{ fontFamily: "Seasons" }}
         >
           Privacy Policy
         </h1>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("informationCollection")}
           >
-            Information Collection:
-          </h2>
+            Information Collection
+          </h3>
           {openSection === "informationCollection" && (
             <ul className="list-disc">
               <li>
@@ -488,13 +488,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("useOfInformation")}
           >
-            Use of Information:
-          </h2>
+            Use of Information
+          </h3>
           {openSection === "useOfInformation" && (
             <ul className="list-disc">
               <li>
@@ -531,13 +531,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("informationSharing")}
           >
-            Information Sharing:
-          </h2>
+            Information Sharing
+          </h3>
           {openSection === "informationSharing" && (
             <ul className="list-disc">
               <li>
@@ -565,13 +565,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("dataSecurity")}
           >
-            Data Security:
-          </h2>
+            Data Security
+          </h3>
           {openSection === "dataSecurity" && (
             <ul className="list-disc">
               <li>
@@ -599,13 +599,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("userRights")}
           >
-            User Rights:
-          </h2>
+            User Rights
+          </h3>
           {openSection === "userRights" && (
             <ul className="list-disc">
               <li>
@@ -632,13 +632,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("cookiesTracking")}
           >
-            Cookies and Tracking Technologies:
-          </h2>
+            Cookies and Tracking Technologies
+          </h3>
           {openSection === "cookiesTracking" && (
             <ul className="list-disc">
               <li>
@@ -666,13 +666,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("childrenPrivacy")}
           >
-            Children's Privacy:
-          </h2>
+            Children's Privacy
+          </h3>
           {openSection === "childrenPrivacy" && (
             <ul className="list-disc">
               <li>
@@ -690,13 +690,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("changesToPrivacyPolicy")}
           >
-            Changes to the Privacy Policy:
-          </h2>
+            Changes to the Privacy Policy
+          </h3>
           {openSection === "changesToPrivacyPolicy" && (
             <ul className="list-disc">
               <li>
@@ -734,13 +734,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("termsAndConditions")}
           >
-            Terms and Conditions:
-          </h2>
+            Terms and Conditions
+          </h3>
           {openSection === "termsAndConditions" && (
             <ul className="list-disc">
               <li>
@@ -759,13 +759,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("useOfWebsite")}
           >
-            Use of Website:
-          </h2>
+            Use of Website
+          </h3>
           {openSection === "useOfWebsite" && (
             <ul className="list-disc">
               <li>
@@ -782,18 +782,18 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("intellectualProperty")}
           >
-            Intellectual Property:
-          </h2>
+            Intellectual Property
+          </h3>
           {openSection === "intellectualProperty" && (
             <ul className="list-disc">
               <li>
                 <p
-                  className="text-md text-left mt-2 font-semibold"
+                  className="text-md text-left mt-2 font-normal"
                   style={{ fontFamily: "Seasons Light" }}
                 >
                   All content on our website, including text, graphics, logos,
@@ -808,13 +808,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("productInformation")}
           >
-            Product Information:
-          </h2>
+            Product Information
+          </h3>
           {openSection === "productInformation" && (
             <ul className="list-disc">
               <li>
@@ -834,13 +834,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("orderingPayment")}
           >
-            Ordering and Payment:
-          </h2>
+            Ordering and Payment
+          </h3>
           {openSection === "orderingPayment" && (
             <ul className="list-disc">
               <li>
@@ -879,13 +879,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("shippingDelivery")}
           >
-            Shipping and Delivery:
-          </h2>
+            Shipping and Delivery
+          </h3>
           {openSection === "shippingDelivery" && (
             <ul className="list-disc">
               <li>
@@ -904,13 +904,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("customerServicePolicy")}
           >
-            Customer Service Policy/ Communication Channels:
-          </h2>
+            Customer Service Policy/ Communication Channels
+          </h3>
           {openSection === "customerServicePolicy" && (
             <ul className="list-disc">
               <li>
@@ -940,13 +940,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("responsiveness")}
           >
-            Responsiveness:
-          </h2>
+            Responsiveness
+          </h3>
           {openSection === "responsiveness" && (
             <ul className="list-disc">
               <li>
@@ -974,13 +974,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("productKnowledge")}
           >
-            Product Knowledge:
-          </h2>
+            Product Knowledge
+          </h3>
           {openSection === "productKnowledge" && (
             <ul className="list-disc">
               <li>
@@ -1007,13 +1007,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("orderAssistance")}
           >
-            Order Assistance:
-          </h2>
+            Order Assistance
+          </h3>
           {openSection === "orderAssistance" && (
             <ul className="list-disc">
               <li>
@@ -1041,13 +1041,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("problemResolution")}
           >
-            Problem Resolution:
-          </h2>
+            Problem Resolution
+          </h3>
           {openSection === "problemResolution" && (
             <ul className="list-disc">
               <li>
@@ -1076,13 +1076,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("professionalismCourtesy")}
           >
-            Professionalism and Courtesy:
-          </h2>
+            Professionalism and Courtesy
+          </h3>
           {openSection === "professionalismCourtesy" && (
             <ul className="list-disc">
               <li>
@@ -1111,13 +1111,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("feedbackImprovement")}
           >
-            Feedback and Improvement:
-          </h2>
+            Feedback and Improvement
+          </h3>
           {openSection === "feedbackImprovement" && (
             <ul className="list-disc">
               <li>
@@ -1145,13 +1145,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("compliance")}
           >
-            Compliance:
-          </h2>
+            Compliance
+          </h3>
           {openSection === "compliance" && (
             <ul className="list-disc">
               <li>
@@ -1182,13 +1182,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("authenticityGuarantee")}
           >
-            Product Authenticity Guarantee/ Originality Assurance:
-          </h2>
+            Product Authenticity Guarantee/ Originality Assurance
+          </h3>
           {openSection === "authenticityGuarantee" && (
             <ul className="list-disc">
               <li>
@@ -1208,13 +1208,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("traceabilityDocumentation")}
           >
-            Traceability and Documentation:
-          </h2>
+            Traceability and Documentation
+          </h3>
           {openSection === "traceabilityDocumentation" && (
             <ul className="list-disc">
               <li>
@@ -1241,13 +1241,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("legalCompliance")}
           >
-            Legal Compliance:
-          </h2>
+            Legal Compliance
+          </h3>
           {openSection === "legalCompliance" && (
             <ul className="list-disc">
               <li>
@@ -1277,13 +1277,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("satisfactionGuarantee")}
           >
-            Satisfaction Guarantee:
-          </h2>
+            Satisfaction Guarantee
+          </h3>
           {openSection === "satisfactionGuarantee" && (
             <ul className="list-disc">
               <li>
@@ -1326,20 +1326,20 @@ const Policies = () => {
 
       <div class="container mx-auto">
         <h1
-          class="text-center text-3xl font-bold text-black mt-12"
+          class="text-center text-xl font-bold text-black mt-12"
           style={{ fontFamily: "Seasons" }}
         >
           Social Responsibility
         </h1>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("ethicalSourcingProduction")}
           >
-            Ethical Sourcing and Production:
-          </h2>
+            Ethical Sourcing and Production
+          </h3>
           {openSection === "ethicalSourcingProduction" && (
             <ul className="list-disc">
               <li>
@@ -1368,13 +1368,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("environmentalStewardship")}
           >
-            Environmental Stewardship:
-          </h2>
+            Environmental Stewardship
+          </h3>
           {openSection === "environmentalStewardship" && (
             <ul className="list-disc">
               <li>
@@ -1403,13 +1403,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("communityEngagementPhilanthropy")}
           >
-            Community Engagement and Philanthropy:
-          </h2>
+            Community Engagement and Philanthropy
+          </h3>
           {openSection === "communityEngagementPhilanthropy" && (
             <ul className="list-disc">
               <li>
@@ -1439,13 +1439,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("diversityInclusion")}
           >
-            Diversity and Inclusion:
-          </h2>
+            Diversity and Inclusion
+          </h3>
           {openSection === "diversityInclusion" && (
             <ul className="list-disc">
               <li>
@@ -1474,13 +1474,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("humanRightsLaborStandards")}
           >
-            Human Rights and Labor Standards:
-          </h2>
+            Human Rights and Labor Standards
+          </h3>
           {openSection === "humanRightsLaborStandards" && (
             <ul className="list-disc">
               <li>
@@ -1508,13 +1508,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("transparencyAccountability")}
           >
-            Transparency and Accountability:
-          </h2>
+            Transparency and Accountability
+          </h3>
           {openSection === "transparencyAccountability" && (
             <ul className="list-disc">
               <li>
@@ -1544,13 +1544,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+             className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("continuousImprovement")}
           >
-            Continuous Improvement:
-          </h2>
+            Continuous Improvement
+          </h3>
           {openSection === "continuousImprovement" && (
             <ul className="list-disc">
               <li>
@@ -1579,13 +1579,13 @@ const Policies = () => {
         </div>
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-8">
-          <h2
-            className="text-lg font-bold text-left cursor-pointer"
+          <h3
+            className="text-md md:text-md font-bold text-left cursor-pointer"
             style={{ fontFamily: "Seasons" }}
             onClick={() => toggleSection("complianceGovernance")}
           >
-            Compliance and Governance:
-          </h2>
+            Compliance and Governance
+          </h3>
           {openSection === "complianceGovernance" && (
             <ul className="list-disc">
               <li>

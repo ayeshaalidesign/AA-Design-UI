@@ -1,41 +1,42 @@
 import React, { useState, useContext } from "react";
-import { FaUser, FaShoppingCart, FaSearch } from "react-icons/fa";
+import { FaShoppingCart, FaHome, FaShoppingBag } from "react-icons/fa";
 import { ProductContext } from "../contexts/ProductsProvider";
 import { FaBars } from "react-icons/fa";
 import logo1 from "../images/LogoIcon.png";
 import pattern from "../images/pattern.svg";
 import "../App.css";
+
 const Header = ({ toggle, setToggle }) => {
   const { products } = useContext(ProductContext);
-  const [searchQuery, setSearchQuery] = useState("");
+  // const [searchQuery, setSearchQuery] = useState("");
   const [searchToggle, setSearchToggle] = useState(false);
 
-  const handleSearchInputChange = (event) => {
-    if (searchToggle === true) {
-      setSearchQuery(event.target.value);
-    } else {
-      setSearchQuery('');
-    }
+  // const handleSearchInputChange = (event) => {
+  //   if (searchToggle === true) {
+  //     setSearchQuery(event.target.value);
+  //   } else {
+  //     setSearchQuery('');
+  //   }
    
-  };
+  // };
 
   const handleToggle = () => {
     setToggle(!toggle);
   };
 
-  const handleSearchToggle = () => {
-    setSearchToggle(!searchToggle);
-  };
+  // const handleSearchToggle = () => {
+  //   setSearchToggle(!searchToggle);
+  // };
 
-  const filteredProducts = products.filter((product) =>
-    product.categoryName.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // const filteredProducts = products.filter((product) =>
+  //   product.categoryName.toLowerCase().includes(searchQuery.toLowerCase())
+  // );
 
   // console.log("products: ", filteredProducts)
 
   return (
     <header
-    className="h-auto py-6"
+    className="h-auto py-3"
     style={{ backgroundImage: `url(${pattern})`, color: "#ac8b4a" }}
   >
     <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center relative">
@@ -47,7 +48,7 @@ const Header = ({ toggle, setToggle }) => {
         />
         <a href="/">
           <h1
-            className="text-sm ml-4 font-thin"
+            className="text-sm font-thin"
             style={{ color: "#ac8b4a", fontFamily: "Seasons Light" }}
           >
             AYESHA ALI DESIGN
@@ -55,8 +56,8 @@ const Header = ({ toggle, setToggle }) => {
         </a>
       </div>
   
-      <div className="flex items-center space-x-5 mt-4 sm:mt-0">
-        <div className={searchToggle ? "" : "hidden"}>
+      <div className="flex items-center space-x-5  sm:mt-0">
+        {/* <div className={searchToggle ? "" : "hidden"}>
         <input
     type="text"
     onChange={handleSearchInputChange}
@@ -68,17 +69,18 @@ const Header = ({ toggle, setToggle }) => {
     }
 />
 
-        </div>
+        </div> */}
   
         <div>
-          <FaSearch
-            className="cursor-pointer hover:cursor-pointer transform hover:scale-110 transition-all"
-            onClick={handleSearchToggle}
+          <FaHome
+            className="cursor-pointer hover:cursor-pointer transform hover:scale-110 transition-all" style={{fontSize:'18px'}}
+            onClick={() => window.location.href = '/'}
+            // onClick={handleSearchToggle}
           />
         </div>
   
-        <div onClick={() => { window.location.href = "/login"; }}>
-          <FaUser className="transform hover:scale-110 transition-all hover:cursor-pointer" />
+        <div onClick={() => { window.location.href = "/products"; }}>
+          <FaShoppingBag className="transform hover:scale-110 transition-all hover:cursor-pointer" />
         </div>
   
         <div onClick={() => { window.location.href = "/cart"; }}>
@@ -93,17 +95,13 @@ const Header = ({ toggle, setToggle }) => {
         </div>
       </div>
   
-      {searchQuery && searchToggle && (
+      {/* {searchQuery && searchToggle && (
   <div className="absolute top-full lg:right-8 sm:right-6 z-10 bg-white lg:w-1/4 shadow-md rounded-md mt-2">
     <ul className="divide-y divide-gray-200 ">
       {filteredProducts.map((product) => (
         <a href={`/products/${product.productId}`} key={product.productId}>
           <li className="p-2">
-            {/* <img
-                src={product.imageUrl}
-                alt={product.productName}
-                className="w-8 h-8 inline-block mr-2"
-              /> */}
+            
             <span className="text-black text-sm font-semibold">
               {product.productName}
             </span>
@@ -115,7 +113,7 @@ const Header = ({ toggle, setToggle }) => {
       ))}
     </ul>
   </div>
-)}
+)} */}
 
     </div>
   </header>
