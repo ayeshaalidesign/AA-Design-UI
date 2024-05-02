@@ -10,6 +10,8 @@ const Cart = () => {
 //   const { isOpen, handleClose } = useContext(SidebarContext);
   const { cart, clearCart, itemAmount, total } = useContext(CartContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  // eslint-disable-next-line
+  const [addressID, setAddressID] = useState(0);
 
   const handlePayClick = () => {
     setIsModalOpen(true);
@@ -19,12 +21,81 @@ const Cart = () => {
     setIsModalOpen(false);
   };
 
-  const handleFormSubmit = (formData) => {
-    // Handle form submission, e.g., send data to backend or perform validation
-    console.log(formData);
-    // Close modal after submission
+  const handleFormSubmit = async (formData) => {
+    try {
+      const response = await fetch('https://ayeshaalidesign-test-5a6e676276ea.herokuapp.com/api/Checkout/checkout-prepare', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phoneNumber,
+          postalCode: formData.postalCode,
+          country: formData.country,
+          state: formData.state,
+          city: formData.city,
+          street: formData.streetNumber,
+          address: formData.address
+        })
+      });
+  
+      const data = await response.json();
+      setAddressID(data.addressID); // Assuming the addressID is stored in data.addressID
+      localStorage.setItem('email', formData.email);
+      console.log('Success:', data);
+      await initiateStripeRequest(formData.email, data.addressID);
+    } catch (error) {
+      console.error('Error:', error);
+    }
     setIsModalOpen(false);
   };
+  
+  const initiateStripeRequest = async (email, addressID) => {
+    const productsData = JSON.parse(localStorage.getItem("cart"));
+  
+    // Calculate total price and construct order items array
+    let totalPrice = 0;
+    let orderItems = [];
+  
+    productsData.forEach(product => {
+      totalPrice += product.ProductPrice * product.amount;
+      orderItems.push({
+        productid: product.ProductId,
+        quantity: product.amount
+      });
+    });
+  
+    const payload = {
+      addressid: addressID,
+      dispatchid: "string",
+      totalprice: totalPrice,
+      orderProgress: "string",
+      email: email,
+      orderItemss: orderItems
+    };
+  
+    try {
+      const response = await fetch('https://ayeshaalidesign-test-5a6e676276ea.herokuapp.com/api/Checkout/checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+  
+      const responseData = await response.json();
+      console.log("url: ", responseData)
+      window.location.href = responseData; 
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+  
+  
+  
 
   return (
     <div style={{fontFamily:'Seasons'}} >
