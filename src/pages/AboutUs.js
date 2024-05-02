@@ -52,14 +52,11 @@ const AboutUs = () => {
               />
             </div>
             <p
-              class="text-black leading-relaxed mb-2 font-semibold text-md italic lg:mt-[-30px]"
+              class="text-black leading-relaxed mb-2 font-semibold text-md italic mt-[-40px]"
               style={{ fontFamily: "Seasons Light" }}
             >
-              wear that is not limited to geographical boundaries, that the
-              “My goal is to create thoughtfully designed, high quality fusion
-              customer can instantly relate to and feel confident wearing on any
-              occasion, and is versatile to be worn by women in any part of the
-              world.” &ndash; Ayesha Ali
+              
+              “My goal is to create thoughtfully designed, high quality fusion wear that is not limited to geographical boundaries ...that the customer can instantly relate to and feels confident wearing it on any occasion and is versatile to be worn by women in any part of the world” &ndash; Ayesha Ali
             </p>
             <p class="text-black leading-relaxed font-bold text-md">
               CEO | Founder | Creative Designer
