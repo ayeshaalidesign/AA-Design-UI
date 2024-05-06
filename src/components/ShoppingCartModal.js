@@ -9,7 +9,7 @@ const ShoppingCartModal = ({ isOpen, onClose }) => {
           <h2 className="text-2xl font-bold mb-4 mt-4">Product added to cart!</h2>
           <div className="flex flex-col sm:flex-row justify-center mt-4 mb-4">
             <button
-              className="bg-black w-1/2 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0 sm:mr-2"
+              className="bg-black w-full text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0 sm:mr-2"
               onClick={() => {
                 onClose();
               }}
@@ -17,7 +17,7 @@ const ShoppingCartModal = ({ isOpen, onClose }) => {
               Continue Shopping
             </button>
             <button
-               className="bg-black w-1/2 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0 sm:mr-2"
+               className="bg-black w-full text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0 sm:mr-2"
               onClick={() => {
                 window.location.href = '/cart';
               }}

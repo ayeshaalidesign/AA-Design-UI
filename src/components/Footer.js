@@ -109,7 +109,7 @@ export default function Footer() {
   </div>
 
   <div className='flex justify-center items-center mb-1'>
-    <FaGlobe className='mr-2 lg:mt-[-22px]' /> 
+    <FaGlobe className='mr-2 mt-[-22px]' /> 
     <p className='text-md mb-0 lg:ml-[-20px] font-semibold'>300 N Dean Rd 5 118, Auburn, AL 36830, USA</p>
   </div>
 
