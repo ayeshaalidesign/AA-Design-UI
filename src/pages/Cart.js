@@ -55,8 +55,6 @@ const Cart = () => {
   
   const initiateStripeRequest = async (email, addressID) => {
     const productsData = JSON.parse(localStorage.getItem("cart"));
-  
-    // Calculate total price and construct order items array
     let totalPrice = 0;
     let orderItems = [];
   
@@ -85,9 +83,7 @@ const Cart = () => {
         },
         body: JSON.stringify(payload)
       });
-  
       const responseData = await response.json();
-      console.log("url: ", responseData)
       window.location.href = responseData; 
     } catch (error) {
       console.error('Error:', error);
@@ -139,12 +135,12 @@ const Cart = () => {
         >
          Checkout
         </Link>
-        <Link
+        {/* <Link
          
           className="bg-primary flex p-3 justify-center items-center text-white w-full font-medium"
         >
           Pay
-        </Link>
+        </Link> */}
         <CheckoutModal isOpen={isModalOpen} onClose={handleCloseModal} onSubmit={handleFormSubmit} />
       </div>
     </div>

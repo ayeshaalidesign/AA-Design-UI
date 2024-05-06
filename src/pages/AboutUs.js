@@ -80,7 +80,7 @@ const AboutUs = () => {
             class="p-6 md:w-1/2 text-left"
             style={{ fontFamily: "Seasons Light" }}
           >
-            <p class="text-black leading-relaxed mb-4 text-md">
+            <p class="text-black leading-relaxed text-md">
             Teamwork makes the Dream Work. Our dedicated team of models, photographers, stylist, videographers, and assistants.
             </p>
            
@@ -92,42 +92,9 @@ const AboutUs = () => {
           >
             <div>
               <img
-                class="object-cover w-full h-1/2 mb-2 rounded-lg"
+                class="object-cover w-full h-1/2  rounded-lg"
                 src={team}
                 alt="Our Team"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container mx-auto">
-        {/* <h1
-          class="text-center my-4 text-3xl font-bold text-black"
-          style={{ fontFamily: "Seasons" }}
-        >
-          Our Partner
-        </h1> */}
-        <div class="max-w-4xl mx-auto bg-white md:flex md:items-center">
-          <div
-            class="p-6 md:w-1/2 text-left"
-            style={{ fontFamily: "Seasons Light" }}
-          >
-            <p class="text-black leading-relaxed mb-4 text-md">
-           Our partner for marketing and web services.
-            </p>
-           
-          </div>
-
-          <div
-            class="w-full md:w-1/2 p-6 md:mt-0 h-full"
-            style={{ fontFamily: "Seasons" }}
-          >
-            <div>
-              <img
-                class="object-cover w-full h-full mb-2 rounded-lg"
-                src={partner}
-                alt="Our Partner"
               />
             </div>
           </div>
@@ -146,7 +113,7 @@ const AboutUs = () => {
             class="p-6 md:w-full text-left"
             style={{ fontFamily: "Seasons Light" }}
           >
-            <p class="text-black leading-relaxed mb-4 text-md">
+            <p class="text-black leading-relaxed text-md mt-4">
             AYESHA ALI DESIGN celebrates and promotes the rich tapestry of cultures, traditions, and identities that make up the vibrant fabric of America and we aspire to build a diverse team of talented professionals within our company as well. We believe in giving back to the community which aligns with our main purpose of promoting culture and diversity. 
 We value originality and creativity. Our embroideries are original and authentic art work of the designer. Our business operates with integrity and fairness, fostering trust and respect in all our interactions and transactions.
             </p>
@@ -154,6 +121,41 @@ We value originality and creativity. Our embroideries are original and authentic
           </div>
         </div>
       </div>
+
+      <div class="container mx-auto">
+        {/* <h1
+          class="text-center my-4 text-3xl font-bold text-black"
+          style={{ fontFamily: "Seasons" }}
+        >
+          Our Partner
+        </h1> */}
+        <div class="max-w-4xl mx-auto bg-white md:flex md:items-center">
+          <div
+            class="p-6 md:w-1/2 text-left"
+            style={{ fontFamily: "Seasons Light" }}
+          >
+            <p class="text-black leading-relaxed text-md">
+           Our partner for marketing and web services.
+            </p>
+           
+          </div>
+
+          <div
+            class="w-full md:w-1/2 p-6 md:mt-0 h-1/2"
+            style={{ fontFamily: "Seasons" }}
+          >
+            <div>
+              <img
+                class="object-cover w-full h-full  rounded-lg"
+                src={partner}
+                alt="Our Partner"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
     </div>
   );
 };

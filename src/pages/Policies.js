@@ -385,6 +385,14 @@ const Policies = () => {
                   className="text-md text-left font-normal mt-2"
                   style={{ fontFamily: "Seasons Light" }}
                 >
+                  We are not taking international orders at the moment.
+                </p>
+              </li>
+              <li>
+                <p
+                  className="text-md text-left font-normal mt-2"
+                  style={{ fontFamily: "Seasons Light" }}
+                >
                   International orders may be subject to customs duties, taxes,
                   and import fees imposed by the destination country.
                 </p>

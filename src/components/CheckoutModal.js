@@ -104,9 +104,9 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
           <h2 className="text-2xl font-bold mb-4 mt-4">Checkout</h2>
           <form
             onSubmit={handleSubmit}
-            className="grid grid-cols-1 md:grid-cols-2 gap-4"
+            className="grid grid-cols-1 md:grid-cols-2 gap-2"
           >
-            <div>
+            <div className="md:col-span-1">
               <label
                 htmlFor="firstName"
                 className="block text-black text-sm font-bold mb-2 "
@@ -124,7 +124,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 required
               />
             </div>
-            <div>
+            <div className="md:col-span-1">
               <label
                 htmlFor="lastName"
                 className="block text-black text-sm font-bold mb-2"
@@ -142,7 +142,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 required
               />
             </div>
-            <div>
+            <div className="md:col-span-1">
               <label
                 htmlFor="email"
                 className="block text-black text-sm font-bold mb-2 "
@@ -160,7 +160,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 required
               />
             </div>
-            <div>
+            <div className="md:col-span-1">
               <label
                 htmlFor="phoneNumber"
                 className="block text-black text-sm font-bold mb-2"
@@ -178,7 +178,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 required
               />
             </div>
-            <div>
+            <div className="md:col-span-2">
               <label
                 htmlFor="address"
                 className="block text-black text-sm font-bold mb-2"
@@ -196,7 +196,24 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 required
               />
             </div>
-            <div>
+            <div className="md:col-span-2">
+              <label
+                htmlFor="streetNumber"
+                className="block text-black text-sm font-bold mb-2"
+              >
+                Address Line 2
+              </label>
+              <input
+                id="streetNumber"
+                type="text"
+                name="streetNumber"
+                value={formData.streetNumber}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline "
+                placeholder="Address Line 2"
+              />
+            </div>
+            <div className="md:col-span-1">
               <label
                 htmlFor="state"
                 className="block text-black text-sm font-bold mb-2"
@@ -222,7 +239,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 ))}
               </select>
             </div>
-            <div>
+            <div className="md:col-span-1">
               <label
                 htmlFor="city"
                 className="block text-black text-sm font-bold mb-2 "
@@ -248,24 +265,8 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 ))}
               </select>
             </div>
-            <div>
-              <label
-                htmlFor="streetNumber"
-                className="block text-black text-sm font-bold mb-2"
-              >
-                Street Number
-              </label>
-              <input
-                id="streetNumber"
-                type="text"
-                name="streetNumber"
-                value={formData.streetNumber}
-                onChange={handleChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline "
-                placeholder="Street Number"
-              />
-            </div>
-            <div>
+           
+            <div className="md:col-span-1">
               <label
                 htmlFor="postalCode"
                 className="block text-black text-sm font-bold mb-2 "
@@ -283,7 +284,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 required
               />
             </div>
-            <div>
+            <div className="md:col-span-1">
               <label
                 htmlFor="country"
                 className="block text-black text-sm font-bold mb-2 "
@@ -298,13 +299,10 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                 required
               >
-                <option value="" disabled>
-                  Select your country
-                </option>
                 <option value="USA">USA</option>
               </select>
             </div>
-            <div className="flex items-center justify-between mb-4">
+            <div className="md:col-span-2 flex items-center justify-between mb-4">
               <button
                 type="submit"
                 className="bg-black text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
@@ -324,6 +322,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
       </div>
     </div>
   );
+  
 };
 
 export default CheckoutModal;

@@ -48,10 +48,10 @@ const Header = ({ toggle, setToggle }) => {
         />
         <a href="/">
           <h1
-            className="text-sm font-thin"
-            style={{ color: "#ac8b4a", fontFamily: "Seasons Light" }}
+            className="text-lg"
+            style={{ color: "#ac8b4a", fontFamily: "Seasons Light", wordSpacing:'3px' }}
           >
-            AYESHA ALI DESIGN
+            AYESHA  ALI DESIGN
           </h1>
         </a>
       </div>

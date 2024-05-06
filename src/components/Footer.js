@@ -1,9 +1,9 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import { FaFacebook, FaTwitter, FaGoogle, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaGoogle, FaInstagram, FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaAddressCard, FaMap, FaGlobe } from 'react-icons/fa';
 import pattern from '../images/pattern.svg';
 import '../App.css';
-import logo from '../images/logo.svg';
+import logo from '../images/LogoIcon.png';
 
 export default function Footer() {
   return (
@@ -70,49 +70,58 @@ export default function Footer() {
         </p>
       </MDBCol> */}
 
-      <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
+      <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4 bg-black text-center p-4'>
         <h6 className='text-lg  font-bold mb-4'>Useful links</h6>
-        <p className='text-md '>
+        <p className='text-md font-semibold'>
           <a href='/products' >
             Shop
           </a>
         </p>
-        <p className='text-md '>
+        <p className='text-md font-semibold'>
           <a href='/about-us'>
             About Us
           </a>
         </p>
-        <p className='text-md'>
+        <p className='text-md font-semibold'>
           <a href='/contact-us' >
             Contact Us
           </a>
         </p>
-        <p className='text-md '>
+        <p className='text-md font-semibold'>
           <a href='/policies'>
             Policies
           </a>
         </p>
       </MDBCol>
 
-      <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-        <h6 className='text-lg  font-bold mb-4'>Contact</h6>
-        <p className='text-md '>
-        300 N Dean Rd 5 118, Auburn, AL 36830, USA
-        </p>
-        <p className='text-md'>
-        info@ayeshaalidesign.com
-        </p>
-        <p className='text-md '>
-        +1 (470) 231 9529
-        </p>
-      </MDBCol>
+     
+<MDBCol md="4" lg="3" xl="3" className='mx-auto mb-4 bg-black text-center p-4'>
+  <h6 className='text-lg font-bold mb-4'>Contact</h6>
+
+  <div className='flex justify-center items-center mb-1'>
+    <FaEnvelope className='mr-2' />
+    <p className='text-md mb-0 font-semibold'>info@ayeshaalidesign.com</p>
+  </div>
+
+  <div className='flex justify-center items-center mb-1'>
+    <FaPhone className='mr-2' /> 
+    <p className='text-md mb-0 font-semibold'>+1 (470) 231 9529</p>
+  </div>
+
+  <div className='flex justify-center items-center mb-1'>
+    <FaGlobe className='mr-2 lg:mt-[-22px]' /> 
+    <p className='text-md mb-0 lg:ml-[-20px] font-semibold'>300 N Dean Rd 5 118, Auburn, AL 36830, USA</p>
+  </div>
+
+</MDBCol>
+
     </MDBRow>
   </MDBContainer>
 </section>
 
 
       <div className='text-center py-2'>
-        <p className=' text-md'>
+        <p className=' text-md font-semibold'>
           © 2024 info@ayeshaalidesign.com
         </p>
       </div>
