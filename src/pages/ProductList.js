@@ -25,7 +25,7 @@ const ProductCardList = () => {
     <div className="container mx-auto py-8 px-4">
       {/* <h1 className="text-xl mt-12 mb-6 text-black font-semibold leading-snug tracking-wide uppercase text-center">Elevate Your Style with Ready-to-Wear Fashion</h1>
       <p className="text-sm px-8 mx-12 mb-12 pb-8 text-black ">The Alexander McQueen collection of women's ready-to-wear focuses on cut, proportion and silhouette. Elevated essentials in impeccable fabrics, from tailored jackets to dresses, knitwear, trousers, skirts and shirts, are all designed to empower.</p> */}
-      <div className="flex flex-wrap justify-center items-center">
+      <div className="flex flex-col justify-center items-center">
       {Object.entries(groupedProducts).map(([category, categoryProducts]) => (
           <ProductCard
             key={category}

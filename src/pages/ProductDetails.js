@@ -50,7 +50,7 @@ const ProductDetails = () => {
   }
 
   return (
-    <div>
+    <div style={{overflow:'hidden'}}>
       {load === true ? (
         <AppLoader />
       ) : (

@@ -122,7 +122,7 @@ export default function Footer() {
 
       <div className='text-center py-2'>
         <p className=' text-md font-semibold'>
-          © 2024 info@ayeshaalidesign.com
+          © COPYRIGHT 2024 AYESHA ALI DESIGN
         </p>
       </div>
     </MDBFooter>

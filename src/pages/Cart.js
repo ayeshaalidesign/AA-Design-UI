@@ -102,7 +102,7 @@ const Cart = () => {
         <div className="uppercase text-sm font-semibold">Shopping Bag ({itemAmount})</div>
        
       </div>
-      <div className="flex flex-col gap-y-2 border-b">
+      <div className="flex flex-col gap-y-2 border-b h-80">
         {cart.length === 0 && (
           <>
           <div className="flex justify-center items-center h-80">
