@@ -45,7 +45,7 @@ const Cart = () => {
       const data = await response.json();
       setAddressID(data.addressID); // Assuming the addressID is stored in data.addressID
       localStorage.setItem('email', formData.email);
-      console.log('Success:', data);
+      
       await initiateStripeRequest(formData.email, data.addressID);
     } catch (error) {
       console.error('Error:', error);

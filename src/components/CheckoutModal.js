@@ -6,7 +6,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
     lastName: "",
     email: "",
     phoneNumber: "",
-    country: "",
+    country: "USA",
     postalCode: "",
     address: "",
     streetNumber: "",
@@ -215,6 +215,24 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
             </div>
             <div className="md:col-span-1">
               <label
+                htmlFor="city"
+                className="block text-black text-sm font-bold mb-2 "
+              >
+                City
+              </label>
+              <input
+                id="city"
+                type="text"
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline "
+                placeholder="City"
+              />
+              
+            </div>
+            <div className="md:col-span-1">
+              <label
                 htmlFor="state"
                 className="block text-black text-sm font-bold mb-2"
               >
@@ -239,39 +257,13 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 ))}
               </select>
             </div>
-            <div className="md:col-span-1">
-              <label
-                htmlFor="city"
-                className="block text-black text-sm font-bold mb-2 "
-              >
-                City
-              </label>
-              <select
-                id="city"
-                name="city"
-                value={formData.city}
-                onChange={handleChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
-                required
-              >
-                <option value="" disabled>
-                  Select your city
-                </option>
-                {/* Populate options based on the selected state */}
-                {cityOptions.map((city, index) => (
-                  <option key={index} value={city}>
-                    {city}
-                  </option>
-                ))}
-              </select>
-            </div>
            
             <div className="md:col-span-1">
               <label
                 htmlFor="postalCode"
                 className="block text-black text-sm font-bold mb-2 "
               >
-                Postal Code
+                Zip Code
               </label>
               <input
                 id="postalCode"
@@ -280,7 +272,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 value={formData.postalCode}
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline "
-                placeholder="Postal Code"
+                placeholder="Zip Code"
                 required
               />
             </div>
