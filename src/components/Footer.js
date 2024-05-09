@@ -7,7 +7,7 @@ import logo from '../images/LogoIcon.png';
 
 export default function Footer() {
   return (
-    <div style={{backgroundImage: `url(${pattern})`, fontFamily:'Seasons',  color: "#ac8b4a"}}>
+    <div style={{backgroundImage: `url(${pattern})`,  color: "#ac8b4a"}} className='font-verdana'>
        <MDBFooter >
       <section className='flex justify-between p-4 border-b border-gray-200'>
         <div className='me-5 hidden lg:block ml-4'>

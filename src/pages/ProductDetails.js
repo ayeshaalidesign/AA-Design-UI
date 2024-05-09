@@ -14,6 +14,7 @@ const ProductDetails = () => {
   const [load, setLoad] = useState(false);
   const [selectedSize, setSelectedSize] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
@@ -48,7 +49,7 @@ const ProductDetails = () => {
   }
 
   return (
-    <div style={{ overflow: "hidden" }}>
+    <div style={{ overflow: "hidden" }} className="font-verdana">
       {load === true ? (
         <AppLoader />
       ) : (
@@ -75,19 +76,19 @@ const ProductDetails = () => {
                       <div className="text-center mt-10">
                         <div
                           className="text-3xl text-black-500 mb-6"
-                          style={{ fontFamily: "Seasons" }}
+                          
                         >
                           {item.ProductName}
                         </div>
                         <div
                           className="text-xl text-black-500 mb-6 font-semibold"
-                          style={{ fontFamily: "Seasons Light" }}
+                          
                         >
                           {item.Descrip}
                         </div>
                         <div
                           className="text-xl text-black-500 mb-6"
-                          style={{ fontFamily: "Seasons Light" }}
+                          
                         >
                           <span className="font-serif text-gray-600">$</span>
                           {item.ProductPrice}
@@ -96,7 +97,7 @@ const ProductDetails = () => {
                       <div className="text-center w-100">
                         <h1
                           className="text-lg font-medium lg:mx-0 text-center mb-6"
-                          style={{ fontFamily: "Seasons Light" }}
+                          
                         >
                           {item.CategoryName}
                         </h1>
@@ -104,30 +105,29 @@ const ProductDetails = () => {
                           className="mb-6 text-center text-md font-thin ml-12"
                           style={{
                             lineHeight: "2",
-                            fontFamily: "Seasons Light",
+                            
                           }}
                         >
                           {item.ProductDescription}
                         </p>
                         <p
                           className="text-md text-center font-thin mb-8"
-                          style={{ fontFamily: "Seasons Light" }}
+                          
                         >
                           Elegant ~ Classy ~ Versatile
                         </p>
                       </div>
 
-                      {/* <div className=" ml-12 text-center text-sm mb-4 italic ">
-              <p style={{ fontFamily: 'Seasons Light' }}>
-                Copyright: We at Ayesha Ali Design value originality
-                and creativity. The embroidery is Ayesha's original
-                artwork and prohibited from being copied.
-              </p>
-            </div> */}
+                      {(item.CategoryName === "NEHA" || item.CategoryName === "CELINE") && 
+                      <div className=" ml-12 text-center text-sm mb-4 italic ">
+                      <p >
+                      Copyright: AYESHA ALI DESIGN values originality and creativity. The embroideries are our original artwork and prohibited from being copied.
+                      </p>
+                    </div>}
 
                       <select
                         className="w-80 h-10 block mb-4 px-4 outline rounded-md font-semibold ml-12"
-                        style={{ fontFamily: "Seasons Light" }}
+                        
                         value={selectedSize}
                         onChange={handleSizeChange}
                       >
@@ -142,7 +142,7 @@ const ProductDetails = () => {
                       <button
                         onClick={toggleSizeChart}
                         className="ml-6 bg-black text-white text-md font-semibold mt-2 py-2 px-4 mr-2"
-                        style={{ fontFamily: "Seasons Light" }}
+                        
                       >
                         Show Size Chart
                       </button>
@@ -151,7 +151,7 @@ const ProductDetails = () => {
                           addToCart(item, item.ProductId, selectedSize)
                         }
                         className="bg-black text-white text-md font-semibold mt-2 py-2 px-4"
-                        style={{ fontFamily: "Seasons Light" }}
+                        
                       >
                         Add to cart
                       </button>
@@ -162,42 +162,44 @@ const ProductDetails = () => {
                       )}
 
                       <h1
-                        class="my-2 text-xl font-bold text-black mt-4 text-left ml-16"
-                        style={{ fontFamily: "Seasons" }}
-                      >
-                        Product Details
-                      </h1>
-                      <div>
-                        {item.ProductDetails.map((detail) => (
-                          <ul
-                            className="list-disc text-left flex flex-col ml-20 text-md py-1"
-                            style={{ fontFamily: "Seasons Light" }}
-                          >
-                            <li>{detail}</li>
-                          </ul>
-                        ))}
-                      </div>
-
-                      <h1
-                        class="my-2 text-xl font-bold text-black mt-4 text-left ml-16"
-                        style={{ fontFamily: "Seasons" }}
-                      >
-                        Wash / Care
-                      </h1>
-                      <div>
+                        class="my-2 text-xl font-bold text-black mt-4 ml-16 cursor-pointer text-center"
                         
-                          <ul
-                            className="list-disc text-left flex flex-col ml-20 text-md"
-                            style={{ fontFamily: "Seasons Light" }}
-                          >
-                            <li className="py-1">Dry Clean recommended</li>
-                            <li className="py-1">Hand wash and flat dry</li>
-                            <li className="py-1">Gentle machine wash inside out with like colors</li>
-                            <li className="py-1">Steam</li>
+                        onClick={() => setShowDetails(!showDetails)}
+                      >
+                        Product Details / Care
+                      </h1>
+                     {showDetails === true && 
+                     <> <div>
+                     {item.ProductDetails.map((detail) => (
+                       <ul
+                         className="flex flex-col text-md py-1 text-center ml-20"
+                         
+                       >
+                         <li>{detail}</li>
+                       </ul>
+                     ))}
+                   </div>
 
-                          </ul>
-                       
-                      </div>
+                   <h1
+                     class="my-2 text-xl font-bold text-black mt-4 text-center ml-16"
+                     
+                   >
+                     Wash / Care
+                   </h1>
+                   <div>
+                     
+                       <ul
+                         className=" text-center flex flex-col ml-16 text-md"
+                         
+                       >
+                         <li className="py-1">Dry Clean recommended</li>
+                         <li className="py-1">Hand wash and flat dry</li>
+                         <li className="py-1">Gentle machine wash inside out with like colors</li>
+                         <li className="py-1">Steam</li>
+
+                       </ul>
+                    
+                   </div></>}
                     </div>
                   </div>
                 ))}

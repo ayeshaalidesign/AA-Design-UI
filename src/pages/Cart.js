@@ -94,7 +94,7 @@ const Cart = () => {
   
 
   return (
-    <div style={{fontFamily:'Seasons'}} >
+    <div className="font-verdana" >
        <div
       className="w-full bg-white top-0 right-0 shadow-2xl  transition-all duration-300 z-20 px-4 py-4 "
     >

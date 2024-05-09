@@ -48,8 +48,8 @@ const Header = ({ toggle, setToggle }) => {
         />
         <a href="/">
           <h1
-            className="text-xl"
-            style={{ color: "#ac8b4a", fontFamily: "Seasons Light", wordSpacing:'3px' }}
+            className="text-xl font-verdana"
+            style={{ color: "#ac8b4a", wordSpacing:'3px' }}
           >
             AYESHA  ALI DESIGN
           </h1>

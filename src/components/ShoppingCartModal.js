@@ -2,7 +2,7 @@ import React from 'react';
 
 const ShoppingCartModal = ({ isOpen, onClose }) => {
   return (
-    <div className={`modal ${isOpen ? 'block' : 'hidden'}`} style={{ fontFamily: 'Seasons' }}>
+    <div className={`modal font-verdana ${isOpen ? 'block' : 'hidden'}`}>
       <div className="modal-overlay absolute inset-0 bg-black opacity-50"></div>
       <div className="modal-container bg-white w-full sm:w-11/12 md:w-9/12 lg:max-w-lg mx-auto rounded shadow-lg z-50 overflow-y-auto mt-6">
         <div className="modal-content py-2 text-left px-6">

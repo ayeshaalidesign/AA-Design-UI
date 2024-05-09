@@ -7,15 +7,15 @@ const ContactUs = () => {
     <div class="bg-white">
       <div class="container mx-auto py-12">
         <h1
-          class="text-center my-4 text-3xl font-bold text-black"
-          style={{ fontFamily: "Seasons" }}
+          class="text-center my-4 text-3xl font-bold text-black font-verdana"
+          
         >
           Contact Us
         </h1>
 
-        <h1 class="text-center my-4 text-lg font-bold text-black"
-          style={{ fontFamily: "Seasons" }}>How can we help you?</h1>
-        <div class="max-w-4xl mx-auto bg-white md:flex md:items-center flex items-center justify-center font-semibold" style={{ fontFamily: "Seasons" }}>
+        <h1 class="text-center my-4 text-lg font-bold text-black font-verdana"
+          >How can we help you?</h1>
+        <div class="max-w-4xl mx-auto bg-white md:flex md:items-center flex items-center justify-center font-semibold font-verdana">
           <div class="p-6 text-center">
           <div className="p-4">
         <img

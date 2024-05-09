@@ -9,7 +9,7 @@ const ProductCard = ({category, products}) => {
 
   return (
     <div>
-    <h2 className="text-3xl font-semibold text-center mb-12 mt-12" style={{ color:'#917030', fontFamily:'Seasons' }}>{category}</h2>
+    <h2 className="text-3xl font-semibold text-center mb-12 mt-12 font-verdana" style={{ color:'#917030' }}>{category}</h2>
       <div className="flex justify-center items-center gap-12 mx-4">
         {products.map((product, index) => (
           <div key={index} className="flex flex-col">
@@ -17,7 +17,7 @@ const ProductCard = ({category, products}) => {
            <img src={product.imageUrl} alt={product.productName} onClick={() => handleRedirection(product.productId)} className="w-full h-full mt-6 mb-6 object-cover rounded-md" />
             <h2 className='font-md font-semibold text-left mt-2 cursor-pointer' onClick={() => handleRedirection(product.productId)}>{product.productName}</h2>
             <h2 className='font-md text-left mt-2'>${product.productPrice}</h2>
-            <button onClick={() => handleRedirection(product.productId)} className='mt-6 text-md font-semibold text-white bg-black px-2 py-2 w-full mb-6' style={{ fontFamily:'Seasons Light' }}>Shop Now</button>
+            <button onClick={() => handleRedirection(product.productId)} className='mt-6 text-md font-semibold text-white bg-black px-2 py-2 w-full mb-6 font-verdana'>Shop Now</button>
            </div>
            <div>
            </div>

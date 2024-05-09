@@ -5,11 +5,11 @@ import '../App.css';
 import { FaCartShopping } from 'react-icons/fa6';
 
 const LeftSideMenu = ({ toggle }) => {
-  const menuClassName = toggle ? "fixed inset-y-0 right-0 z-50 bg-black w-100 py-6 transition-all duration-1000 ease-in-out transform translate-x-0" : "fixed inset-y-0 right-0 z-50 bg-black w-0 py-6 transition-all duration-1000 ease-in-out transform translate-x-0";
+  const menuClassName = toggle ? "font-verdana fixed inset-y-0 right-0 z-50 bg-black w-100 py-6 transition-all duration-1000 ease-in-out transform translate-x-0" : " font-verdana fixed inset-y-0 right-0 z-50 bg-black w-0 py-6 transition-all duration-1000 ease-in-out transform translate-x-0";
 
 
   return (
-    <div className={menuClassName} style={{fontFamily: 'Seasons', color: "#ac8b4a"}}>
+    <div className={menuClassName} style={{ color: "#ac8b4a"}}>
      {toggle && (
       <div className='flex'>
         <div className=' flex justify-center items-center w-50 mx-6 lg:mt-20x'>

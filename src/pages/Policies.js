@@ -7,25 +7,25 @@ const Policies = () => {
   };
 
   return (
-    <div class="bg-white text-black">
+    <div class="bg-white text-black font-verdana">
       <div class="container mx-auto py-12">
         <h1
-          class="text-center my-4 text-xl font-bold text-black"
-          style={{ fontFamily: "Seasons" }}
+          class="text-center my-4 text-xl font-bold text-black "
+          
         >
           Our Policies
         </h1>
 
         <div className="max-w-5xl mx-auto font-semibold px-4">
           <h3
-            className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+            className="text-md md:text-md font-bold text-left cursor-pointer "
+            
             onClick={() => toggleSection("returns")}
           >
             Returns
           </h3>
           {openSection === "returns" && (
-            <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
+            <ul className="list-disc ">
               <li>
                 <p className="text-md text-left font-normal mt-2">
                   We facilitate hassle-free returns for online purchases,
@@ -64,15 +64,15 @@ const Policies = () => {
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
           <h3
-            className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+            className="text-md md:text-md font-bold text-left cursor-pointer "
+           
             onClick={() => toggleSection("exchanges")}
           >
             Exchanges
           </h3>
           {/* Render the content conditionally based on openSection state */}
           {openSection === "exchanges" && (
-            <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
+            <ul className="list-disc ">
               <li>
                 <p className="text-md text-left font-normal mt-2">
                   We offer exchanges for a different size or color within 14
@@ -108,15 +108,15 @@ const Policies = () => {
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
           <h3
-            className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+            className="text-md md:text-md font-bold text-left cursor-pointer "
+            
             onClick={() => toggleSection("refunds")}
           >
             Refunds
           </h3>
           {/* Render the content conditionally based on openSection state */}
           {openSection === "refunds" && (
-            <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
+            <ul className="list-disc ">
               <li>
                 <p className="text-md text-left font-normal mt-2">
                   Refunds will be processed within 7-10 business days of
@@ -144,15 +144,15 @@ const Policies = () => {
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
           <h3
-            className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+            className="text-md md:text-md font-bold text-left cursor-pointer "
+            
             onClick={() => toggleSection("returnExchange")}
           >
             Initiating a Return or Exchange
           </h3>
           {/* Render the content conditionally based on openSection state */}
           {openSection === "returnExchange" && (
-            <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
+            <ul className="list-disc " >
               <li>
                 <p className="text-md text-left font-normal mt-2">
                   To initiate a return or exchange, please contact our customer
@@ -171,15 +171,15 @@ const Policies = () => {
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
           <h3
-            className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+            className="text-md md:text-md font-bold text-left cursor-pointer "
+            
             onClick={() => toggleSection("exceptions")}
           >
             Exceptions
           </h3>
           {/* Render the content conditionally based on openSection state */}
           {openSection === "exceptions" && (
-            <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
+            <ul className="list-disc ">
               <li>
                 <p className="text-md text-left font-normal mt-2">
                   Final sale items, such as clearance or discounted items, are
@@ -199,14 +199,14 @@ const Policies = () => {
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
           <h3
-            className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+            className="text-md md:text-md font-bold text-left cursor-pointer "
+            
             onClick={() => toggleSection("shippingMethod")}
           >
             Shipping Methods
           </h3>
           {openSection === "shippingMethod" && (
-            <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
+            <ul className="list-disc ">
               <li>
                 <p className="text-md text-left font-normal mt-2">
                   We offer standard and expedited shipping options for domestic
@@ -226,14 +226,14 @@ const Policies = () => {
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
           <h3
-            className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+            className="text-md md:text-md font-bold text-left cursor-pointer "
+            
             onClick={() => toggleSection("shippingRates")}
           >
             Shipping Rates
           </h3>
           {openSection === "shippingRates" && (
-            <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
+            <ul className="list-disc ">
               <li>
                 <p className="text-md text-left font-normal mt-2">
                   Shipping rates are calculated based on the weight of the
@@ -258,14 +258,14 @@ const Policies = () => {
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
           <h3
-             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+             className="text-md md:text-md font-bold text-left cursor-pointer "
+           
             onClick={() => toggleSection("orderProcessing")}
           >
             Order Processing Time
           </h3>
           {openSection === "orderProcessing" && (
-            <ul className="list-disc" style={{ fontFamily: "Seasons Light" }}>
+            <ul className="list-disc ">
               <li>
                 <p className="text-md text-left font-normal mt-2">
                   Orders are typically processed and shipped within 1-2 business
@@ -284,8 +284,8 @@ const Policies = () => {
 
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
           <h3
-             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+             className="text-md md:text-md font-bold text-left cursor-pointer "
+            
             onClick={() => toggleSection("orderTracking")}
           >
             Order Tracking
@@ -295,7 +295,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Once the order has shipped, the customer will receive a
                   shipping confirmation email with a tracking number to monitor
@@ -309,7 +309,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
           <h3
             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("shippingRestrictions")}
           >
             Shipping Restrictions
@@ -319,7 +319,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Please check our website for a list of eligible shipping
                   destinations.
@@ -328,7 +328,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Some items may be subject to shipping restrictions due to
                   size, weight, or import/export regulations.
@@ -341,7 +341,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("deliveryIssues")}
           >
             Delivery Issues
@@ -351,7 +351,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   In the event of a lost or delayed package, please contact our
                   customer service team for assistance.
@@ -360,7 +360,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We do not bear the responsibility for lost or stolen packages
                   after delivery confirmation.
@@ -373,7 +373,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("internationalShipping")}
           >
             International Shipping
@@ -383,7 +383,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We are not taking international orders at the moment.
                 </p>
@@ -391,7 +391,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   International orders may be subject to customs duties, taxes,
                   and import fees imposed by the destination country.
@@ -400,7 +400,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Customers are responsible for paying any additional charges
                   levied by customs authorities.
@@ -413,7 +413,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("shippingAddress")}
           >
             Shipping Address
@@ -423,7 +423,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Customers are responsible for providing accurate and complete
                   shipping information at checkout.
@@ -432,7 +432,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We are not responsible for orders shipped to incorrect or
                   incomplete addresses provided by the customer.
@@ -441,7 +441,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Please review our shipping policy carefully before placing
                   your order. If you have any questions or concerns, please
@@ -456,7 +456,7 @@ const Policies = () => {
       <div class="container mx-auto">
         <h1
           class="text-center text-xl font-bold text-black"
-          style={{ fontFamily: "Seasons" }}
+         
         >
           Privacy Policy
         </h1>
@@ -464,7 +464,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("informationCollection")}
           >
             Information Collection
@@ -474,7 +474,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We collect personal information such as name, email address,
                   shipping address, and payment details when a customer places
@@ -484,7 +484,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We also collect non-personal information such as browsing
                   history, IP address, and device information through cookies
@@ -498,7 +498,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("useOfInformation")}
           >
             Use of Information
@@ -508,7 +508,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We use the information collected to process orders,
                   communicate with customers, and provide personalized shopping
@@ -518,7 +518,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Personal information may also be used for marketing purposes,
                   including promotional emails and newsletters.
@@ -527,7 +527,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Non-personal information is used to analyze website usage
                   patterns, improve our products and services, and enhance user
@@ -541,7 +541,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("informationSharing")}
           >
             Information Sharing
@@ -551,7 +551,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We may share personal information with third-party service
                   providers such as payment processors, shipping companies, and
@@ -562,7 +562,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We do not sell or rent personal information to third parties
                   for their marketing purposes.
@@ -575,7 +575,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("dataSecurity")}
           >
             Data Security
@@ -585,7 +585,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We implement security measures to protect personal information
                   from unauthorized access, disclosure, alteration, or
@@ -595,7 +595,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Secure socket layer (SSL) technology is used to encrypt
                   sensitive data transmitted between the user's browser and our
@@ -609,7 +609,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("userRights")}
           >
             User Rights
@@ -619,7 +619,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Users have the right to access, update, or delete their
                   personal information stored in our database.
@@ -628,7 +628,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Users can opt out of receiving promotional communications at
                   any time by unsubscribing from marketing emails or contacting
@@ -642,7 +642,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("cookiesTracking")}
           >
             Cookies and Tracking Technologies
@@ -652,7 +652,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We use cookies and similar tracking technologies to enhance
                   user experience, analyze website traffic, and deliver targeted
@@ -662,7 +662,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Users can manage cookie preferences through their web browser
                   settings and opt out of targeted advertising through industry
@@ -676,7 +676,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("childrenPrivacy")}
           >
             Children's Privacy
@@ -686,7 +686,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Our website is not intended for children under the age of 13,
                   and we do not knowingly collect personal information from
@@ -700,7 +700,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("changesToPrivacyPolicy")}
           >
             Changes to the Privacy Policy
@@ -710,7 +710,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We reserve the right to update our privacy policy periodically
                   to reflect changes in our information practices.
@@ -719,7 +719,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Users will be notified of any material changes to the privacy
                   policy through website notifications or email communication.
@@ -728,7 +728,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   By using our website and services, users consent to the
                   collection, use, and sharing of their information as described
@@ -744,7 +744,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("termsAndConditions")}
           >
             Terms and Conditions
@@ -754,7 +754,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   By accessing or using our website and services, users agree to
                   comply with these terms and conditions. If you do not agree
@@ -769,7 +769,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("useOfWebsite")}
           >
             Use of Website
@@ -779,7 +779,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left font-normal mt-2"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   You may not use our website for any unlawful or prohibited
                   purpose.
@@ -792,7 +792,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("intellectualProperty")}
           >
             Intellectual Property
@@ -802,7 +802,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   All content on our website, including text, graphics, logos,
                   images, and software, is the property of our brand AYESHA ALI
@@ -818,7 +818,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("productInformation")}
           >
             Product Information
@@ -828,7 +828,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Our team works meticulously to provide accurate and up-to-date
                   information about our products, including descriptions,
@@ -844,7 +844,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("orderingPayment")}
           >
             Ordering and Payment
@@ -854,7 +854,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Upon the placement of an order on our website, the customer
                   agrees to provide their accurate and complete information and
@@ -865,7 +865,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We reserve the right to cancel or refuse any orders at our
                   discretion, including orders with incorrect pricing or
@@ -876,7 +876,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Payment is due at the time of purchase and is accepted through
                   the approved payment methods only.
@@ -889,7 +889,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("shippingDelivery")}
           >
             Shipping and Delivery
@@ -899,7 +899,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We prioritize the processing and shipping of all orders in a
                   timely manner. Shipping costs and delivery times may vary
@@ -914,7 +914,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("customerServicePolicy")}
           >
             Customer Service Policy/ Communication Channels
@@ -924,7 +924,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We provide multiple communication channels for customers to
                   reach us, including phone, email, and live chat support during
@@ -936,7 +936,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Our customer service representatives are trained to provide
                   prompt and courteous assistance to address inquiries,
@@ -950,7 +950,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("responsiveness")}
           >
             Responsiveness
@@ -960,7 +960,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We strive to respond to customer inquiries and requests on
                   time, typically within 24 to 48 hours during regular business
@@ -971,7 +971,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Urgent matters or issues requiring immediate attention are
                   prioritized for faster resolution.
@@ -984,7 +984,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("productKnowledge")}
           >
             Product Knowledge
@@ -994,7 +994,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Our customer service team is knowledgeable about our products,
                   including features, materials, sizing, and care instructions.
@@ -1004,7 +1004,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Detailed information and recommendations can be given on
                   request to help customers make informed purchasing decisions.
@@ -1017,7 +1017,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("orderAssistance")}
           >
             Order Assistance
@@ -1027,7 +1027,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We assist customers with order-related inquiries, including
                   order status, tracking information, and modifications or
@@ -1038,7 +1038,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Customers can also receive assistance with returns, exchanges,
                   and refunds as per our return policy.
@@ -1051,7 +1051,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("problemResolution")}
           >
             Problem Resolution
@@ -1061,7 +1061,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   In the event of product defects, shipping issues, or other
                   problems, we are committed to resolving issues promptly and
@@ -1072,7 +1072,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Our customer service team will work closely with customers to
                   find suitable solutions, which may include replacements,
@@ -1086,7 +1086,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("professionalismCourtesy")}
           >
             Professionalism and Courtesy
@@ -1096,7 +1096,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We maintain a professional and courteous demeanor in all
                   customer interactions, treating each customer with respect and
@@ -1107,7 +1107,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Our goal is to provide a positive and enjoyable shopping
                   experience for every customer, fostering long-term
@@ -1121,7 +1121,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("feedbackImprovement")}
           >
             Feedback and Improvement
@@ -1131,7 +1131,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We welcome customer feedback and suggestions as valuable
                   insights for our continuous improvement.
@@ -1141,7 +1141,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Customer feedback is regularly reviewed and analyzed to
                   identify areas for enhancement in our products, services, and
@@ -1155,7 +1155,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("compliance")}
           >
             Compliance
@@ -1165,7 +1165,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Our customer service operations adhere to all relevant laws,
                   regulations, and industry standards, including those related
@@ -1177,7 +1177,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   For questions, concerns, or feedback regarding our customer
                   service policy, please contact us. We are committed to
@@ -1192,7 +1192,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("authenticityGuarantee")}
           >
             Product Authenticity Guarantee/ Originality Assurance
@@ -1202,7 +1202,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We guarantee that all products offered by AYESHA ALI DESIGN
                   are 100% authentic and the original work of the designer. Each
@@ -1218,7 +1218,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("traceabilityDocumentation")}
           >
             Traceability and Documentation
@@ -1228,7 +1228,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We maintain detailed records and documentation for each
                   product, including invoices, and receipts.
@@ -1238,7 +1238,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Customers can request product documentation and verification
                   to confirm the authenticity and provenance of their purchases.
@@ -1251,7 +1251,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("legalCompliance")}
           >
             Legal Compliance
@@ -1261,7 +1261,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Our operations comply with all relevant laws, regulations, and
                   industry standards related to product authenticity, including
@@ -1273,7 +1273,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We work closely with brand owners, law enforcement agencies,
                   and industry organizations to combat counterfeiting and
@@ -1287,7 +1287,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("satisfactionGuarantee")}
           >
             Satisfaction Guarantee
@@ -1297,7 +1297,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We stand behind the authenticity of our products and offer a
                   satisfaction guarantee to ensure customer confidence and
@@ -1308,7 +1308,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   In the rare event that a customer receives a product that is
                   found to be damaged or defective, we offer hassle-free
@@ -1319,7 +1319,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Our Product Authenticity Guarantee reflects our unwavering
                   commitment to delivering genuine luxury products and
@@ -1335,7 +1335,7 @@ const Policies = () => {
       <div class="container mx-auto">
         <h1
           class="text-center text-xl font-bold text-black mt-12"
-          style={{ fontFamily: "Seasons" }}
+         
         >
           Social Responsibility
         </h1>
@@ -1343,7 +1343,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("ethicalSourcingProduction")}
           >
             Ethical Sourcing and Production
@@ -1353,7 +1353,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We are committed to ethical sourcing and production practices
                   that prioritize the well-being of workers, communities, and
@@ -1364,7 +1364,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Our supply chain partners are required to adhere to strict
                   ethical standards, including fair labor practices, safe
@@ -1378,7 +1378,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("environmentalStewardship")}
           >
             Environmental Stewardship
@@ -1388,7 +1388,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We recognize our responsibility to minimize the environmental
                   impact of our operations and products throughout their
@@ -1399,7 +1399,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We implement sustainable practices such as reducing waste,
                   conserving resources, and minimizing carbon emissions in our
@@ -1413,7 +1413,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("communityEngagementPhilanthropy")}
           >
             Community Engagement and Philanthropy
@@ -1423,7 +1423,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We value our active engagement with local communities and
                   support charitable initiatives that address social, economic,
@@ -1434,7 +1434,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Through partnerships with nonprofit organizations and
                   community outreach programs, we contribute to initiatives
@@ -1449,7 +1449,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("diversityInclusion")}
           >
             Diversity and Inclusion
@@ -1459,7 +1459,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We embrace diversity and inclusion as one of our fundamental
                   values that enrich our workplace culture, foster innovation,
@@ -1470,7 +1470,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We promote diversity in our workforce, supply chain, and
                   marketing efforts, striving to create an inclusive environment
@@ -1484,7 +1484,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("humanRightsLaborStandards")}
           >
             Human Rights and Labor Standards
@@ -1494,7 +1494,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We uphold human rights and labor standards in all aspects of
                   our business operations and supply chain.
@@ -1504,7 +1504,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We prohibit forced labor, child labor, discrimination,
                   harassment, and other forms of exploitation, and we require
@@ -1518,7 +1518,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("transparencyAccountability")}
           >
             Transparency and Accountability
@@ -1528,7 +1528,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We are transparent about our social responsibility
                   initiatives, practices, and performance, regularly
@@ -1540,7 +1540,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We hold ourselves accountable for upholding the highest
                   standards of social responsibility and welcome feedback from
@@ -1554,7 +1554,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-4">
           <h3
              className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("continuousImprovement")}
           >
             Continuous Improvement
@@ -1564,7 +1564,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We are committed to continuous improvement in our social
                   responsibility efforts, striving to set and achieve ambitious
@@ -1575,7 +1575,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We regularly assess our policies, practices, and performance,
                   identifying areas for improvement and implementing corrective
@@ -1589,7 +1589,7 @@ const Policies = () => {
         <div className="max-w-5xl mx-auto font-semibold px-4 mt-4 mb-8">
           <h3
             className="text-md md:text-md font-bold text-left cursor-pointer"
-            style={{ fontFamily: "Seasons" }}
+           
             onClick={() => toggleSection("complianceGovernance")}
           >
             Compliance and Governance
@@ -1599,7 +1599,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   We comply with all applicable laws, regulations, and
                   international standards related to social responsibility,
@@ -1611,7 +1611,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Our social responsibility policies are governed by a dedicated
                   team responsible for oversight, monitoring, and ensuring
@@ -1622,7 +1622,7 @@ const Policies = () => {
               <li>
                 <p
                   className="text-md text-left mt-2 font-normal"
-                  style={{ fontFamily: "Seasons Light" }}
+                 
                 >
                   Our Social Responsibility Policy reflects our dedication to
                   making a positive difference in the world, upholding ethical

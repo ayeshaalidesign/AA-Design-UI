@@ -15,11 +15,11 @@ const HomePage = () => {
   }
 
   return (
-    <div style={{fontFamily:'Seasons'}}>
+    <div className='font-verdana'>
       <BootstrapCarousel />
       <div className="relative">
   <img src={ready} alt='ready to wear' className="w-full" />
-  <button className="absolute bottom-12 left-1/2 transform -translate-x-1/2 bg-black text-white font-semibold text-md px-4 py-3 mb-2" onClick={redirectToProducts}>Shop Now</button>
+  <button className="absolute bottom-12 left-1/2 transform -translate-x-1/2 bg-black text-white font-semibold text-md px-4 py-3 mb-2 font-verdana"  onClick={redirectToProducts}>Shop Now</button>
 </div>
 
     </div>
