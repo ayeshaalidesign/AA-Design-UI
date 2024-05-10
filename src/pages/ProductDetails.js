@@ -81,13 +81,13 @@ const ProductDetails = () => {
                           {item.ProductName}
                         </div>
                         <div
-                          className="text-xl text-black-500 mb-6 font-semibold"
+                          className="text-xl text-black-500 mb-6 font-semibold italic"
                           
                         >
                           {item.Descrip}
                         </div>
                         <div
-                          className="text-xl text-black-500 mb-6"
+                          className="text-xl text-gray-500 mb-6"
                           
                         >
                           <span className="font-serif text-gray-600">$</span>
@@ -95,12 +95,12 @@ const ProductDetails = () => {
                         </div>
                       </div>
                       <div className="text-center w-100">
-                        <h1
+                        {/* <h1
                           className="text-lg font-medium lg:mx-0 text-center mb-6"
                           
                         >
                           {item.CategoryName}
-                        </h1>
+                        </h1> */}
                         <p
                           className="mb-6 text-center text-md font-thin ml-12"
                           style={{
@@ -162,7 +162,7 @@ const ProductDetails = () => {
                       )}
 
                       <h1
-                        class="my-2 text-xl font-bold text-black mt-4 ml-16 cursor-pointer text-center"
+                        class="my-2 text-xl font-semibold text-gray-700 mt-4 ml-16 cursor-pointer text-center"
                         
                         onClick={() => setShowDetails(!showDetails)}
                       >
@@ -181,7 +181,7 @@ const ProductDetails = () => {
                    </div>
 
                    <h1
-                     class="my-2 text-xl font-bold text-black mt-4 text-center ml-16"
+                     class="my-2 text-xl font-semibold text-gray-700 mt-4 text-center ml-16"
                      
                    >
                      Wash / Care

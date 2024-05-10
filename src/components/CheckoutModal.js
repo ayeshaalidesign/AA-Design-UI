@@ -7,11 +7,11 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
     email: "",
     phoneNumber: "",
     country: "USA",
-    postalCode: "",
-    address: "",
-    streetNumber: "",
-    city: "",
-    state: "",
+    // postalCode: "",
+    // address: "",
+    // streetNumber: "",
+    // city: "",
+    // state: "",
   });
 
   const handleChange = (e) => {
@@ -104,9 +104,9 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
           <h2 className="text-xl font-bold mb-2 mt-2">Checkout</h2>
           <form
             onSubmit={handleSubmit}
-            className="grid grid-cols-1 md:grid-cols-2 gap-2"
+            className="grid grid-cols-1 md:grid-cols-1 gap-2"
           >
-            <div className="md:col-span-1">
+            <div className="md:col-span-2">
               <label
                 htmlFor="firstName"
                 className="block text-black text-sm font-bold mb-2 "
@@ -124,7 +124,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 required
               />
             </div>
-            <div className="md:col-span-1">
+            <div className="md:col-span-2">
               <label
                 htmlFor="lastName"
                 className="block text-black text-sm font-bold mb-2"
@@ -142,7 +142,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 required
               />
             </div>
-            <div className="md:col-span-1">
+            <div className="md:col-span-2">
               <label
                 htmlFor="email"
                 className="block text-black text-sm font-bold mb-2 "
@@ -160,7 +160,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 required
               />
             </div>
-            <div className="md:col-span-1">
+            <div className="md:col-span-2">
               <label
                 htmlFor="phoneNumber"
                 className="block text-black text-sm font-bold mb-2"
@@ -178,7 +178,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 required
               />
             </div>
-            <div className="md:col-span-2">
+            {/* <div className="md:col-span-2">
               <label
                 htmlFor="address"
                 className="block text-black text-sm font-bold mb-2"
@@ -249,7 +249,6 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 <option value="" disabled>
                   Select your state
                 </option>
-                {/* Map through cityData to create options for states */}
                 {Object.keys(cityData).map((state, index) => (
                   <option key={index} value={state}>
                     {state}
@@ -275,8 +274,8 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 placeholder="Zip Code"
                 required
               />
-            </div>
-            <div className="md:col-span-1">
+            </div> */}
+            <div className="md:col-span-2">
               <label
                 htmlFor="country"
                 className="block text-black text-sm font-bold mb-2 "

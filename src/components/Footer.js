@@ -100,12 +100,12 @@ export default function Footer() {
 
   <div className='flex justify-center items-center mb-1'>
     <FaEnvelope className='mr-2' />
-    <p className='text-md mb-0 font-semibold'>info@ayeshaalidesign.com</p>
+    <a href="mailto:info@ayeshaalidesign.com" class="text-md mb-0 font-semibold">info@ayeshaalidesign.com</a>
   </div>
 
   <div className='flex justify-center items-center mb-1'>
     <FaPhone className='mr-2' /> 
-    <p className='text-md mb-0 font-semibold'>+1 (470) 231 9529</p>
+    <a href="tel:+14702319529" class="text-md mb-0 font-semibold">+1 (470) 231 9529</a>
   </div>
 
   <div className='flex justify-center items-center mb-1'>

@@ -45,12 +45,25 @@ const CartProvider = ({ children }) => {
   }, [cart]);
 
   const addToCart = (product, id, size) => {
+    var sizeId = 0;
     if (size === "") {
       toast.error("Please select a size.",{ autoClose: 1000 });
       return;
     }
+
+    if (size === 'xs') {
+      sizeId = 1;
+    } else if (size === 's') {
+      sizeId = 2;
+    } else if (size === 'm') {
+      sizeId = 3; 
+    } else if (size === 'l') {
+      sizeId = 4;
+    } else {
+      sizeId = 5;
+    }
   
-    const newItem = { ...product, size: size, amount: 1 };
+    const newItem = { ...product, size: size, amount: 1, SizeId: sizeId};
     const existingItem = cart.find(
       (item) => item.ProductId === id && item.size !== size
     );

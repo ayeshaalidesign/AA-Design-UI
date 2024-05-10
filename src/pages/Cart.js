@@ -33,12 +33,12 @@ const Cart = () => {
           lastName: formData.lastName,
           email: formData.email,
           phone: formData.phoneNumber,
-          postalCode: formData.postalCode,
+          // postalCode: formData.postalCode,
           country: formData.country,
-          state: formData.state,
-          city: formData.city,
-          street: formData.streetNumber,
-          address: formData.address
+          // state: formData.state,
+          // city: formData.city,
+          // street: formData.streetNumber,
+          // address: formData.address
         })
       });
   
@@ -62,7 +62,8 @@ const Cart = () => {
       totalPrice += product.ProductPrice * product.amount;
       orderItems.push({
         productid: product.ProductId,
-        quantity: product.amount
+        quantity: product.amount,
+        sizeid: product.SizeId
       });
     });
   

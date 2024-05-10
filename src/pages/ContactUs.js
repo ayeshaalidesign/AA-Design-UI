@@ -34,7 +34,8 @@ const ContactUs = () => {
           className="h-16 w-16 mx-auto"
         />
         <h2 className="text-xl font-bold text-center mt-4">Phone</h2>
-        <p className="text-black text-center mt-2">+1 (470) 231 9529</p>
+        <a href="tel:+14702319529" class="text-black text-center mt-2">+1 (470) 231 9529</a>
+        
       </div>
 
       <div className="p-4">
