@@ -1,6 +1,6 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import { FaFacebook, FaTwitter, FaGoogle, FaInstagram, FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaAddressCard, FaMap, FaGlobe } from 'react-icons/fa';
+import { FaFacebook, FaGoogle, FaInstagram, FaEnvelope, FaPhone, FaGlobe, FaTiktok, FaPinterest } from 'react-icons/fa';
 import pattern from '../images/pattern.svg';
 import '../App.css';
 import logo from '../images/LogoIcon.png';
@@ -15,24 +15,22 @@ export default function Footer() {
         </div>
 
         <div className='flex items-center'>
-          <a href='facebook.com' className='me-4  hover:text-gray-800 transform transition-all hover:scale-110'>
+          <a href='https://www.facebook.com/ayeshaalidesign?mibextid=ZbWKwL' target='_blank' rel='noopener noreferrer' className='me-4  hover:text-white transform transition-all hover:scale-110'>
             <FaFacebook className='text-xl' />
           </a>
-          <a href='twitter.com' className='me-4  hover:text-gray-800 transform transition-all hover:scale-110'>
-            <FaTwitter className='text-xl' />
+          <a href='https://www.tiktok.com/@ayesha.ali.design' target='_blank' rel='noopener noreferrer'  className='me-4  hover:text-white transform transition-all hover:scale-110'>
+            <FaTiktok className='text-xl' />
           </a>
-          <a href='google.com' className='me-4  hover:text-gray-800 transform transition-all hover:scale-110'>
+          <a href="mailto:info@ayeshaalidesign.com" className='me-4  hover:text-white transform transition-all hover:scale-110'>
             <FaGoogle className='text-xl' />
           </a>
-          <a href='instagram.com' className='me-4  hover:text-gray-800 transform transition-all hover:scale-110'>
-            <FaInstagram className='text-xl' />
+          <a href='https://www.instagram.com/ayesha.ali.design/' target='_blank' rel='noopener noreferrer' className='me-4 hover:text-white transform transition-all hover:scale-110'>
+    <FaInstagram className='text-xl' />
+  </a>
+          <a href='https://www.pinterest.com/pin/ayesha-ali-design-on-instagram-photographer-spotlight-vegafosterphotography-meet-vega-the-genius-behind-her-magical-lens-thank-you-vega-for-your-magic-video-video-in-2024--950118852625370202/' className='me-4  hover:text-white transform transition-all hover:scale-110' target='_blank' rel='noopener noreferrer'>
+            <FaPinterest className='text-xl' />
           </a>
-          <a href='linkedin.com' className='me-4  hover:text-gray-800 transform transition-all hover:scale-110'>
-            <FaLinkedin className='text-xl' />
-          </a>
-          <a href='github.com' className='me-4  hover:text-gray-800 transform transition-all hover:scale-110'>
-            <FaGithub className='text-xl' />
-          </a>
+          
         </div>
       </section>
 

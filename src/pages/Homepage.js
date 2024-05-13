@@ -1,6 +1,6 @@
 import React from 'react';
 import BootstrapCarousel from '../components/Carousel';
-import ready from '../images/ready-to-wear.jpg';
+import ready from '../images/ready-to-wear.svg';
 
 import '../App';
 

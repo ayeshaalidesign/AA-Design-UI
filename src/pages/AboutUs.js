@@ -119,6 +119,7 @@ We value originality and creativity. Our embroideries are original and authentic
             className="p-6 md:w-1/2 text-left font-verdana"
            
           >
+            <p className="text-black leading-relaxed text-md text-justify">Our partner for web and marketing services.</p>
             <p className="text-black leading-relaxed text-md text-justify">
             Whyme Solutions specialize in uplifting all businesses streamline operations, boost productivity, creativity and achieve their ultimate goals with tailored marketing strategies and cutting-edge technology.
             </p>
