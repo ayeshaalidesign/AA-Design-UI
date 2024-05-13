@@ -15,7 +15,7 @@ export default function Footer() {
         </div>
 
         <div className='flex items-center'>
-          <a href='https://www.facebook.com/ayeshaalidesign?mibextid=ZbWKwL' target='_blank' rel='noopener noreferrer' className='me-4  hover:text-white transform transition-all hover:scale-110'>
+          <a href='https://www.Facebook.com/ayeshaalidesign' target='_blank' rel='noopener noreferrer' className='me-4  hover:text-white transform transition-all hover:scale-110'>
             <FaFacebook className='text-xl' />
           </a>
           <a href='https://www.tiktok.com/@ayesha.ali.design' target='_blank' rel='noopener noreferrer'  className='me-4  hover:text-white transform transition-all hover:scale-110'>
