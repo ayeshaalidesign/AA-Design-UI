@@ -3,7 +3,7 @@ import '../App.css';
 
 const SizeChart = () => {
   return (
-    <div className='mt-4 text-black ml-12'>
+    <div className='mt-2 text-black mb-4'>
       <h2 className="text-md font-bold mb-2 font-verdana">Size Chart In Inches</h2>
       <div className="">
   <table className="table-auto border-collapse border border-gray-300 rounded-lg">
