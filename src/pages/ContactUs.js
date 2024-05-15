@@ -50,7 +50,8 @@ const ContactUs = () => {
       ></iframe>
       </div>
         <h2 className="text-xl font-bold text-center mt-4">Address</h2>
-        <p className="text-black text-center mt-2">300 N Dean Rd 5 118, Auburn, AL 36830, USA</p>
+        <p className="text-black text-center mt-2">300 North Dean Rd. Suite 5, No.118,</p>
+        <p className="text-black text-center">Auburn AL 36830 USA</p>
       </div>
           </div>
         </div>

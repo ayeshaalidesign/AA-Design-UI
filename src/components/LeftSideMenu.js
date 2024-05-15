@@ -51,12 +51,12 @@ const LeftSideMenu = ({ toggle }) => {
         </li>
         </a>
 
-        <a href='/policies'>
+        {/* <a href='/policies'>
         <li className=" flex items-center mb-4 ml-4 text-md transform hover:scale-105 transition-all">
           <FaShieldAlt className="mr-2"  style={{fontSize:'16px'}} />
           Policies
         </li>
-        </a>
+        </a> */}
       </ul>
         </div>
 

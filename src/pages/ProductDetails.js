@@ -15,6 +15,7 @@ const ProductDetails = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
   const [selectedVideo, setSelectedVideo] = useState("");
+  const [showDetails, setShowDetails] = useState(false);
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
@@ -65,7 +66,7 @@ const ProductDetails = () => {
                 <img
                   src={imageUrl}
                   alt={item.ProductName}
-                  className="w-full cursor-pointer h-32 object-contain"
+                  className="w-full cursor-pointer h-24 object-contain"
                   onClick={() => handleImageClick(imageUrl)}
                 />
               </div>
@@ -76,7 +77,7 @@ const ProductDetails = () => {
               <div>
                 <video
                   src={item.VideoURL}
-                  className="w-full h-32 cursor-pointer object-contain"
+                  className="w-full h-24 cursor-pointer object-contain"
                   onClick={() => handleVideoClick(item.VideoURL)}
                 />
               </div>
@@ -86,12 +87,12 @@ const ProductDetails = () => {
       </div>
     ))}
   </div>
-  <div className="w-full lg:w-1/3 h-screen  mt-2 lg:mt-0 ">
+  <div className="w-full lg:w-1/3 lg:h-screen lg:ml-[-110px] ">
     {selectedImage !== "" && (
       <img
         src={selectedImage}
         alt="Selected Product"
-        className="w-full h-100 object-contain"
+        className="w-full h-100 object-contain px-2 "
       />
     )}
 
@@ -104,15 +105,25 @@ const ProductDetails = () => {
       </>
     )}
   </div>
-  <div className="w-full lg:w-1/3 flex justify-center items-center ">
+  <div className="w-full lg:w-1/3 flex justify-center mt-4 ">
     {product.map((item) => (
       <div key={item.ProductId} className="px-4">
-        <h3 className="text-lg font-semibold py-2">
+        <h3 className="text-2xl font-bold py-2">
           {item.ProductName}
         </h3>
-        <h3 className="text-xl font-semibold mb-2">{item.Descrip}</h3>
-        <p className="text-gray-700 mb-4">{item.ProductDescription}</p>
         <p className="text-xl font-semibold mb-2">${item.ProductPrice}</p>
+        <h3 className="text-xl font-semibold mb-4 italic">{item.Descrip}</h3>
+        <p className="text-gray-800 mb-4">{item.ProductDescription}</p>
+        <p className="text-gray-800 mb-4 italic thin">Elegant ~ Classy ~ Versatile</p>
+        {(item.CategoryName === "NEHA" || item.CategoryName === "CELINE") && 
+                      <div className="text-center text-sm mb-4 italic ">
+                      <p >
+                      Copyright: We at Ayesha Ali Design value originality and creativity. All artwork and embroidery designs
+featured on our website are original creations and are protected by copyright law.
+
+                      </p>
+                    </div>}
+
         <select
           className="w-full h-10 mb-4 px-4 outline rounded-md font-semibold"
           value={selectedSize}
@@ -139,9 +150,50 @@ const ProductDetails = () => {
         </button>
         {showSizeChart && (
           <div className="flex justify-center items-center">
-            <SizeChart />
+           <SizeChart productName={product[0].ProductName} />
           </div>
         )}
+
+<h1
+                        className=" text-xl font-semibold text-gray-800 cursor-pointer text-center mb-2"
+                        
+                        onClick={() => setShowDetails(!showDetails)}
+                      >
+                        Product Details / Care
+                      </h1>
+                     {showDetails === true && 
+                     <> <div>
+                     {item.ProductDetails.map((detail) => (
+                       <ul
+                         className="flex flex-col text-md py-1 text-center"
+                         
+                       >
+                         <li>{detail}</li>
+                       </ul>
+                     ))}
+                   </div>
+
+                   <h1
+                     className="my-2 text-xl font-semibold text-gray-800 mt-4 text-center"
+                     
+                   >
+                     Wash / Care
+                   </h1>
+                   <div>
+                     
+                       <ul
+                         className=" text-center flex flex-col text-md"
+                         
+                       >
+                         <li className="py-1">Dry Clean recommended</li>
+                         <li className="py-1">Hand wash and flat dry</li>
+                         <li className="py-1">Gentle machine wash inside out with like colors</li>
+                         <li className="py-1 mb-2">Steam</li>
+
+                       </ul>
+                    
+                   </div></>}
+
       </div>
     ))}
   </div>
