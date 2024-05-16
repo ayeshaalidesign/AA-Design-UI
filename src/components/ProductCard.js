@@ -14,10 +14,10 @@ const ProductCard = ({category, products}) => {
         {products.map((product, index) => (
           <div key={index} className="flex flex-col">
            <div>
-           <img src={product.imageUrl} alt={product.productName} onClick={() => handleRedirection(product.productId)} className="w-full h-full mt-6 mb-6 object-cover rounded-md" />
+           <img src={product.imageUrl} alt={product.productName} onClick={() => handleRedirection(product.productId)} className="w-full h-full mt-6 mb-6 object-cover rounded-md cursor-pointer" />
             <h2 className='font-md font-semibold text-left mt-2 cursor-pointer' onClick={() => handleRedirection(product.productId)}>{product.productName}</h2>
             <h2 className='font-md text-left mt-2'>${product.productPrice}</h2>
-            <button onClick={() => handleRedirection(product.productId)} className='mt-6 text-md font-semibold text-white bg-black px-2 py-2 w-full mb-6 font-verdana'>Shop Now</button>
+            <button onClick={() => handleRedirection(product.productId)} className='mt-2 text-sm font-semibold text-black underline bg-white w-full mb-2 font-verdana'>Shop Now</button>
            </div>
            <div>
            </div>
