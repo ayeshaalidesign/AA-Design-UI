@@ -4,6 +4,7 @@ import { CartContext } from "../contexts/CartProvider";
 import AppLoader from "../loader/AppLoader";
 import SizeChart from "../components/SizeChart";
 import ShoppingCartModal from "../components/ShoppingCartModal";
+import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 
 const ProductDetails = () => {
   const { addToCart } = useContext(CartContext);
@@ -112,7 +113,9 @@ const ProductDetails = () => {
           {item.ProductName}
         </h3>
         <p className="text-xl font-semibold mb-2">${item.ProductPrice}</p>
-        <h3 className="text-xl font-semibold mb-4 italic">{item.Descrip}</h3>
+        <h3 className="text-md font-semibold mb-4">
+              {item.Descrip.toUpperCase()}
+            </h3>
         <p className="text-gray-800 mb-4">{item.ProductDescription}</p>
         <p className="text-gray-800 mb-4 italic thin">Elegant ~ Classy ~ Versatile</p>
         {(item.CategoryName === "NEHA" || item.CategoryName === "CELINE") && 
@@ -155,12 +158,16 @@ featured on our website are original creations and are protected by copyright la
         )}
 
 <h1
-                        className=" text-xl font-semibold text-gray-800 cursor-pointer text-center mb-2"
-                        
-                        onClick={() => setShowDetails(!showDetails)}
-                      >
-                        Product Details / Care
-                      </h1>
+  className="text-xl font-semibold text-gray-800 cursor-pointer text-center mb-2 flex items-center justify-center border-2 border-black py-1"
+  onClick={() => setShowDetails(!showDetails)}
+>
+  <span className="mr-4">Product Details / Care</span>
+  {showDetails ? (
+    <BiChevronUp />
+  ) : (
+    <BiChevronDown />
+  )}
+</h1>
                      {showDetails === true && 
                      <> <div>
                      {item.ProductDetails.map((detail) => (
