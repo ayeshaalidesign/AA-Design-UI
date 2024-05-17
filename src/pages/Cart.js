@@ -46,7 +46,7 @@ const Cart = () => {
       setAddressID(data.addressID); // Assuming the addressID is stored in data.addressID
       localStorage.setItem('email', formData.email);
       
-      await initiateStripeRequest(formData.email, data.addressID);
+      await initiateStripeRequest(formData.email, data);
     } catch (error) {
       console.error('Error:', error);
     }
@@ -103,10 +103,10 @@ const Cart = () => {
         <div className="uppercase text-sm font-semibold">Shopping Bag ({itemAmount})</div>
        
       </div>
-      <div className="flex flex-col gap-y-2 border-b h-80">
+      <div className="flex flex-col gap-y-2 border-b">
         {cart.length === 0 && (
           <>
-          <div className="flex justify-center items-center h-80">
+          <div className="flex justify-center items-center">
             <h2 className="text-center mt-40">No Products.</h2>
           </div>
           </>
