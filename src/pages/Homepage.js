@@ -13,13 +13,13 @@ const HomePage = () => {
       <BootstrapCarousel />
       <div className="relative">
         <img src={ready} alt="ready to wear" className="w-full" />
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-white font-semibold font-verdana text-xs lg:text-lg lg:ml-[-40px]">
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-white font-semibold font-verdana text-xs mb-[-25px] lg:text-lg lg:ml-[-40px]">
           Ready to Wear
         </div>
-        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white font-thin italic font-verdana text-xs lg:text-lg lg:ml-[-40px]">
+        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white font-thin italic font-verdana text-xs mb-[-12px] lg:text-lg lg:ml-[-40px]">
           Vintage Luxe
         </div>
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white font-semibold font-verdana cursor-pointer text-xs lg:text-lg lg:ml-[-40px] underline" onClick={handleRedirection}>Shop Now</div>
+        <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-white font-semibold font-verdana cursor-pointer text-xs lg:text-lg lg:ml-[-40px] underline" onClick={handleRedirection}>Shop Now</div>
       </div>
     </div>
   );

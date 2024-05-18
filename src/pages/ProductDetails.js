@@ -45,26 +45,26 @@ const ProductDetails = () => {
 
   const [height, setHeight] = useState("80vh");
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 600) {
-        setHeight("70vh");
-      } else {
-        setHeight("85vh");
-      }
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (window.innerWidth <= 600) {
+  //       setHeight("100vh");
+  //     } else {
+  //       setHeight("100vh");
+  //     }
+  //   };
 
-    // Set initial height
-    handleResize();
+  //   // Set initial height
+  //   handleResize();
 
-    // Add event listener for window resize
-    window.addEventListener("resize", handleResize);
+  //   // Add event listener for window resize
+  //   window.addEventListener("resize", handleResize);
 
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   // Cleanup the event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   const handleImageClick = (imageUrl) => {
     setSelectedImage(imageUrl);
@@ -143,12 +143,12 @@ const ProductDetails = () => {
                   src={imageUrl}
                   alt={`Image ${index + 1}`}
                   fluid
-                  style={{ height }}
+                  // style={{ height }}
                 />
               </Carousel.Item>
             ))}
             <Carousel.Item>
-              <div className="relative w-full" style={{ height }}>
+              <div className="relative w-full h-screen" >
                 <video autoPlay muted loop playsInline
                   
                   
