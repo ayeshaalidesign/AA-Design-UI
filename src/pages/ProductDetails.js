@@ -13,6 +13,7 @@ const ProductDetails = () => {
   const { id } = useParams();
   const [showSizeChart, setShowSizeChart] = useState(false);
   const [load, setLoad] = useState(false);
+  const [isLoad, setIsLoad] = useState(false);
   const [selectedSize, setSelectedSize] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
@@ -21,9 +22,21 @@ const ProductDetails = () => {
   const [images, setImages] = useState([]);
   const [video, setVideo] = useState("");
   const [activeIndex, setActiveIndex] = useState(0);
+  const [sizes, setSizes] = useState([]);
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const fetchSizes = async () => {
+    setIsLoad(true);
+    const response = await fetch(
+      "https://ayeshaalidesign-test-5a6e676276ea.herokuapp.com/api/product/size/" +
+        id
+    );
+    const data = await response.json();
+  setSizes(data)
+    setIsLoad(false);
   };
 
   useEffect(() => {
@@ -40,6 +53,7 @@ const ProductDetails = () => {
       setSelectedImage(data[0].ImageUrls[0]);
       setLoad(false);
     };
+    fetchSizes();
     fetchProducts();
   }, [id]);
 
@@ -59,7 +73,7 @@ const ProductDetails = () => {
     }
   }, [selectedImage, images]);
 
-  if (load) {
+  if (load || isLoad) {
     return <AppLoader />;
   }
 
@@ -165,15 +179,13 @@ const ProductDetails = () => {
               onChange={(e) => setSelectedSize(e.target.value)}
             >
               <option value="">Select size</option>
-              <option value="xs">Xs</option>
-              <option value="s">S</option>
-              <option value="m">M</option>
-              <option value="l">L</option>
-              <option value="xl">Xl</option>
+              {sizes.map((size) => (
+                <option value={size}>{size}</option>
+              ))}
             </select>
             <button
               className="w-full bg-black text-white text-md font-semibold mb-4 py-2 px-4"
-              onClick={() => addToCart(item, item.ProductId, selectedSize)}
+              onClick={() => addToCart(item, item.ProductId, selectedSize.toLowerCase())}
             >
               Add to Cart
             </button>
