@@ -98,7 +98,7 @@ export default function Footer() {
 
   <div className='flex justify-center items-center mb-2'>
     <FaEnvelope className='mr-2' />
-    <a href="mailto:support@ayeshaalidesign.com" class="text- md-0 font-semibold">info@ayeshaalidesign.com</a>
+    <a href="mailto:info@ayeshaalidesign.com" class="text- md-0 font-semibold">info@ayeshaalidesign.com</a>
   </div>
 
   <div className='flex justify-center items-center mb-1'>
