@@ -151,7 +151,7 @@ const ProductDetails = () => {
               item.CategoryName === "CELINE") && (
               <div className="text-center text-sm mb-4 italic ">
                 <p>
-                  Copyright: We at Ayesha Ali Design value originality and
+                  Copyright: Ayesha Ali Design values originality and
                   creativity. All artwork and embroidery designs featured on our
                   website are original creations and are protected by copyright
                   law.
@@ -193,7 +193,7 @@ const ProductDetails = () => {
               className="text-xl font-semibold text-gray-800 cursor-pointer text-center mb-2 flex items-center justify-center border-2 border-black py-1"
               onClick={() => setShowDetails(!showDetails)}
             >
-              <span className="mr-4">Product Details / Care</span>
+              <span className="mr-4">Details / Care</span>
               {showDetails ? <BiChevronUp /> : <BiChevronDown />}
             </h1>
             {showDetails === true && (

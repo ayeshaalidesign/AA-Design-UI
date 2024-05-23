@@ -21,7 +21,7 @@ export default function Footer() {
           <a href='https://www.tiktok.com/@ayesha.ali.design' target='_blank' rel='noopener noreferrer'  className='me-4  hover:text-white transform transition-all hover:scale-110'>
             <FaTiktok className='text-xl' />
           </a>
-          <a href="mailto:info@ayeshaalidesign.com" className='me-4  hover:text-white transform transition-all hover:scale-110'>
+          <a href="mailto:support@ayeshaalidesign.com" className='me-4  hover:text-white transform transition-all hover:scale-110'>
             <FaGoogle className='text-xl' />
           </a>
           <a href='https://www.instagram.com/ayesha.ali.design/' target='_blank' rel='noopener noreferrer' className='me-4 hover:text-white transform transition-all hover:scale-110'>
@@ -98,7 +98,7 @@ export default function Footer() {
 
   <div className='flex justify-center items-center mb-1'>
     <FaEnvelope className='mr-2' />
-    <a href="mailto:info@ayeshaalidesign.com" class="text-sm mb-0 font-semibold">info@ayeshaalidesign.com</a>
+    <a href="mailto:support@ayeshaalidesign.com" class="text-sm mb-0 font-semibold">support@ayeshaalidesign.com</a>
   </div>
 
   <div className='flex justify-center items-center mb-1'>
