@@ -2,6 +2,8 @@ import React from "react";
 import EmailImage from '../images/email.svg';
 import PhoneImage from '../images/phone.svg';
 import MapImage from '../images/map.svg';
+import EmaillImage from '../images/emaill.png';
+
 
 const ContactUs = () => {
   return (
@@ -18,6 +20,16 @@ const ContactUs = () => {
           >How can we help you?</h1>
         <div class="max-w-4xl mx-auto bg-white md:flex md:items-center flex items-center justify-center font-semibold font-verdana">
           <div class="p-6 text-center">
+          <div className="p-4">
+        <img
+          src={EmaillImage}
+          alt="Email Icon"
+          className="h-16 w-16 mx-auto"
+        />
+        <h2 className="text-xl font-bold text-center mt-4">Email</h2>
+        <a href={'mailto:info@ayeshaalidesign.com' } className="text-black text-center mt-2">info@ayeshaalidesign.com</a>
+      </div>
+
           <div className="p-4">
         <img
           src={EmailImage}

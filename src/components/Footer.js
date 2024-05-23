@@ -96,20 +96,20 @@ export default function Footer() {
 <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-4 bg-black text-center p-4'>
   <h6 className='text-lg font-bold mb-4'>Contact</h6>
 
-  <div className='flex justify-center items-center mb-1'>
+  <div className='flex justify-center items-center mb-2'>
     <FaEnvelope className='mr-2' />
-    <a href="mailto:support@ayeshaalidesign.com" class="text-sm mb-0 font-semibold">support@ayeshaalidesign.com</a>
+    <a href="mailto:support@ayeshaalidesign.com" class="text- md-0 font-semibold">info@ayeshaalidesign.com</a>
   </div>
 
   <div className='flex justify-center items-center mb-1'>
     <FaPhone className='mr-2' /> 
-    <a href="tel:+14702319529" class="text-sm mb-0 font-semibold">+1 (470) 231 9529</a>
+    <a href="tel:+14702319529" class="text-md mb-0 font-semibold">+1 (470) 231 9529</a>
   </div>
 
-  <div className='flex justify-center items-center mb-1'>
+  {/* <div className='flex justify-center items-center mb-1'>
     <FaGlobe className='mr-2 mt-[-22px]' /> 
     <p className='text-sm mb-0 lg:ml-[-20px] font-semibold'>300 North Dean Rd. Suite 5, No.118, Auburn AL 36830 USA</p>
-  </div>
+  </div> */}
 
 </MDBCol>
 
