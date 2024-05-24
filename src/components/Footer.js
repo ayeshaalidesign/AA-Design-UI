@@ -96,9 +96,14 @@ export default function Footer() {
 <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-4 bg-black text-center p-4'>
   <h6 className='text-lg font-bold mb-4'>Contact</h6>
 
-  <div className='flex justify-center items-center mb-2'>
+  <div className='flex justify-center items-center mb-1'>
     <FaEnvelope className='mr-2' />
     <a href="mailto:info@ayeshaalidesign.com" class="text- md-0 font-semibold">info@ayeshaalidesign.com</a>
+  </div>
+
+  <div className='flex justify-center items-center mb-1'>
+    <FaEnvelope className='mr-2' />
+    <a href="mailto:support@ayeshaalidesign.com" class="text- md-0 font-semibold">support@ayeshaalidesign.com</a>
   </div>
 
   <div className='flex justify-center items-center mb-1'>
