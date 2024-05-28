@@ -20,7 +20,7 @@ const AboutUs = () => {
             
           >
             <p className="text-black leading-relaxed text-md  text-justify lg:mt-[-90px]">
-            AYESHA ALI DESIGN is women’s fusion luxury brand that combines intricate Eastern embroideries and embellishments with American fashion sensibilities, creating an exquisite and elegant range of garments for the modern woman. Ayesha’s clothing designs reflect her commitment to originality, modesty, and elegance. Each piece is carefully crafted to elevate the wearer’s personal style and enhance their confidence. Using only the finest fabrics, the brand is a tribute to Ayesha Ali’s Pakistani heritage blended with the influences of her American surroundings, creating garments that are not only timeless but also a testament to global craftmanship.
+            AYESHA ALI DESIGN is a women’s fusion luxury brand that combines intricate Eastern embroideries and embellishments with American fashion sensibilities, creating an exquisite and elegant range of garments for the modern woman. Ayesha’s clothing designs reflect her commitment to originality, modesty, and elegance. Each piece is carefully crafted to elevate the wearer’s personal style and enhance their confidence. Using only the finest fabrics, the brand is a tribute to Ayesha Ali’s Pakistani heritage blended with the influences of her American surroundings, creating garments that are not only timeless but also a testament to global craftmanship.
             </p>
            
           </div>
