@@ -43,7 +43,7 @@ const Cart = () => {
       });
   
       const data = await response.json();
-      setAddressID(data.addressID); // Assuming the addressID is stored in data.addressID
+      setAddressID(data.addressID); 
       localStorage.setItem('email', formData.email);
       
       await initiateStripeRequest(formData.email, data);
@@ -59,7 +59,8 @@ const Cart = () => {
     let orderItems = [];
   
     productsData.forEach(product => {
-      totalPrice += product.ProductPrice * product.amount;
+      // discount change
+      totalPrice += (product.ProductPrice - (product.ProductPrice * 0.10)) * product.amount;
       orderItems.push({
         productid: product.ProductId,
         quantity: product.amount,
@@ -119,8 +120,13 @@ const Cart = () => {
         <div className="flex w-full justify-between items-center">
           {/* total */}
           <div className="font-semibold">
-            <span className="mr-2">Subtotal:</span> ${" "}
+            <span className="mr-1">Total:</span> $
             {parseFloat(total).toFixed(2)}
+          </div>
+           {/* discount change */}
+          <div className="font-semibold">
+            <span className="mr-1">Subtotal:</span> $
+            {parseFloat(total - (total*0.10)).toFixed(2)}
           </div>
           {/* clear cart icon */}
           <div
