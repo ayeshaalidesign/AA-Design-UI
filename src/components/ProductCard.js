@@ -34,9 +34,9 @@ const ProductCard = ({ category, products }) => {
               >
                 {product.productName}
               </h2>
-              {/* <h2 className="text-sm text-left mt-2">
-                product description
-              </h2> */}
+              <h2 className="text-sm text-left mt-2">
+               {product.productDetail}
+              </h2>
               <h2 className="font-md text-left mt-2">
                 ${product.productPrice}
               </h2>
