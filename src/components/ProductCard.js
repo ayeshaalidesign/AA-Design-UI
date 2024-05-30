@@ -25,15 +25,18 @@ const ProductCard = ({ category, products }) => {
                 className="w-full h-full mt-6 mb-6 object-cover rounded-md"
               />
               {/* discount change */}
-              <div className="absolute bottom-44 left-0 text-white text-sm font-semibold px-2 py-1 rounded-md" style={{ background: "#917030" }}>
+              {/* <div className="absolute bottom-44 left-0 text-white text-sm font-semibold px-2 py-1 rounded-md" style={{ background: "#917030" }}>
                 10% OFF
-              </div>
+              </div> */}
               <h2
                 className="font-md font-semibold text-left mt-2 cursor-pointer"
                 onClick={() => handleRedirection(product.productId)}
               >
                 {product.productName}
               </h2>
+              {/* <h2 className="text-sm text-left mt-2">
+                product description
+              </h2> */}
               <h2 className="font-md text-left mt-2">
                 ${product.productPrice}
               </h2>

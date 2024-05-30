@@ -108,7 +108,7 @@ const Cart = () => {
         {cart.length === 0 && (
           <>
           <div className="flex justify-center items-center">
-            <h2 className="text-center mt-40">No Products.</h2>
+            <h2 className="text-center mt-40 mb-40">No Products.</h2>
           </div>
           </>
         )}
@@ -118,15 +118,22 @@ const Cart = () => {
       </div>
       <div className="flex flex-col gap-y-3  mt-4">
         <div className="flex w-full justify-between items-center">
-          {/* total */}
-          <div className="font-semibold">
+          <div className="flex-col text-left">
+            {/* total */}
+          <div className="font-semibold mb-2">
             <span className="mr-1">Total:</span> $
             {parseFloat(total).toFixed(2)}
+          </div>
+
+          <div className="font-semibold mb-2">
+            <span className="mr-1">Discount:</span> $
+            {parseFloat(total * 0.10).toFixed(2)}
           </div>
            {/* discount change */}
           <div className="font-semibold">
             <span className="mr-1">Subtotal:</span> $
             {parseFloat(total - (total*0.10)).toFixed(2)}
+          </div>
           </div>
           {/* clear cart icon */}
           <div
