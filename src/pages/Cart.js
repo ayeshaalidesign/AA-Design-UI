@@ -5,6 +5,7 @@ import CartItem from "../components/CartItem";
 import { CartContext } from "../contexts/CartProvider";
 import '../App.css';
 import CheckoutModal from "../components/CheckoutModal";
+import { toast } from "react-toastify";
 
 const Cart = () => {
 //   const { isOpen, handleClose } = useContext(SidebarContext);
@@ -74,7 +75,8 @@ const Cart = () => {
       totalprice: totalPrice,
       orderProgress: "string",
       email: email,
-      orderItemss: orderItems
+      orderItemss: orderItems,
+      promocode:""
     };
   
     try {
@@ -86,7 +88,11 @@ const Cart = () => {
         body: JSON.stringify(payload)
       });
       const responseData = await response.json();
-      window.location.href = responseData; 
+      if (responseData.isSuccess === true) {
+        window.location.href = responseData.checkoutSessionURL; 
+      } else {
+        toast.error("There was some error.",{ autoClose: 1000 });
+      }
     } catch (error) {
       console.error('Error:', error);
     }
