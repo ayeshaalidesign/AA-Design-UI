@@ -7,11 +7,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
     email: "",
     phoneNumber: "",
     country: "USA",
-    // postalCode: "",
-    // address: "",
-    // streetNumber: "",
-    // city: "",
-    // state: "",
+    
   });
 
   const handleChange = (e) => {
@@ -27,74 +23,6 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
     onSubmit(formData);
   };
 
-  const [cityOptions, setCityOptions] = useState([]);
-
-  const cityData = {
-    Alabama: ["Birmingham", "Montgomery", "Mobile", "Huntsville"],
-    Alaska: ["Anchorage", "Fairbanks", "Juneau", "Sitka"],
-    Arizona: ["Phoenix", "Tucson", "Mesa", "Chandler"],
-    Arkansas: ["Little Rock", "Fort Smith", "Fayetteville", "Springdale"],
-    California: ["Los Angeles", "San Francisco", "San Diego", "San Jose"],
-    Colorado: ["Denver", "Colorado Springs", "Aurora", "Fort Collins"],
-    Connecticut: ["Bridgeport", "New Haven", "Hartford", "Stamford"],
-    Delaware: ["Wilmington", "Dover", "Newark", "Middletown"],
-    Florida: ["Miami", "Orlando", "Tampa", "Jacksonville"],
-    Georgia: ["Atlanta", "Augusta", "Savannah", "Athens"],
-    Hawaii: ["Honolulu", "Hilo", "Kailua", "Kapolei"],
-    Idaho: ["Boise", "Nampa", "Meridian", "Idaho Falls"],
-    Illinois: ["Chicago", "Aurora", "Rockford", "Joliet"],
-    Indiana: ["Indianapolis", "Fort Wayne", "Evansville", "South Bend"],
-    Iowa: ["Des Moines", "Cedar Rapids", "Davenport", "Sioux City"],
-    Kansas: ["Wichita", "Overland Park", "Kansas City", "Topeka"],
-    Kentucky: ["Louisville", "Lexington", "Bowling Green", "Owensboro"],
-    Louisiana: ["New Orleans", "Baton Rouge", "Shreveport", "Lafayette"],
-    Maine: ["Portland", "Lewiston", "Bangor", "South Portland"],
-    Maryland: ["Baltimore", "Frederick", "Rockville", "Gaithersburg"],
-    Massachusetts: ["Boston", "Worcester", "Springfield", "Lowell"],
-    Michigan: ["Detroit", "Grand Rapids", "Warren", "Ann Arbor"],
-    Minnesota: ["Minneapolis", "St. Paul", "Rochester", "Duluth"],
-    Mississippi: ["Jackson", "Gulfport", "Southaven", "Hattiesburg"],
-    Missouri: ["Kansas City", "St. Louis", "Springfield", "Columbia"],
-    Montana: ["Billings", "Missoula", "Great Falls", "Bozeman"],
-    Nebraska: ["Omaha", "Lincoln", "Bellevue", "Grand Island"],
-    Nevada: ["Las Vegas", "Henderson", "Reno", "North Las Vegas"],
-    "New Hampshire": ["Manchester", "Nashua", "Concord", "Derry"],
-    "New Jersey": ["Newark", "Jersey City", "Paterson", "Elizabeth"],
-    "New Mexico": ["Albuquerque", "Las Cruces", "Rio Rancho", "Santa Fe"],
-    "New York": ["New York City", "Buffalo", "Rochester", "Yonkers"],
-    "North Carolina": ["Charlotte", "Raleigh", "Greensboro", "Durham"],
-    "North Dakota": ["Fargo", "Bismarck", "Grand Forks", "Minot"],
-    Ohio: ["Columbus", "Cleveland", "Cincinnati", "Toledo"],
-    Oklahoma: ["Oklahoma City", "Tulsa", "Norman", "Broken Arrow"],
-    Oregon: ["Portland", "Salem", "Eugene", "Gresham"],
-    Pennsylvania: ["Philadelphia", "Pittsburgh", "Allentown", "Erie"],
-    "Rhode Island": ["Providence", "Warwick", "Cranston", "Pawtucket"],
-    "South Carolina": [
-      "Columbia",
-      "Charleston",
-      "North Charleston",
-      "Mount Pleasant",
-    ],
-    "South Dakota": ["Sioux Falls", "Rapid City", "Aberdeen", "Brookings"],
-    Tennessee: ["Nashville", "Memphis", "Knoxville", "Chattanooga"],
-    Texas: ["Houston", "San Antonio", "Dallas", "Austin"],
-    Utah: ["Salt Lake City", "West Valley City", "Provo", "West Jordan"],
-    Vermont: ["Burlington", "Essex", "South Burlington", "Colchester"],
-    Virginia: ["Virginia Beach", "Norfolk", "Chesapeake", "Richmond"],
-    Washington: ["Seattle", "Spokane", "Tacoma", "Vancouver"],
-    "West Virginia": ["Charleston", "Huntington", "Parkersburg", "Morgantown"],
-    Wisconsin: ["Milwaukee", "Madison", "Green Bay", "Kenosha"],
-    Wyoming: ["Cheyenne", "Casper", "Laramie", "Gillette"],
-  };
-
-  useEffect(() => {
-    if (formData.state) {
-      setCityOptions(cityData[formData.state]);
-    } else {
-      setCityOptions([]);
-    }
-    // eslint-disable-next-line
-  }, [formData.state]);
 
   return (
     <div className={`modal ${isOpen ? "block" : "hidden"}`}>
@@ -178,103 +106,7 @@ const CheckoutModal = ({ isOpen, onClose, onSubmit }) => {
                 required
               />
             </div>
-            {/* <div className="md:col-span-2">
-              <label
-                htmlFor="address"
-                className="block text-black text-sm font-bold mb-2"
-              >
-                Address
-              </label>
-              <input
-                id="address"
-                type="text"
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Address"
-                required
-              />
-            </div>
-            <div className="md:col-span-2">
-              <label
-                htmlFor="streetNumber"
-                className="block text-black text-sm font-bold mb-2"
-              >
-                Address Line 2
-              </label>
-              <input
-                id="streetNumber"
-                type="text"
-                name="streetNumber"
-                value={formData.streetNumber}
-                onChange={handleChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline "
-                placeholder="Address Line 2"
-              />
-            </div>
-            <div className="md:col-span-1">
-              <label
-                htmlFor="city"
-                className="block text-black text-sm font-bold mb-2 "
-              >
-                City
-              </label>
-              <input
-                id="city"
-                type="text"
-                name="city"
-                value={formData.city}
-                onChange={handleChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline "
-                placeholder="City"
-              />
-              
-            </div>
-            <div className="md:col-span-1">
-              <label
-                htmlFor="state"
-                className="block text-black text-sm font-bold mb-2"
-              >
-                State
-              </label>
-              <select
-                id="state"
-                name="state"
-                value={formData.state}
-                onChange={handleChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
-                required
-              >
-                <option value="" disabled>
-                  Select your state
-                </option>
-                {Object.keys(cityData).map((state, index) => (
-                  <option key={index} value={state}>
-                    {state}
-                  </option>
-                ))}
-              </select>
-            </div>
-           
-            <div className="md:col-span-1">
-              <label
-                htmlFor="postalCode"
-                className="block text-black text-sm font-bold mb-2 "
-              >
-                Zip Code
-              </label>
-              <input
-                id="postalCode"
-                type="text"
-                name="postalCode"
-                value={formData.postalCode}
-                onChange={handleChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline "
-                placeholder="Zip Code"
-                required
-              />
-            </div> */}
+            
             <div className="md:col-span-2">
               <label
                 htmlFor="country"

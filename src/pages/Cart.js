@@ -6,13 +6,15 @@ import { CartContext } from "../contexts/CartProvider";
 import '../App.css';
 import CheckoutModal from "../components/CheckoutModal";
 import { toast } from "react-toastify";
+import PromoCodeModal from "../components/PromoCodeModal";
 
 const Cart = () => {
-//   const { isOpen, handleClose } = useContext(SidebarContext);
   const { cart, clearCart, itemAmount, total } = useContext(CartContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // eslint-disable-next-line
   const [addressID, setAddressID] = useState(0);
+  const [promoCode, setPromoCode] = useState("");
+  const [discount, setDiscount] = useState(0);
+  const [isPromoModalOpen, setIsPromoModalOpen] = useState(false);
 
   const handlePayClick = () => {
     setIsModalOpen(true);
@@ -20,6 +22,14 @@ const Cart = () => {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handlePromoClick = () => {
+    setIsPromoModalOpen(true);
+  };
+
+  const handleClosePromoModal = () => {
+    setIsPromoModalOpen(false);
   };
 
   const handleFormSubmit = async (formData) => {
@@ -34,12 +44,7 @@ const Cart = () => {
           lastName: formData.lastName,
           email: formData.email,
           phone: formData.phoneNumber,
-          // postalCode: formData.postalCode,
           country: formData.country,
-          // state: formData.state,
-          // city: formData.city,
-          // street: formData.streetNumber,
-          // address: formData.address
         })
       });
   
@@ -53,6 +58,33 @@ const Cart = () => {
     }
     setIsModalOpen(false);
   };
+
+  const handlePromoFormSubmit = async (formData) => {
+    setPromoCode(formData.promocode);
+    try {
+      const url = 'https://ayeshaalidesign-test-5a6e676276ea.herokuapp.com/discount?promocode=' + formData.promocode + '&totalprice=' + total;
+
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+  
+      const data = await response.json();
+      if (data.message === "Promocode is Valid") {
+        setDiscount(data.discount);
+        toast.success('PromoCode applied successfully.', {autoClose:1000})
+      } else {
+        toast.error('Invalid PromoCode.', {autoClose:1000})
+      }
+     
+    } catch (error) {
+      console.error('Error:', error);
+    }
+    setIsPromoModalOpen(false);
+  };
+  
   
   const initiateStripeRequest = async (email, addressID) => {
     const productsData = JSON.parse(localStorage.getItem("cart"));
@@ -60,8 +92,7 @@ const Cart = () => {
     let orderItems = [];
   
     productsData.forEach(product => {
-      // discount change
-      totalPrice += (product.ProductPrice - (product.ProductPrice * 0.10)) * product.amount;
+      totalPrice += (product.ProductPrice) * product.amount;
       orderItems.push({
         productid: product.ProductId,
         quantity: product.amount,
@@ -72,11 +103,11 @@ const Cart = () => {
     const payload = {
       addressid: addressID,
       dispatchid: "string",
-      totalprice: totalPrice,
+      totalprice: total,
       orderProgress: "string",
       email: email,
       orderItemss: orderItems,
-      promocode:""
+      promocode:promoCode
     };
   
     try {
@@ -98,9 +129,6 @@ const Cart = () => {
     }
   };
   
-  
-  
-
   return (
     <div className="font-verdana" >
        <div
@@ -125,6 +153,9 @@ const Cart = () => {
       <div className="flex flex-col gap-y-3  mt-4">
         <div className="flex w-full justify-between items-center">
           <div className="flex-col text-left">
+            <div className="font-semibold mb-4">
+              <p>Do you have a promo code ? <span onClick={() => handlePromoClick()} className="text-blue-500 cursor-pointer">Apply Now</span></p>
+            </div>
             {/* total */}
           <div className="font-semibold mb-2">
             <span className="mr-1">Total:</span> $
@@ -133,12 +164,12 @@ const Cart = () => {
 
           <div className="font-semibold mb-2">
             <span className="mr-1">Discount:</span> $
-            {parseFloat(total * 0.10).toFixed(2)}
+            {discount.toFixed(2)}
           </div>
            {/* discount change */}
           <div className="font-semibold">
             <span className="mr-1">Subtotal:</span> $
-            {parseFloat(total - (total*0.10)).toFixed(2)}
+            {(parseFloat(total) - discount).toFixed(2)}
           </div>
           </div>
           {/* clear cart icon */}
@@ -155,13 +186,10 @@ const Cart = () => {
         >
          Checkout
         </Link>
-        {/* <Link
-         
-          className="bg-primary flex p-3 justify-center items-center text-white w-full font-medium"
-        >
-          Pay
-        </Link> */}
+       
         <CheckoutModal isOpen={isModalOpen} onClose={handleCloseModal} onSubmit={handleFormSubmit} />
+
+        <PromoCodeModal isOpen={isPromoModalOpen} onClose={handleClosePromoModal} onSubmit={handlePromoFormSubmit} />
       </div>
     </div>
     </div>
