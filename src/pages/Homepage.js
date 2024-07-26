@@ -19,7 +19,11 @@ const HomePage = () => {
         <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white font-thin italic font-verdana text-xs mb-[-12px] lg:text-lg lg:ml-[-40px]">
           Vintage Luxe
         </div>
-        <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-white font-semibold font-verdana cursor-pointer text-xs lg:text-lg lg:ml-[-40px] underline" onClick={handleRedirection}>Shop</div>
+        <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-white font-semibold font-verdana cursor-pointer text-xs lg:text-lg lg:ml-[-40px] underline" onClick={handleRedirection}>
+        <p>
+        Shop
+        </p>
+        </div>
       </div>
     </div>
   );
