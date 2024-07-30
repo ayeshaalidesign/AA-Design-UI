@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiTrash2 } from "react-icons/fi";
 import CartItem from "../components/CartItem";
@@ -15,6 +15,10 @@ const Cart = () => {
   const [promoCode, setPromoCode] = useState("");
   const [discount, setDiscount] = useState(0);
   const [isPromoModalOpen, setIsPromoModalOpen] = useState(false);
+
+  useEffect(() => {
+    sessionStorage.clear();
+  },[])
 
   const handlePayClick = () => {
     setIsModalOpen(true);
@@ -120,6 +124,8 @@ const Cart = () => {
       });
       const responseData = await response.json();
       if (responseData.isSuccess === true) {
+        sessionStorage.setItem("orderId", responseData.orderId);
+        sessionStorage.setItem("discount", responseData.discount);
         window.location.href = responseData.checkoutSessionURL; 
       } else {
         toast.error("There was some error.",{ autoClose: 1000 });
