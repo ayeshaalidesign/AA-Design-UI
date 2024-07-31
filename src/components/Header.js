@@ -3,7 +3,7 @@ import { FaShoppingCart, FaHome, FaShoppingBag } from "react-icons/fa";
 import { ProductContext } from "../contexts/ProductsProvider";
 import { FaBars } from "react-icons/fa";
 import logo1 from "../images/LogoIcon.png";
-import pattern from "../images/pattern.svg";
+import pattern from "../images/pattern.jpg";
 import "../App.css";
 
 const Header = ({ toggle, setToggle }) => {
