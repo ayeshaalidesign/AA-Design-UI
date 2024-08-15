@@ -63,7 +63,7 @@ const PaymentSuccessful = () => {
     <div className="p-6 max-w-6xl mx-auto bg-white rounded-lg">
     {load ? <AppLoader /> : (
       <>
-       <h1 className="text-xl font-bold mb-4">Your order is confirmed and your order id {data.orderId}</h1>
+       <h1 className="text-xl font-bold mb-4">Your order is confirmed and your order id is {data.orderId}</h1>
       <div className="overflow-x-auto">
 
       <div className="flex justify-between font-sm text-md pt-2">
