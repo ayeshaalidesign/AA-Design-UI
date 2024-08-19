@@ -1,11 +1,11 @@
-import React, { useState, lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState, lazy, Suspense, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NotFound from './pages/NotFound';
 import AppLoader from './loader/AppLoader';
+import ReactPixel from 'react-facebook-pixel';
 
-// Lazy loading components
 const LazyLayout = lazy(() => import('../src/layout/Layout'));
 const LazyHomePage = lazy(() => import('../src/pages/Homepage'));
 // const LazyLogin = lazy(() => import('./pages/Login'));
@@ -21,8 +21,16 @@ const LazyFail = lazy(() => import('./pages/PaymentFailed'));
 
 function App() {
   const [toggle, setToggle] = useState(false); 
+  const location = useLocation();
+
+  useEffect(() => {
+    const pixelId = '360127443821372';
+    ReactPixel.init(pixelId);
+    ReactPixel.pageView();
+  }, [location]);
+
   return (
-    <Router>
+      <>
       <Suspense fallback={<AppLoader />}>
         <LazyLayout toggle={toggle} setToggle={setToggle}>
           <Routes>
@@ -42,7 +50,7 @@ function App() {
         </LazyLayout>
       </Suspense>
       <ToastContainer /> 
-    </Router>
+      </>
   );
 }
 

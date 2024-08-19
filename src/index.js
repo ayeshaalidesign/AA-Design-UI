@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
 
 import ProductProvider from "./contexts/ProductsProvider";
 import CartProvider from './contexts/CartProvider';
@@ -14,7 +15,9 @@ root.render(
   <CartProvider>
  <ProductProvider>
         <React.StrictMode>
-          <App />
+        <BrowserRouter>
+        <App />
+        </BrowserRouter>
         </React.StrictMode>
       </ProductProvider>
   </CartProvider>
