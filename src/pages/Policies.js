@@ -184,7 +184,7 @@ our customer service team for assistance.
             <ul className="list-disc ">
               <li>
                 <p className="text-md text-left font-normal mt-2">
-                We offer standard and expedited shipping options. Standard shipping typically takes 5-7 business days for
+                We offer standard and expedited shipping options. Standard shipping typically takes 3-5 business days for
 domestic orders. We are not shipping orders outside the U.S. at this time
                 </p>
               </li>

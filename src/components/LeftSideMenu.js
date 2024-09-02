@@ -1,6 +1,6 @@
 import React from 'react';
 import BootstrapCarousel from '../components/Carousel'
-import {FaBook, FaInfoCircle, FaComments, FaHome, FaShieldAlt } from 'react-icons/fa';
+import {FaBook, FaInfoCircle, FaComments, FaHome } from 'react-icons/fa';
 import '../App.css';
 import { FaCartShopping } from 'react-icons/fa6';
 

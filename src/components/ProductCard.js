@@ -8,12 +8,12 @@ const ProductCard = ({ category, products }) => {
 
   return (
     <div>
-      <h2
+      {/* <h2
         className="text-3xl font-semibold text-center mb-12 mt-12 font-verdana"
         style={{ color: "#917030" }}
       >
         {category}
-      </h2>
+      </h2> */}
       <div className="flex justify-center items-center gap-12 mx-4">
         {products.map((product, index) => (
           <div key={index} className="flex flex-col">

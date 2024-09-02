@@ -1,11 +1,25 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useState} from 'react';
 import ProductCard from "../components/ProductCard";
-import { ProductContext } from '../contexts/ProductsProvider';
 import AppLoader from '../loader/AppLoader';
 
-const ProductCardList = () => {
-  const productContext = useContext(ProductContext);
-  const { products } = productContext || { products: [] };
+const Shawls = () => {
+  
+  const [products, setProducts] = useState([]);
+  
+  useEffect(() => {
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch("https://ayeshaalidesign-test-5a6e676276ea.herokuapp.com/api/product");
+      const data = await response.json();
+      const sortedProducts = data.sort((a, b) => a.categoryName.localeCompare(b.categoryName));
+      setProducts(sortedProducts);
+    } catch (error) {
+      console.error('Error fetching products:', error);
+    }
+  };
+
+  fetchProducts();
+}, []);
 
   const groupedProducts = products.reduce((acc, product) => {
     if (!acc[product.categoryName]) {
@@ -39,4 +53,4 @@ const ProductCardList = () => {
   );
 };
 
-export default ProductCardList;
+export default Shawls;

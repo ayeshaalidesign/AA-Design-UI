@@ -1,6 +1,7 @@
 import React from "react";
 import BootstrapCarousel from "../components/Carousel";
 import ready from "../images/cover.jpeg";
+import cover from '../images/Coverr.jpg';
 import "../App";
 
 const HomePage = () => {
@@ -25,6 +26,7 @@ const HomePage = () => {
         </p>
         </div>
       </div>
+      <img src={cover} alt="coming soon" className="w-full" />
     </div>
   );
 };

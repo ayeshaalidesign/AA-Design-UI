@@ -1,5 +1,5 @@
 import React, { useState, lazy, Suspense, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NotFound from './pages/NotFound';
@@ -18,6 +18,9 @@ const LazyContactUs = lazy(() => import('./pages/ContactUs'));
 const LazyPolicies = lazy(() => import('./pages/Policies'));
 const LazySuccess = lazy(() => import('./pages/PaymentSuccessful'));
 const LazyFail = lazy(() => import('./pages/PaymentFailed'));
+const LazyOccasionWear = lazy(() => import('./pages/OccasionWear'));
+const LazyJewelry = lazy(() => import('./pages/Jewelry'));
+const LazyShawls= lazy(() => import('./pages/Shawls'));
 
 function App() {
   const [toggle, setToggle] = useState(false); 
@@ -45,6 +48,9 @@ function App() {
             <Route path="/policies" element={<LazyPolicies />} />
             <Route path="/payment-success" element={<LazySuccess />} />
             <Route path="/payment-fail" element={<LazyFail />} />
+            {/* <Route path="/occasion-wear" element={<LazyOccasionWear />} />
+            <Route path="/jewelry" element={<LazyJewelry />} />
+            <Route path="/shawls" element={<LazyShawls />} /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </LazyLayout>

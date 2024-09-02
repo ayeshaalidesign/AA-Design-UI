@@ -1,6 +1,6 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import { FaFacebook, FaGoogle, FaInstagram, FaEnvelope, FaPhone, FaGlobe, FaTiktok, FaPinterest } from 'react-icons/fa';
+import { FaFacebook, FaGoogle, FaInstagram, FaEnvelope, FaPhone, FaTiktok, FaPinterest } from 'react-icons/fa';
 import pattern from '../images/pattern.jpg';
 import '../App.css';
 import logo from '../images/LogoIcon.png';
