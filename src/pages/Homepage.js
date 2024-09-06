@@ -1,7 +1,7 @@
 import React from "react";
 import BootstrapCarousel from "../components/Carousel";
 import occasionWear from '../images/Cover.jpeg';
-import shawl from '../images/Coverr.jpg'
+// import shawl from '../images/Coverr.jpg'
 import "../App";
 
 const HomePage = () => {
