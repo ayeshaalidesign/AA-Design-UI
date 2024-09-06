@@ -10,14 +10,14 @@ const HomePage = () => {
     window.location.href = '/products';
   }
 
-  const handleRedirectionShawl = () => {
-    window.location.href = '/shawls';
-  }
+  // const handleRedirectionShawl = () => {
+  //   window.location.href = '/shawls';
+  // }
 
   return (
     <div className="font-verdana">
       <BootstrapCarousel />
-      <div className="relative">
+      {/* <div className="relative">
         <img src={shawl} alt="Embroidered Shawl" className="w-full" />
         <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-white font-bold italic font-verdana text-xs mb-[-12px] lg:text-lg lg:ml-[-40px]">
         Embroidered Shawl
@@ -27,7 +27,7 @@ const HomePage = () => {
         Shop
         </p>
         </div>
-      </div>
+      </div> */}
 
       <div className="relative">
         <img src={occasionWear} alt="Occasion Wear" className="w-full" />
