@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 
 const ProductCard = ({ category, products }) => {
+  
   const handleRedirection = (id) => {
     window.location.href = `/products/${id}`;
   };
@@ -48,7 +49,6 @@ const ProductCard = ({ category, products }) => {
               </button>
             </div>
 
-            <div></div>
           </div>
         ))}
       </div>

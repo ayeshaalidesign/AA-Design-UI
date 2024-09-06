@@ -9,10 +9,9 @@ const Shawls = () => {
   useEffect(() => {
   const fetchProducts = async () => {
     try {
-      const response = await fetch("https://ayeshaalidesign-test-5a6e676276ea.herokuapp.com/api/product");
+      const response = await fetch("https://ayeshaalidesign-test-5a6e676276ea.herokuapp.com/api/Product/collection?categoryid=5");
       const data = await response.json();
-      const sortedProducts = data.sort((a, b) => a.categoryName.localeCompare(b.categoryName));
-      setProducts(sortedProducts);
+      setProducts(data);
     } catch (error) {
       console.error('Error fetching products:', error);
     }
@@ -21,13 +20,10 @@ const Shawls = () => {
   fetchProducts();
 }, []);
 
-  const groupedProducts = products.reduce((acc, product) => {
-    if (!acc[product.categoryName]) {
-      acc[product.categoryName] = [];
-    }
-    acc[product.categoryName].push(product);
-    return acc;
-  }, {});
+const handleRedirection = (id) => {
+  window.location.href = `/shawls-details/${id}`;
+};
+
 
   if (products.length === 0) {
     return (
@@ -38,18 +34,33 @@ const Shawls = () => {
   
   return (
     <div className="container mx-auto py-8 px-4">
-      <div className="flex flex-col justify-center items-center">
-      {Object.entries(groupedProducts).map(([category, categoryProducts]) => (
-          <ProductCard
-            key={category}
-            category={category}
-            products={categoryProducts}
+    <div className="grid grid-cols-2 sm:grid-cols-2 gap-6">
+      {products.map((product, index) => (
+        <div key={index} className="relative rounded-md ">
+          <img
+            src={product.imageUrl}
+            alt={product.productName}
+            className="object-cover rounded-md"
           />
-        ))}
-
-
-      </div>
+          <h2 className="font-md font-semibold text-left mt-2 cursor-pointer" onClick={() => handleRedirection(product.productId)}>
+            {product.productName}
+          </h2>
+          <h2 className="text-sm text-left mt-2">
+            {product.productDetail}
+          </h2>
+          <h2 className="font-md text-left mt-2">
+            ${product.productPrice}
+          </h2>
+          <button
+            className="mt-6 text-md font-semibold text-white bg-black px-4 py-2 w-full mb-6"
+            onClick={() => handleRedirection(product.productId)}
+          >
+            Shop
+          </button>
+        </div>
+      ))}
     </div>
+  </div>
   );
 };
 

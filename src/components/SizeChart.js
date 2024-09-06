@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 
-const SizeChart = ({ productName }) => {
+const SizeChart = ({ productName,  }) => {
   return (
     <div className=" text-black mb-2">
       <h2 className="text-md font-bold mb-2 font-verdana">
@@ -197,6 +197,30 @@ const SizeChart = ({ productName }) => {
       </div>
         </>
       ): null}
+
+      {
+        (productName === "Blue & Silver Shawl" || productName === "Black & Silver Shawl" || productName === "Red & Silver Shawl" || productName === "Red & Silver Shawl" || productName === "Grey & Silver Shawl" || productName === "Beige & Gold Shawl" || productName === "Cream & Gold Shawl") ? (
+          <>
+           <div>
+        <table className="table-auto border-collapse border border-gray-300 rounded-lg">
+          <thead>
+            <tr className="bg-gray-200 font-verdana">
+              <th className="px-4 py-2">Length</th>
+              <th className="px-4 py-2">Width</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="font-verdana">
+              <td className="border px-4 py-2">87</td>
+              <td className="border px-4 py-2">42</td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+          </>
+        ) : null 
+      }
     </div>
   );
 };

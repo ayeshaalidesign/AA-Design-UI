@@ -9,13 +9,13 @@ const CartItem = ({ item }) => {
   const { removeFromCart, increaseAmount, decreaseAmount } =
     useContext(CartContext);
   // destructure item
-  const { ProductId, ProductName, ImageUrls, ProductPrice, amount, size } = item;
+  const { ProductId, ProductName, ImageUrls, ProductPrice, amount, size, CategoryName } = item;
 
   return (
     <div className="flex gap-x-4 py-2 lg:px-6 border-b border-gray-200 w-full font-light text-gray-500">
       <div className="w-full min-h-[150px] flex items-center gap-x-4">
   
-        <Link to={`/products/${ProductId}`}>
+        <Link to={CategoryName !== "Shawls" ? `/products/${ProductId}` : `/shawls-details/${ProductId}`}>
           <img className="max-w-[80px]" src={ImageUrls[0]} alt="Product" />
         </Link>
         <div className="w-full flex flex-col">
@@ -23,7 +23,7 @@ const CartItem = ({ item }) => {
           <div className="flex justify-between mb-2">
           
             <Link
-              to={`/products/${ProductId}`}
+             to={CategoryName !== "Shawls" ? `/products/${ProductId}` : `/shawls-details/${ProductId}`}
               className="text-sm uppercase font-medium max-w-[240px] text-primary hover:underline"
             >
               {ProductName}

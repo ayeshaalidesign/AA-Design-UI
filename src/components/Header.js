@@ -67,10 +67,10 @@ const Header = ({ toggle, setToggle }) => {
         </div>
       </div>
 
-      {/* <div className="flex mx-4 justify-center">
+      <div className="flex mx-4 justify-center">
         <h3
           className="text-[12px] sm:text-[14px] text-white font-normal cursor-pointer underline mx-2 transform hover:scale-105 transition-all"
-          onClick={() => (window.location.href = "/occasion-wear")}
+          onClick={() => (window.location.href = "/products")}
         >
           Occasion Wear
         </h3>
@@ -78,15 +78,15 @@ const Header = ({ toggle, setToggle }) => {
           className="text-[12px] sm:text-[14px] text-white font-normal cursor-pointer underline mx-2 transform hover:scale-105 transition-all"
           onClick={() => (window.location.href = "/shawls")}
         >
-          Shawls/Shrugs
+          Shawls
         </h3>
-        <h3
+        {/* <h3
           className="text-[12px] sm:text-[14px] text-white font-normal cursor-pointer underline mx-2 transform hover:scale-105 transition-all"
           onClick={() => (window.location.href = "/jewelry")}
         >
           Jewelry & Accessories
-        </h3>
-      </div> */}
+        </h3> */}
+      </div>
     </header>
   );
 };
