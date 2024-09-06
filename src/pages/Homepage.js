@@ -19,9 +19,7 @@ const HomePage = () => {
       <BootstrapCarousel />
       <div className="relative">
         <img src={shawl} alt="Embroidered Shawl" className="w-full" />
-        {/* <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-white font-semibold font-verdana text-xs mb-[-25px] lg:text-lg lg:ml-[-40px]">
-          Ready to Wear
-        </div> */}
+       
         <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-white font-bold italic font-verdana text-xs mb-[-12px] lg:text-lg lg:ml-[-40px]">
         Embroidered Shawl
         </div>
