@@ -78,7 +78,7 @@ const Header = ({ toggle, setToggle }) => {
           className="text-[12px] sm:text-[14px] text-white font-normal cursor-pointer underline mx-2 transform hover:scale-105 transition-all"
           onClick={() => (window.location.href = "/shawls")}
         >
-          Shawls
+          Shawl
         </h3>
         {/* <h3
           className="text-[12px] sm:text-[14px] text-white font-normal cursor-pointer underline mx-2 transform hover:scale-105 transition-all"
