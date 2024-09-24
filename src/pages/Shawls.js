@@ -1,5 +1,4 @@
 import React, { useEffect, useState} from 'react';
-import ProductCard from "../components/ProductCard";
 import AppLoader from '../loader/AppLoader';
 
 const Shawls = () => {

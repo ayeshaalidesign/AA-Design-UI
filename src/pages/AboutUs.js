@@ -1,8 +1,5 @@
 import React from "react";
 import "../App.css";
-// import founder from "../images/founder.svg";
-// import team from "../images/Team.svg";
-import partner from "../images/whyme.svg";
 
 const AboutUs = () => {
   return (
@@ -29,12 +26,7 @@ const AboutUs = () => {
       </div>
 
       <div className="container mx-auto">
-        {/* <h1
-          className="text-center my-4 text-3xl font-bold text-black"
-          style={{ fontFamily: "Seasons" }}
-        >
-          Our Team
-        </h1> */}
+      
         <div className="max-w-4xl mx-auto bg-white md:flex md:items-center">
           <div className="p-6 text-left font-verdana">
             <p className="text-black leading-relaxed text-md">
@@ -46,12 +38,7 @@ const AboutUs = () => {
       </div>
 
       <div className="container mx-auto">
-        {/* <h1
-          className="text-center my-4 text-3xl font-bold text-black"
-          style={{ fontFamily: "Seasons" }}
-        >
-          Our Partner
-        </h1> */}
+       
         <div className="max-w-4xl mx-auto bg-white md:flex md:items-center">
           <div className="p-6 md:w-full text-left font-verdana">
             <p className="text-black leading-relaxed text-md mt-4 text-justify">
@@ -70,37 +57,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="container mx-auto">
-        {/* <h1
-          className="text-center my-4 text-3xl font-bold text-black"
-          style={{ fontFamily: "Seasons" }}
-        >
-          Our Partner
-        </h1> */}
-        <div className="max-w-4xl mx-auto bg-white md:flex md:items-center">
-          <div className="p-6 md:w-1/2 text-left font-verdana">
-            <p className="text-black leading-relaxed text-md text-justify">
-              Our partner for web and marketing services.
-            </p>
-            <p className="text-black leading-relaxed text-md text-justify">
-              Whyme Solutions specialize in uplifting all businesses streamline
-              operations, boost productivity, creativity and achieve their
-              ultimate goals with tailored marketing strategies and cutting-edge
-              technology.
-            </p>
-          </div>
-
-          <div className="w-full md:w-1/2 p-6 md:mt-0 h-1/2 font-verdana">
-            <div>
-              <img
-                className="object-cover w-full h-full  rounded-lg"
-                src={partner}
-                alt="Our Partner"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };

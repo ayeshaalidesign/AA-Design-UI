@@ -4,7 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NotFound from './pages/NotFound';
 import AppLoader from './loader/AppLoader';
-import ReactPixel from 'react-facebook-pixel';
+import { initializeFacebookPixel } from './utils/FacebookPixel';
 
 const LazyLayout = lazy(() => import('../src/layout/Layout'));
 const LazyHomePage = lazy(() => import('../src/pages/Homepage'));
@@ -22,15 +22,14 @@ const LazyOccasionWear = lazy(() => import('./pages/OccasionWear'));
 const LazyJewelry = lazy(() => import('./pages/Jewelry'));
 const LazyShawls= lazy(() => import('./pages/Shawls'));
 const LazyShawlsDetails= lazy(() => import('./pages/ShawlDetails'));
+const LazyJewelryDetails= lazy(() => import('./pages/JewelryDetails'));
 
 function App() {
   const [toggle, setToggle] = useState(false); 
   const location = useLocation();
 
   useEffect(() => {
-    const pixelId = '360127443821372';
-    ReactPixel.init(pixelId);
-    ReactPixel.pageView();
+   initializeFacebookPixel();
   }, [location]);
 
   return (
@@ -53,6 +52,7 @@ function App() {
             <Route path="/jewelry" element={<LazyJewelry />} />
             <Route path="/shawls" element={<LazyShawls />} />
             <Route path="/shawls-details/:id" element={<LazyShawlsDetails />} />
+            <Route path="/jewelry-details/:id" element={<LazyJewelryDetails />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </LazyLayout>

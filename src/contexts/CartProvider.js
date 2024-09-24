@@ -2,6 +2,7 @@ import React, { createContext, useState, useEffect } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ShoppingCartModal from "../components/ShoppingCartModal";
+import { trackEvent } from "../utils/FacebookPixel";
 
 
 export const CartContext = createContext();
@@ -45,6 +46,7 @@ const CartProvider = ({ children }) => {
   }, [cart]);
 
   const addToCart = (product, id, size) => {
+    trackEvent("Add to Cart");
     var sizeId = 0;
     if (size === "") {
       toast.error("Please select a size.",{ autoClose: 1000 });

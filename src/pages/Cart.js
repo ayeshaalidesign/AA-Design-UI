@@ -7,6 +7,7 @@ import '../App.css';
 import CheckoutModal from "../components/CheckoutModal";
 import { toast } from "react-toastify";
 import PromoCodeModal from "../components/PromoCodeModal";
+import { trackEvent } from "../utils/FacebookPixel";
 
 const Cart = () => {
   const { cart, clearCart, itemAmount, total } = useContext(CartContext);
@@ -37,6 +38,7 @@ const Cart = () => {
   };
 
   const handleFormSubmit = async (formData) => {
+    trackEvent("Purchase");
     try {
       const response = await fetch('https://ayeshaalidesign-test-5a6e676276ea.herokuapp.com/api/Checkout/checkout-prepare', {
         method: 'POST',

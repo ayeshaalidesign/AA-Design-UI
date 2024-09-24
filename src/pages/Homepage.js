@@ -3,15 +3,18 @@ import BootstrapCarousel from "../components/Carousel";
 import "../App";
 import first from '../images/First.jpg';
 import second from '../images/second.jpeg';
+import { trackEvent } from "../utils/FacebookPixel";
 
 const HomePage = () => {
 
   const handleRedirection = () => {
     window.location.href = '/products';
+    trackEvent("Shop");
   }
 
   const handleRedirectionShawl = () => {
     window.location.href = '/shawls';
+    trackEvent("Shop");
   }
 
   return (
