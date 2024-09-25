@@ -1,7 +1,7 @@
 import React from "react";
 import BootstrapCarousel from "../components/Carousel";
 import "../App";
-import first from '../images/First.jpg';
+import first from '../images/Firstt.jpg';
 import second from '../images/second.jpeg';
 import { trackEvent } from "../utils/FacebookPixel";
 
@@ -22,10 +22,10 @@ const HomePage = () => {
       <BootstrapCarousel />
       <div className="relative">
         <img src={first} alt="embroidered shawl" className="w-full" />
-        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-white font-bold italic font-verdana text-xs mb-[-12px] lg:text-lg lg:ml-[-40px]">
+        <div className="absolute bottom-20 lg:bottom-48 left-1/2 transform -translate-x-1/2 text-white font-bold italic font-verdana text-xs mb-[-12px] lg:text-lg lg:ml-[-40px]">
         Embroidered Shawl
         </div>
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white font-semibold font-verdana cursor-pointer text-xs lg:text-xl lg:ml-[-40px] underline" onClick={handleRedirectionShawl}>
+        <div className="absolute bottom-12 lg:bottom-40 left-1/2 transform -translate-x-1/2 text-white font-semibold font-verdana cursor-pointer text-xs lg:text-xl lg:ml-[-40px] underline" onClick={handleRedirectionShawl}>
         <p>
         Shop
         </p>

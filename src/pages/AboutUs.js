@@ -9,38 +9,44 @@ const AboutUs = () => {
           About Us
         </h1>
 
-        <div className="max-w-4xl mx-auto bg-white md:flex md:items-center">
-          <div className="p-6 text-left font-verdana">
+        <div className="max-w-4xl mx-auto bg-white">
+          <div className="text-left font-verdana mt-4">
             <p className="text-black leading-relaxed text-md  text-justify ">
-              AYESHA ALI DESIGN is a women’s luxury clothing brand that
-              elegantly blends contemporary American fashion with elements
-              inspired by South Asian art and culture. Designed for the modern
-              woman who appreciates both Eastern and Western cultures, each
-              piece embodies global craftsmanship and personal expression. Our
-              timeless garments pay tribute to the rich Pakistani heritage of
-              our founder, Ayesha Ali, perfectly capturing the essence of our
-              tagline, "This is Me."
+              AYESHA ALI DESIGN is women’s luxury clothing brand where Ayesha’s
+              intricate embroideries inspired by the Eastern art and culture are
+              fused with American fashion, creating an exquisite and elegant
+              range of garments for the modern woman. Embracing her Pakistani
+              heritage and blending it with the influences of her American
+              surroundings, founder and designer Ayesha creates garments that
+              are a celebration of diversity and individuality. Each piece is
+              carefully crafted to elevate the wearer’s personal style and
+              enhance their confidence. Her clothing designs reflect her
+              commitment to originality, modesty, and elegance.
+            </p>
+          </div>
+
+          <div className="mt-4 text-left font-verdana">
+            <p className="text-black leading-relaxed text-md  text-justify font-semibold">
+              “My goal is to create thoughtfully designed, high quality fusion
+              wear that women can instantly relate to and feel confident wearing
+              on any occasion in any part of the world.”
+            </p>
+            <p className="text-black leading-relaxed text-md  text-justify">
+              - Ayesha Ali
+            </p>
+            <p className="text-black leading-relaxed text-md  text-justify">
+              CEO | Founder | Creative Designer
+            </p>
+            <p className="text-black leading-relaxed text-md  text-justify">
+              AYESHA ALI DESIGN
             </p>
           </div>
         </div>
       </div>
 
       <div className="container mx-auto">
-      
-        <div className="max-w-4xl mx-auto bg-white md:flex md:items-center">
-          <div className="p-6 text-left font-verdana">
-            <p className="text-black leading-relaxed text-md">
-              Teamwork makes the Dream Work. Our dedicated team of models,
-              photographers, stylist, videographers, and assistants.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="container mx-auto">
-       
-        <div className="max-w-4xl mx-auto bg-white md:flex md:items-center">
-          <div className="p-6 md:w-full text-left font-verdana">
+        <div className="max-w-4xl mx-auto bg-white md:flex md:items-center mb-4">
+          <div className="md:w-full text-left font-verdana">
             <p className="text-black leading-relaxed text-md mt-4 text-justify">
               AYESHA ALI DESIGN celebrates and promotes the rich tapestry of
               cultures, traditions, and identities that make up the vibrant
@@ -56,8 +62,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 };
