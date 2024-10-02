@@ -8,7 +8,7 @@ const Shawls = () => {
   useEffect(() => {
   const fetchProducts = async () => {
     try {
-      const response = await fetch("https://ayeshaalidesign-test-5a6e676276ea.herokuapp.com/api/Product/collection?categoryid=5");
+      const response = await fetch("https://ayeshaalidesign-test-5a6e676276ea.herokuapp.com/api/Product/collection/5");
       const data = await response.json();
       setProducts(data);
     } catch (error) {

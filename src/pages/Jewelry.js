@@ -8,7 +8,7 @@ const Jewelry = () => {
   useEffect(() => {
   const fetchProducts = async () => {
     try {
-      const response = await fetch("https://ayeshaalidesign-test-5a6e676276ea.herokuapp.com/api/Product/collection?categoryid=6");
+      const response = await fetch("https://ayeshaalidesign-test-5a6e676276ea.herokuapp.com/api/Product/collection/6");
       const data = await response.json();
       let initialProducts = data.filter((product) => product.productName !== "Black Bow Clutch" && product.productName !== "Aztec Crossbody/ Wristlet Bag");
       let finalProducts = data.filter((product) => product.productName === "Black Bow Clutch" || product.productName === "Aztec Crossbody/ Wristlet Bag");
@@ -40,7 +40,7 @@ const handleRedirection = (id) => {
         <div key={index} className="relative rounded-md flex flex-col h-full">
           <img
             src={product.imageUrl}
-            alt={`Image of ${product.productName}`}
+            alt={`${product.productName}`}
             className="object-cover rounded-md"
           />
           <div className="flex-grow">
