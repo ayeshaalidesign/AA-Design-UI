@@ -35,21 +35,26 @@ const handleRedirection = (id) => {
     <div className="container mx-auto py-8 px-4">
     <div className="grid grid-cols-2 sm:grid-cols-2 gap-6">
       {products.map((product, index) => (
-        <div key={index} className="relative rounded-md ">
+        <div key={index} className="relative rounded-md flex flex-col justify-between h-full">
           <img
             src={product.imageUrl}
             alt={product.productName}
             className="object-cover rounded-md"
           />
-          <h2 className="font-md font-semibold text-left mt-2 cursor-pointer" onClick={() => handleRedirection(product.productId)}>
-            {product.productName}
-          </h2>
-          <h2 className="text-sm text-left mt-2">
-            {product.productDetail}
-          </h2>
-          <h2 className="font-md text-left mt-2">
-            ${product.productPrice}
-          </h2>
+          <div className="flex-grow">
+            <h2
+              className="font-md font-semibold text-left mt-2 cursor-pointer"
+              onClick={() => handleRedirection(product.productId)}
+            >
+              {product.productName}
+            </h2>
+            <h2 className="text-sm text-left mt-2">
+              {product.productDetail}
+            </h2>
+            <h2 className="font-md text-left mt-2">
+              ${product.productPrice}
+            </h2>
+          </div>
           <button
             className="mt-6 text-md font-semibold text-white bg-black px-4 py-2 w-full mb-6"
             onClick={() => handleRedirection(product.productId)}
@@ -60,6 +65,7 @@ const handleRedirection = (id) => {
       ))}
     </div>
   </div>
+  
   );
 };
 
