@@ -20,9 +20,11 @@ const LazySuccess = lazy(() => import('./pages/PaymentSuccessful'));
 const LazyFail = lazy(() => import('./pages/PaymentFailed'));
 const LazyOccasionWear = lazy(() => import('./pages/OccasionWear'));
 const LazyJewelry = lazy(() => import('./pages/Jewelry'));
-const LazyShawls= lazy(() => import('./pages/Shawls'));
-const LazyShawlsDetails= lazy(() => import('./pages/ShawlDetails'));
-const LazyJewelryDetails= lazy(() => import('./pages/JewelryDetails'));
+const LazyShawls = lazy(() => import('./pages/Shawls'));
+const LazyShawlsDetails = lazy(() => import('./pages/ShawlDetails'));
+const LazyJewelryDetails = lazy(() => import('./pages/JewelryDetails'));
+const LazyCapes = lazy(() => import('./pages/Capes'));
+const LazyCapesDetails = lazy(() => import('./pages/CapeDetails'));
 
 function App() {
   const [toggle, setToggle] = useState(false); 
@@ -51,8 +53,10 @@ function App() {
             <Route path="/occasion-wear" element={<LazyOccasionWear />} />
             <Route path="/jewelry" element={<LazyJewelry />} />
             <Route path="/shawls" element={<LazyShawls />} />
+            <Route path="/capes" element={<LazyCapes />} />
             <Route path="/shawls-details/:id" element={<LazyShawlsDetails />} />
             <Route path="/jewelry-details/:id" element={<LazyJewelryDetails />} />
+            <Route path="/cape-details/:id" element={<LazyCapesDetails />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </LazyLayout>

@@ -221,6 +221,34 @@ const SizeChart = ({ productName,  }) => {
           </>
         ) : null 
       }
+
+{productName === "Black & White " || productName === "Blue & Rust" || productName === "Black & Fuchsia " || productName === "Blue & Beige" || productName === "Blue & Silver" || productName === "Blue & Pink " || productName === "Black & Silver"   ? (
+        <>
+         <div>
+        <table className="table-auto border-collapse border border-gray-300 rounded-lg mb-4">
+          <thead>
+            <tr className="bg-gray-200 font-verdana">
+              <th className="px-2 py-2">Size</th>
+              <th className="px-2 py-2">Length</th>
+              <th className="px-2 py-2">Hem Width</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="font-verdana">
+              <td className="border px-2 py-2">S/M</td>
+              <td className="border px-2 py-2">28</td>
+              <td className="border px-2 py-2">84</td>
+            </tr>
+            <tr className="font-verdana">
+              <td className="border px-2 py-2">M/L</td>
+              <td className="border px-2 py-2">30</td>
+              <td className="border px-2 py-2">84</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        </>
+      ) : null}
     </div>
   );
 };

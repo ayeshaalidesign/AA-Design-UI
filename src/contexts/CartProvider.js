@@ -61,8 +61,12 @@ const CartProvider = ({ children }) => {
       sizeId = 3; 
     } else if (size === 'l') {
       sizeId = 4;
-    } else {
+    } else if (size === 'xl') {
       sizeId = 5;
+    } else if (size === 's/m') {
+      sizeId = 6;
+    } else {
+      sizeId = 7;
     }
   
     const newItem = { ...product, size: size, amount: 1, SizeId: sizeId};

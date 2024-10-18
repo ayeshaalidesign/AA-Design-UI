@@ -28,6 +28,8 @@ const CartItem = ({ item }) => {
               ? `/shawls-details/${ProductId}`
               : CategoryName === "Jewel"
               ? `/jewelry-details/${ProductId}`
+              : CategoryName === "Capes"
+              ? `/cape-details/${ProductId}`
               : `/products/${ProductId}`
           }
         >
@@ -41,6 +43,8 @@ const CartItem = ({ item }) => {
                   ? `/shawls-details/${ProductId}`
                   : CategoryName === "Jewel"
                   ? `/jewelry-details/${ProductId}`
+                  : CategoryName === "Capes"
+                  ? `/cape-details/${ProductId}`
                   : `/products/${ProductId}`
               }
               className="text-sm uppercase font-medium max-w-[240px] text-primary hover:underline"

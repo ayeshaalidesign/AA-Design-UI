@@ -68,13 +68,9 @@ export default function Footer() {
         </p>
       </MDBCol> */}
 
-      <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4 bg-black text-center p-4'>
-        <h6 className='text-lg  font-bold mb-4'>Useful links</h6>
-        <p className='text-md font-semibold'>
-          <a href='/products' >
-            Shop
-          </a>
-        </p>
+      <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4 bg-black text-center p-4 rounded-md'>
+        <h6 className='text-lg  font-bold mb-3'>Useful links</h6>
+        
         <p className='text-md font-semibold'>
           <a href='/about-us'>
             About Us
@@ -93,7 +89,7 @@ export default function Footer() {
       </MDBCol>
 
      
-<MDBCol md="4" lg="3" xl="3" className='mx-auto mb-4 bg-black text-center p-4'>
+<MDBCol md="4" lg="3" xl="3" className='mx-auto mb-4 bg-black text-center p-4 rounded-md'>
   <h6 className='text-lg font-bold mb-4'>Contact</h6>
 
   <div className='flex justify-center items-center mb-1'>

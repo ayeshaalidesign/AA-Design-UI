@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import MainVideo from '../video/MainVideo.mp4';
+import MainVideo from '../video/homepage-video.mp4';
 
 const BootstrapCarousel = () => {
 

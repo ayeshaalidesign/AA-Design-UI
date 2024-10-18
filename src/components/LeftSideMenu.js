@@ -54,6 +54,11 @@ const LeftSideMenu = ({ toggle }) => {
                       <span>Jewelry/Accessories</span>
                     </li>
                   </a>
+                  <a href='/capes'>
+                    <li className="flex items-center mb-4 text-md transform hover:scale-105 transition-all">
+                      <span>Capes</span>
+                    </li>
+                  </a>
                 </div>
               )}
 
