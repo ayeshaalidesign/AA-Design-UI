@@ -1,7 +1,7 @@
 import React from "react";
 import BootstrapCarousel from "../components/Carousel";
 import "../App";
-import first from '../images/first.jpg';
+import first from '../images/first.jpg'; 
 import second from '../images/second.jpeg';
 import third from '../images/third.jpg';
 import { trackEvent } from "../utils/FacebookPixel";
