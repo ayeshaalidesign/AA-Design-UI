@@ -1,7 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import MainVideo from '../video/homepage-video.mp4';
-
+import HomePageVideo from '../video/homepage-video.mp4';
 const BootstrapCarousel = () => {
 
   return (
@@ -10,7 +9,7 @@ const BootstrapCarousel = () => {
     <Carousel.Item>
       <div className="relative">
         <video autoPlay muted loop playsInline className="w-full">
-          <source src={MainVideo} type="video/mp4" />
+          <source src={HomePageVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
