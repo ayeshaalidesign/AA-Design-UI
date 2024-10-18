@@ -41,7 +41,7 @@ const HomePage = () => {
       
       <div className="flex flex-row">
       <div className="relative flex-1">
-        <img src={first} alt="embroidered shawl" className="w-full" />
+        <img src={FirstImage} alt="embroidered shawl" className="w-full" />
         <div className="absolute bottom-12 lg:bottom-20 left-1/2 transform -translate-x-1/2 text-white font-bold font-verdana text-xs mb-[-12px] lg:text-lg lg:ml-[-40px] truncate">
         Embroidered Shawl
         </div>
