@@ -1,7 +1,6 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import HomepageVideo from '../video/homepage.mp4';
-
 const BootstrapCarousel = () => {
   return (
     <div className="carousel-container">
