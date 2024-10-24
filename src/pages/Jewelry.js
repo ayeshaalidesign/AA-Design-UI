@@ -8,7 +8,7 @@ const Jewelry = () => {
   useEffect(() => {
   const fetchProducts = async () => {
     try {
-      const response = await fetch("https://ayeshaalidesign-test-5a6e676276ea.herokuapp.com/api/Product/collection/6");
+      const response = await fetch("https://ayeshaalidesign-test-5a6e676276ea.herokuapp.com/api/Product/collection/28");
       const data = await response.json();
       let initialProducts = data.filter((product) => product.productName !== "Black Bow Clutch" && product.productName !== "Aztec Crossbody/ Wristlet Bag");
       let finalProducts = data.filter((product) => product.productName === "Black Bow Clutch" || product.productName === "Aztec Crossbody/ Wristlet Bag");
