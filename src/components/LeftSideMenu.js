@@ -39,7 +39,7 @@ const LeftSideMenu = ({ toggle }) => {
 
               {showCollections && (
                 <div className="ml-6">
-                  <a href='/occasion-wear'>
+                  <a href='/products'>
                     <li className="flex items-center mb-4 text-md transform hover:scale-105 transition-all">
                       <span>Occasion Wear</span>
                     </li>
