@@ -102,7 +102,7 @@ const PaymentSuccessful = () => {
 
         <div className="flex justify-between font-semibold text-md pt-2">
           <span>Total Amount</span>
-          <span>${(data.totalPrice).toFixed(2)}</span>
+          <span>${(data.totalPrice + parseFloat(sessionStorage.getItem("discount") ?? 0)).toFixed(2)}</span>
         </div>
 
         <div className="flex justify-between font-semibold text-md pt-2">
@@ -112,7 +112,7 @@ const PaymentSuccessful = () => {
 
         <div className="flex justify-between font-semibold text-md pt-2">
           <span>Sub Total</span>
-          <span>${(data.totalPrice - (sessionStorage.getItem("discount") ? parseFloat(sessionStorage.getItem("discount")) : 0)).toFixed(2)}</span>
+          <span>${(data.totalPrice).toFixed(2)}</span>
         </div>
       </div>
       </>
