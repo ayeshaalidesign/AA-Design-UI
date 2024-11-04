@@ -1,7 +1,7 @@
 import ReactPixel from 'react-facebook-pixel';
 
 export const initializeFacebookPixel = () => {
-    const pixelId = '360127443821372';
+    const pixelId = '474043248721385';
     ReactPixel.init(pixelId);
     ReactPixel.pageView();
 }
